@@ -1,0 +1,41 @@
+{
+  "@context": "http://purl.imsglobal.org/ctx/caliper/v1p1",
+  "action": "Viewed",
+  "actor": {
+    "id": "http://localhost:18000/u/honor",
+    "name": "honor",
+    "type": "Person"
+  },
+  "eventTime": "2018-10-19T10:59:49.120Z",
+  "extensions": {
+    "extra_fields": {
+      "accept_language": "en-US,en;q=0.5",
+      "agent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:62.0) Gecko/20100101 Firefox/62.0",
+      "course_id": "course-v1:edx+CS0110+2014_T",
+      "event_source": "browser",
+      "event_type": "edx.team.page_viewed",
+      "host": "8c3b43aa7b1b",
+      "ip": "172.18.0.1",
+      "org_id": "edX",
+      "page": "http://localhost:18000/courses/course-v1:edx+CS0110+2014_T/teams/#topics/Topic1ID",
+      "path": "/event",
+      "session": "204cef1ca57dacb23b3ae6e76ba29ec4",
+      "user_id": 6
+    }
+  },
+  "id": "urn:uuid:cd088ca7-c044-405c-bb41-0b2a8506f907",
+  "object": {
+    "extensions": {
+      "team_id": null,
+      "page_name": "single-topic",
+      "topic_id": "Topic1ID"
+    },
+    "id": "http://localhost:18000/courses/course-v1:edx+CS0110+2014_T/teams/#topics/Topic1ID",
+    "type": "WebPage"
+  },
+  "referrer": {
+    "id": "http://localhost:18000/courses/course-v1:edx+CS0110+2014_T/teams/",
+    "type": "WebPage"
+  },
+  "type": "ViewEvent"
+}

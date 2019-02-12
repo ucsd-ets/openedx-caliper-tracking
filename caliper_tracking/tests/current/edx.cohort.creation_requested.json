@@ -1,0 +1,25 @@
+{
+    "accept_language": "en-US,en;q=0.9",
+    "agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36",
+    "context": {
+        "course_id": "course-v1:edX+DemoX+Demo_Course",
+        "course_user_tags": {},
+        "org_id": "edX",
+        "path": "/courses/course-v1:edX+DemoX+Demo_Course/cohorts/",
+        "user_id": 15
+    },
+    "event": {
+        "cohort_id": 1,
+        "cohort_name": "test cohort"
+    },
+    "event_source": "server",
+    "event_type": "edx.cohort.creation_requested",
+    "host": "48ca736c86e8",
+    "ip": "172.19.0.1",
+    "name": "edx.cohort.creation_requested",
+    "page": null,
+    "referer": "http://openedx-dev.ucsd.edu/courses/course-v1:edX+DemoX+Demo_Course/instructor",
+    "session": "ee3435791c08a24b6e19cd0cc5793e4f",
+    "time": "2019-01-15T10:33:48.532398+00:00",
+    "username": "danial_malik"
+}

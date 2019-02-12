@@ -1,0 +1,58 @@
+{
+  "accept_language": "en;q=1.0, en;q=1.0",
+  "agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.67 Safari/537.36",
+  "context": {
+    "asides": {},
+    "course_id": "course-v1:abcx+CS101+2014_T1",
+    "course_user_tags": {},
+    "module": {
+      "display_name": "Open Response Assessment",
+      "usage_key": "block-v1:abcx+CS101+2014_T1+type@openassessment+block@9282ae72a83c4636850a6883e1dac7ed"
+    },
+    "org_id": "abcx",
+    "path": "/courses/course-v1:abcx+CS101+2014_T1/xblock/block-v1:abcx+CS101+2014_T1+type@openassessment+block@9282ae72a83c4636850a6883e1dac7ed/handler/self_assess",
+    "user_id": 2
+  },
+  "event": {
+    "feedback": "",
+    "parts": [
+      {
+        "criterion": {
+          "name": "Content",
+          "points_possible": 3
+        },
+        "feedback": "",
+        "option": {
+          "name": "Good",
+          "points": 3
+        }
+      },
+      {
+        "criterion": {
+          "name": "Ideas",
+          "points_possible": 5
+        },
+        "feedback": "",
+        "option": {
+          "name": "Fair",
+          "points": 3
+        }
+      }
+    ],
+    "rubric": {
+      "content_hash": "3a644e4f995ee20b78372c817bdbaf3f2637266f"
+    },
+    "score_type": "SE",
+    "scored_at": "2018-10-19T13:20:58.850488+00:00",
+    "scorer_id": "752cbf142dc6995d24927a8fddd44942",
+    "submission_uuid": "faa2071b-d202-4ef2-b0e7-ca8cc57fb652"
+  },
+  "event_source": "server",
+  "event_type": "openassessmentblock.self_assess",
+  "host": "ec7deba3430f",
+  "ip": "172.18.0.1",
+  "page": "x_module",
+  "referer": "http://localhost:18000/courses/course-v1:abcx+CS101+2014_T1/courseware/ba828da5496e498aaeee3cebefb02b4a/25f1b98619c64f0ba34d9e0f53649de0/2?activate_block_id=block-v1%3Aabcx%2BCS101%2B2014_T1%2Btype%40vertical%2Bblock%40c42a13c5852c43dab986815075ef9d36",
+  "time": "2018-10-19T13:20:58.898345+00:00",
+  "username": "edx"
+}

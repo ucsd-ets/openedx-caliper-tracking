@@ -1,0 +1,25 @@
+{
+  "accept_language": "en-US,en;q=0.9,ur-PK;q=0.8,ur;q=0.7",
+  "agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36",
+  "context": {
+    "course_id": "course-v1:edX+Test101+course",
+    "org_id": "edX",
+    "path": "/shoppingcart/postpay_callback/",
+    "user_id": 7
+  },
+  "event": {
+    "course_id": "course-v1:edX+Test101+course",
+    "mode": "verified",
+    "user_id": 7
+  },
+  "event_source": "server",
+  "event_type": "edx.course.enrollment.upgrade.succeeded",
+  "host": "tasawernawaz.sandbox.edx.org",
+  "ip": "116.58.62.58",
+  "name": "edx.course.enrollment.upgrade.succeeded",
+  "page": null,
+  "referer": "https://tasawernawaz.sandbox.edx.org/shoppingcart/payment_fake/",
+  "session": "f3029807d5ac0b71b59b53e9e789f0fc",
+  "time": "2018-10-17T13:08:41.590533+00:00",
+  "username": "honor"
+}

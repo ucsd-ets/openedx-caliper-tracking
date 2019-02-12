@@ -1,0 +1,45 @@
+{
+  "@context": "http://purl.imsglobal.org/ctx/caliper/v1p1",
+  "action": "Modified",
+  "actor": {
+    "id": "http://localhost:18000/u/hassanstudio",
+    "name": "hassanstudio",
+    "type": "Person"
+  },
+  "eventTime": "2019-01-09T07:04:58.663Z",
+  "extensions": {
+    "extra_fields": {
+      "accept_language": "en-US,en;q=0.9",
+      "agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36",
+      "course_id": "course-v1:UCP+CS4230+PF_2018",
+      "event_source": "server",
+      "event_type": "edx.special_exam.practice.updated",
+      "host": "2a7c2b157142",
+      "ip": "172.18.0.1",
+      "org_id": "UCP",
+      "page": null,
+      "path": "/xblock/block-v1:UCP+CS4230+PF_2018+type@sequential+block@3fd97eafc6a349b5b980143d21ccf2b3",
+      "session": "9fe2bfc4b8118c233e67566435b1cfca",
+      "user_id": 13
+    }
+  },
+  "id": "urn:uuid:d4618c23-d612-4709-8d9a-478d87808067",
+  "object": {
+    "extensions": {
+      "exam_content_id": "block-v1:UCP+CS4230+PF_2018+type@sequential+block@3fd97eafc6a349b5b980143d21ccf2b3",
+      "exam_default_time_limit_mins": 30,
+      "exam_id": 9,
+      "exam_is_active": true,
+      "exam_is_practice_exam": true,
+      "exam_is_proctored": true
+    },
+    "id": "http://localhost:18010/course/course-v1:UCP+CS4230+PF_2018",
+    "name": "Paractice",
+    "type": "Assessment"
+  },
+  "referrer": {
+    "id": "http://localhost:18010/course/course-v1:UCP+CS4230+PF_2018",
+    "type": "WebPage"
+  },
+  "type": "Event"
+}

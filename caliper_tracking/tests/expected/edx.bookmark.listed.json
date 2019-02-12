@@ -1,0 +1,42 @@
+{
+  "@context": "http://purl.imsglobal.org/ctx/caliper/v1p1",
+  "action": "NavigatedTo",
+  "actor": {
+    "id": "http://localhost:18000/u/honor",
+    "name": "honor",
+    "type": "Person"
+  },
+  "eventTime": "2018-10-16T14:23:24.785Z",
+  "extensions": {
+    "extra_fields": {
+      "accept_language": "en-US,en;q=0.9,ur-PK;q=0.8,ur;q=0.7",
+      "agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36",
+      "event_source": "server",
+      "event_type": "edx.bookmark.listed",
+      "host": "747befdb3d9d",
+      "ip": "172.18.0.1",
+      "org_id": "",
+      "page": null,
+      "path": "/api/bookmarks/v1/bookmarks/",
+      "session": "87d4e5619e69f6e03cfa8d8ded61d197",
+      "user_id": 6
+    }
+  },
+  "id": "urn:uuid:d4618c23-d612-4709-8d9a-478d87808067",
+  "object": {
+    "id": "http://localhost:18000/courses/course-v1:edx+cs-101+2018/bookmarks/",
+    "type": "WebPage",
+    "extensions": {
+      "bookmarks_count": 1,
+      "course_id": "course-v1:edx+cs-101+2018",
+      "list_type": "per_course",
+      "page_number": 1,
+      "page_size": 10
+    }
+  },
+  "referrer": {
+    "id": "http://localhost:18000/courses/course-v1:edx+cs-101+2018/bookmarks/",
+    "type": "WebPage"
+  },
+  "type": "NavigationEvent"
+}

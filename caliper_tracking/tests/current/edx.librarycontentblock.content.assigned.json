@@ -1,0 +1,32 @@
+{
+  "accept_language": "en-US,en;q=0.5",
+  "agent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:62.0) Gecko/20100101 Firefox/62.0",
+  "context": {
+    "course_id": "course-v1:Arbisoft+1+1",
+    "course_user_tags": {},
+    "org_id": "Arbisoft",
+    "path": "/courses/course-v1:Arbisoft+1+1/course/",
+    "user_id": 14
+  },
+  "event": {
+    "added": [
+      null
+    ],
+    "location": "block-v1:Arbisoft+1+1+type@library_content+block@cc1ac7863baf44d283ba11386733dde6",
+    "max_count": 1,
+    "previous_count": 0,
+    "result": [
+      null
+    ]
+  },
+  "event_source": "server",
+  "event_type": "edx.librarycontentblock.content.assigned",
+  "host": "061206df0efd",
+  "ip": "172.19.0.1",
+  "name": "edx.librarycontentblock.content.assigned",
+  "page": null,
+  "referer": "http://localhost:18000/login?next=%2Fcourses%2Fcourse-v1%3AArbisoft%2B1%2B1%2Fcourse%2F",
+  "session": "02d42e65f86ea01aa03e657ff5e0f758",
+  "time": "2018-10-18T15:34:59.194697+00:00",
+  "username": "testuser"
+}

@@ -1,0 +1,45 @@
+{
+  "@context": "http://purl.imsglobal.org/ctx/caliper/v1p1",
+  "action": "Viewed",
+  "actor": {
+    "id": "http://localhost:18000/u/verified",
+    "name": "verified",
+    "type": "Person"
+  },
+  "eventTime": "2018-12-24T09:56:52.848Z",
+  "extensions": {
+    "extra_fields": {
+      "accept_language": "en;q=1.0, en;q=1.0",
+      "agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36",
+      "asides": {},
+      "course_id": "course-v1:UCP+CS4230+PF_2018",
+      "course_user_tags": {},
+      "event_source": "server",
+      "event_type": "edx.googlecomponent.document.displayed",
+      "host": "e5d2c598af1a",
+      "ip": "172.18.0.1",
+      "module": {
+        "display_name": "Google Document",
+        "usage_key": "block-v1:UCP+CS4230+PF_2018+type@google-document+block@627b371b59e341f49362bd016f0a517d"
+      },
+      "org_id": "UCP",
+      "page": "x_module",
+      "path": "/courses/course-v1:UCP+CS4230+PF_2018/xblock/block-v1:UCP+CS4230+PF_2018+type@google-document+block@627b371b59e341f49362bd016f0a517d/handler/publish_event",
+      "user_id": 8
+    }
+  },
+  "id": "urn:uuid:3fa5fb93-1e64-4695-a953-9842e31b7da9",
+  "object": {
+    "extensions": {
+      "displayed_in": "iframe",
+      "url": "https://docs.google.com/presentation/d/1x2ZuzqHsMoh1epK8VsGAlanSo7r9z55ualwQlj-ofBQ/embed?start=true&loop=true&delayms=10000"
+    },
+    "id": "http://localhost:18000/courses/course-v1:UCP+CS4230+PF_2018/courseware/360ca77f129246b2b495e40ade55c066/7b004f7dbea440ec8d71f80ae9c4c369/?child=last",
+    "type": "Document"
+  },
+  "referrer": {
+    "id": "http://localhost:18000/courses/course-v1:UCP+CS4230+PF_2018/courseware/360ca77f129246b2b495e40ade55c066/7b004f7dbea440ec8d71f80ae9c4c369/?child=last",
+    "type": "WebPage"
+  },
+  "type": "ViewEvent"
+}

@@ -1,0 +1,21 @@
+{
+    "accept_language": "en-US,en;q=0.9",
+    "agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36",
+    "context": {
+        "course_id": "course-v1:edX+S001+2019_T1",
+        "org_id": "edX",
+        "path": "/event",
+        "user_id": 6
+    },
+    "event": "{\"done\": true}",
+    "event_source": "browser",
+    "event_type": "edx.done.toggled",
+    "host": "4a3fad7cf959",
+    "ip": "172.18.0.1",
+    "name": "edx.done.toggled",
+    "page": "http://localhost:18000/courses/course-v1:edX+S001+2019_T1/courseware/2d06e2e5a2e346088d1c22ebcee34fd5/2c9fb1dd56234b7eb1c6e87d77c816ba/1?activate_block_id=block-v1%3AedX%2BS001%2B2019_T1%2Btype%40vertical%2Bblock%40d832207a95094746860341e58eb84dff",
+    "referer": "http://localhost:18000/courses/course-v1:edX+S001+2019_T1/courseware/2d06e2e5a2e346088d1c22ebcee34fd5/2c9fb1dd56234b7eb1c6e87d77c816ba/1?activate_block_id=block-v1%3AedX%2BS001%2B2019_T1%2Btype%40vertical%2Bblock%40d832207a95094746860341e58eb84dff",
+    "session": "393b62724a21645ab0321ebd8e79b629",
+    "time": "2019-01-02T10:22:20.914690+00:00",
+    "username": "honor"
+}

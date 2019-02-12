@@ -1,0 +1,27 @@
+{
+  "accept_language": "en-US,en;q=0.9",
+  "agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36",
+  "context": {
+    "course_id": "course-v1:edX+DemoX+Demo_Course",
+    "course_user_tags": {},
+    "org_id": "edX",
+    "path": "/courses/course-v1:edX+DemoX+Demo_Course/course/",
+    "user_id": 6
+  },
+  "event": {
+    "group_id": 15803546,
+    "group_name": "Group B",
+    "partition_id": 1912245073,
+    "partition_name": "Learners Complete"
+  },
+  "event_source": "server",
+  "event_type": "xmodule.partitions.assigned_user_to_partition",
+  "host": "e5d2c598af1a",
+  "ip": "172.18.0.1",
+  "name": "xmodule.partitions.assigned_user_to_partition",
+  "page": null,
+  "referer": "http://localhost:18000/dashboard",
+  "session": "0b84391f3c4c81c5ced45dd0e445cd7e",
+  "time": "2019-01-03T07:52:46.165854+00:00",
+  "username": "honor"
+}

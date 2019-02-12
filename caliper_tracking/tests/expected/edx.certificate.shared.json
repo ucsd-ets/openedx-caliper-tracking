@@ -1,0 +1,43 @@
+{
+  "@context": "http://purl.imsglobal.org/ctx/caliper/v1p1",
+  "action": "Shared",
+  "actor": {
+    "id": "http://localhost:18000/u/verified",
+    "type": "Person"
+  },
+  "eventTime": "2019-01-09T09:57:44.758Z",
+  "extensions": {
+    "extra_fields": {
+      "accept_language": "en-US,en;q=0.9",
+      "agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.80 Safari/537.36",
+      "course_id": "",
+      "event_source": "browser",
+      "event_type": "edx.certificate.shared",
+      "host": "8c3b43aa7b1b",
+      "ip": "172.18.0.1",
+      "org_id": "",
+      "page": "http://localhost:18000/certificates/user/8/course/course-v1:pucit+cs_08+2019_F",
+      "path": "/event",
+      "session": "51ec4c05447ef4a00a9427f588c3e840",
+      "user_id": 8
+    }
+  },
+  "id": "urn:uuid:2635b9dd-0061-4059-ac61-2718ab366f75",
+  "object": {
+    "extensions": {
+      "certificate_id": "402fb5284c2b413eafa8f569867562a2",
+      "certificate_url": "http://localhost:18000/certificates/user/8/course/course-v1:pucit+cs_08+2019_F",
+      "course_id": "course-v1:pucit+cs_08+2019_F",
+      "enrollment_mode": "verified",
+      "social_network": "LinkedIn",
+      "user_id": "8"
+    },
+    "id": "http://localhost:18000/certificates/user/8/course/course-v1:pucit+cs_08+2019_F",
+    "type": "Document"
+  },
+  "referrer": {
+    "id": "http://localhost:18000/certificates/user/8/course/course-v1:pucit+cs_08+2019_F",
+    "type": "WebPage"
+  },
+  "type": "Event"
+}

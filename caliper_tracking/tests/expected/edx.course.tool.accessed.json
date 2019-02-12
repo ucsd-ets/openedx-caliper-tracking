@@ -1,0 +1,37 @@
+{
+    "eventTime":"2018-12-10T06:37:32.332Z",
+    "action": "NavigatedTo",
+    "type": "NavigationEvent",
+    "referrer":{
+        "id":"http://localhost:18000/courses/course-v1:edX+DemoX+Demo_Course/course/",
+        "type": "WebPage"
+    },
+    "actor":{
+        "id":"http://localhost:18000/u/honor",
+        "type": "Person",
+        "name": "honor"
+    },
+    "extensions":{
+        "extra_fields":{
+            "event_source":"browser",
+            "host":"e5d2c598af1a",
+            "session":"8f4bc12afc481a0ec6084b29d67795ab",
+            "user_id":6,
+            "course_id":"course-v1:edX+DemoX+Demo_Course",
+            "event_type":"edx.course.tool.accessed",
+            "accept_language":"en-US,en;q=0.9",
+            "path":"/event",
+            "org_id":"edX",
+            "event":"{}",
+            "ip":"172.18.0.1",
+            "page":"http://localhost:18000/courses/course-v1:edX+DemoX+Demo_Course/course/",
+            "agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36"
+        }
+    },
+    "object": {
+        "id": "http://localhost:18000/courses/course-v1:edX+DemoX+Demo_Course/course/",
+        "type": "WebPage"
+    },
+    "@context":"http://purl.imsglobal.org/ctx/caliper/v1p1",
+    "id":"urn:uuid:afda01cb-7a5e-442c-8da3-ca9ce709f361"
+}

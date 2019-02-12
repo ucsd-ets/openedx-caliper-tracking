@@ -1,0 +1,39 @@
+{
+  "@context": "http://purl.imsglobal.org/ctx/caliper/v1p1",
+  "action": "Submitted",
+  "actor": {
+    "id": "http://localhost:18000/u/ali",
+    "name": "ali",
+    "type": "Person"
+  },
+  "eventTime": "2018-12-13T07:20:03.205Z",
+  "extensions": {
+    "extra_fields": {
+      "accept_language": "en-US,en;q=0.9",
+      "agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36",
+      "course_id": "course-v1:edX+DemoX+Demo_Course",
+      "event_source": "browser",
+      "event_type": "problem_check",
+      "host": "9c680a5d44c8",
+      "ip": "172.18.0.1",
+      "org_id": "edX",
+      "page": "http://localhost:18000/courses/course-v1:edX+DemoX+Demo_Course/courseware/1414ffd5143b4b508f739b563ab468b7/workflow/6?activate_block_id=block-v1%3AedX%2BDemoX%2BDemo_Course%2Btype%40vertical%2Bblock%40vertical_36e0beb03f0a",
+      "path": "/event",
+      "session": "b14f2496665d403273fb0fe04a37dfd3",
+      "user_id": 17
+    }
+  },
+  "id": "urn:uuid:dad88464-0c20-4a19-a1ba-ddf2f9c3ff33",
+  "object": {
+    "extensions": {
+      "event": "input_ex_practice_3_2_1=797"
+    },
+    "id": "http://localhost:18000/courses/course-v1:edX+DemoX+Demo_Course/courseware/1414ffd5143b4b508f739b563ab468b7/workflow/6?activate_block_id=block-v1%3AedX%2BDemoX%2BDemo_Course%2Btype%40vertical%2Bblock%40vertical_36e0beb03f0a",
+    "type": "Assessment"
+  },
+  "referrer": {
+    "id": "http://localhost:18000/courses/course-v1:edX+DemoX+Demo_Course/courseware/1414ffd5143b4b508f739b563ab468b7/workflow/6?activate_block_id=block-v1%3AedX%2BDemoX%2BDemo_Course%2Btype%40vertical%2Bblock%40vertical_36e0beb03f0a",
+    "type": "WebPage"
+  },
+  "type": "AssessmentEvent"
+}

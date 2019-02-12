@@ -1,0 +1,26 @@
+{
+  "accept_language": "en-US,en;q=0.9",
+  "agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36",
+  "context": {
+    "course_id": "course-v1:edX+E2E-101+course",
+    "course_user_tags": {},
+    "org_id": "edX",
+    "path": "/courses/course-v1:edX+E2E-101+course/cohorts/3/add",
+    "user_id": 13
+  },
+  "event": {
+    "cohort_id": 4,
+    "cohort_name": "test cohort 2",
+    "user_id": 2
+  },
+  "event_source": "server",
+  "event_type": "edx.cohort.user_removed",
+  "host": "ec7deba3430f",
+  "ip": "172.18.0.1",
+  "name": "edx.cohort.user_removed",
+  "page": null,
+  "referer": "http://localhost:18000/courses/course-v1:edX+E2E-101+course/instructor",
+  "session": "cbcc997cc8cc58a6525aa345f1a6f0cf",
+  "time": "2018-12-20T07:08:08.611267+00:00",
+  "username": "osamaarshad"
+}

@@ -1,0 +1,32 @@
+{
+  "accept_language": "en;q=1.0, en;q=1.0",
+  "agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36",
+  "context": {
+    "asides": {},
+    "course_id": "course-v1:edX+DemoX+Demo_Course",
+    "course_user_tags": {},
+    "module": {
+      "display_name": "Survey",
+      "usage_key": "block-v1:edX+DemoX+Demo_Course+type@survey+block@4b2805d63ca940f98b1311f7f30c316e"
+    },
+    "org_id": "edX",
+    "path": "/courses/course-v1:edX+DemoX+Demo_Course/xblock/block-v1:edX+DemoX+Demo_Course+type@survey+block@4b2805d63ca940f98b1311f7f30c316e/handler/vote",
+    "user_id": 6
+  },
+  "event": {
+    "choices": {
+      "enjoy": "Y",
+      "learn": "M",
+      "recommend": "Y"
+    },
+    "url_name": "4b2805d63ca940f98b1311f7f30c316e"
+  },
+  "event_source": "server",
+  "event_type": "xblock.survey.submitted",
+  "host": "e5d2c598af1a",
+  "ip": "172.18.0.1",
+  "page": "x_module",
+  "referer": "http://localhost:18000/courses/course-v1:edX+DemoX+Demo_Course/courseware/57cffc9e27e5494aa72444b142cc79fd/da1e0ff2718b471b88ad9a5d5fede8a7/1?activate_block_id=block-v1%3AedX%2BDemoX%2BDemo_Course%2Btype%40vertical%2Bblock%40c1f57e13fe9d4cc7b7780c8fb5d26ff5",
+  "time": "2018-12-18T08:01:49.115333+00:00",
+  "username": "honor"
+}

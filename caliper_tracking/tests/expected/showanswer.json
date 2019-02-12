@@ -1,0 +1,44 @@
+{
+    "@context": "http://purl.imsglobal.org/ctx/caliper/v1p1",
+    "action": "Viewed",
+    "actor": {
+        "id": "http://localhost:18000/u/testlms",
+        "name": "testlms",
+        "type": "Person"
+    },
+    "eventTime": "2018-10-19T10:39:59.885Z",
+    "extensions": {
+        "extra_fields": {
+            "accept_language": "en;q=1.0, en;q=1.0",
+            "agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.67 Safari/537.36",
+            "asides": {},
+            "course_id": "course-v1:TestUni+ITP47+2018_T3",
+            "course_user_tags": {},
+            "event_source": "server",
+            "event_type": "showanswer",
+            "host": "3c31c9770429",
+            "ip": "172.18.0.1",
+            "module": {
+                "display_name": "Text Input",
+                "usage_key": "block-v1:TestUni+ITP47+2018_T3+type@problem+block@381ebb822df34fbfbe70e649421245f4"
+            },
+            "org_id": "TestUni",
+            "page": "x_module",
+            "path": "/courses/course-v1:TestUni+ITP47+2018_T3/xblock/block-v1:TestUni+ITP47+2018_T3+type@problem+block@381ebb822df34fbfbe70e649421245f4/handler/xmodule_handler/problem_show",
+            "user_id": 14
+        }
+    },
+    "id": "urn:uuid:13bc41f6-8406-4006-b929-c9f1ac156ada",
+    "object": {
+        "extensions": {
+            "problem_id": "block-v1:TestUni+ITP47+2018_T3+type@problem+block@381ebb822df34fbfbe70e649421245f4"
+        },
+        "id": "http://localhost:18000/courses/course-v1:TestUni+ITP47+2018_T3/courseware/49442fdda84645d0950f613ca3052292/becccc9761f544aabd448a9167ef51a2/?child=first",
+        "type": "Frame"
+    },
+    "referrer": {
+        "id": "http://localhost:18000/courses/course-v1:TestUni+ITP47+2018_T3/courseware/49442fdda84645d0950f613ca3052292/becccc9761f544aabd448a9167ef51a2/?child=first",
+        "type": "WebPage"
+    },
+    "type": "ViewEvent"
+}

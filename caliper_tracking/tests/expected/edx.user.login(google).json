@@ -1,0 +1,44 @@
+{
+    "@context": "http://purl.imsglobal.org/ctx/caliper/v1p1",
+    "action": "LoggedIn",
+    "actor": {
+        "id": "http://localhost:18000/u/danial_malik",
+        "name": "danial_malik",
+        "type": "Person"
+    },
+    "eventTime": "2019-01-30T09:07:03.262Z",
+    "extensions": {
+        "extra_fields": {
+            "accept_language": "en-US,en;q=0.9",
+            "agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36",
+            "course_id": "",
+            "event_source": "server",
+            "event_type": "edx.user.login",
+            "host": "427bd71e514d",
+            "ip": "172.18.0.1",
+            "org_id": "",
+            "page": null,
+            "path": "/user_api/v1/account/login_session/",
+            "session": "",
+            "user_id": null
+        }
+    },
+    "id": "urn:uuid:4a725288-39af-4735-a3b4-21e2c002ac38",
+    "object": {
+        "extensions": {
+            "email": "danial.malik@arbisoft.com",
+            "is_new": false,
+            "new_association": false,
+            "user_id": 15,
+            "username": "danial_malik",
+            "verified": false
+        },
+        "id": "http://localhost:18000",
+        "type": "SoftwareApplication"
+    },
+    "referrer": {
+        "id": "http://localhost:18000/login?next=%2F",
+        "type": "WebPage"
+    },
+    "type": "SessionEvent"
+}

@@ -1,0 +1,42 @@
+{
+    "@context": "http://purl.imsglobal.org/ctx/caliper/v1p1",
+    "action": "ChangedSize",
+    "actor": {
+        "id": "http://localhost:18000/u/honor",
+        "name": "honor",
+        "type": "Person"
+    },
+    "eventTime": "2018-10-25T10:25:27.902Z",
+    "extensions": {
+        "extra_fields": {
+            "accept_language": "en-US,en;q=0.9",
+            "agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.67 Safari/537.36",
+            "course_id": "course-v1:TestUni+ITP47+2018_T3",
+            "event_source": "browser",
+            "event_type": "textbook.pdf.display.scaled",
+            "host": "3c31c9770429",
+            "ip": "172.18.0.1",
+            "org_id": "edX",
+            "page": "http://localhost:18000/courses/course-v1:edX+DemoX+Demo_Course/pdfbook/0/?viewer=true&file=/assets/courseware/v1/55969d87f0409b18ed8d979465e80f1a/asset-v1:edX+DemoX+Demo_Course+type@asset+block/gazatte_11th_2018.pdf#zoom=page-fit&disableRange=true",
+            "path": "/event",
+            "session": "a1ca0425f56e74b6766acbd374a2241c",
+            "user_id": 2
+        }
+    },
+    "id": "urn:uuid:fa25a902-275e-4e5b-90b6-bd2779608dce",
+    "object": {
+        "extensions": {
+            "amount": 0.7,
+            "chapter": "/assets/courseware/v1/55969d87f0409b18ed8d979465e80f1a/asset-v1:edX+DemoX+Demo_Course+type@asset+block/gazatte_11th_2018.pdf",
+            "name": "textbook.pdf.display.scaled",
+            "page": 23
+        },
+        "id": "http://localhost:18000/courses/course-v1:edX+DemoX+Demo_Course/pdfbook/0/?viewer=true&file=/assets/courseware/v1/55969d87f0409b18ed8d979465e80f1a/asset-v1:edX+DemoX+Demo_Course+type@asset+block/gazatte_11th_2018.pdf",
+        "type": "Document"
+    },
+    "referrer": {
+        "id": "http://localhost:18000/courses/course-v1:edX+DemoX+Demo_Course/pdfbook/0/?viewer=true&file=/assets/courseware/v1/55969d87f0409b18ed8d979465e80f1a/asset-v1:edX+DemoX+Demo_Course+type@asset+block/gazatte_11th_2018.pdf",
+        "type": "WebPage"
+    },
+    "type": "Event"
+}

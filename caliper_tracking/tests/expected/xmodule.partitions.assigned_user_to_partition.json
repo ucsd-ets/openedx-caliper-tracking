@@ -1,0 +1,53 @@
+{
+  "@context": "http://purl.imsglobal.org/ctx/caliper/v1p1",
+  "action": "Linked",
+  "actor": {
+    "id": "http://localhost:18000",
+    "type": "SoftwareApplication"
+  },
+  "eventTime": "2019-01-03T07:52:46.165Z",
+  "extensions": {
+    "extra_fields": {
+      "accept_language": "en-US,en;q=0.9",
+      "agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36",
+      "course_id": "course-v1:edX+DemoX+Demo_Course",
+      "course_user_tags": {},
+      "event_source": "server",
+      "event_type": "xmodule.partitions.assigned_user_to_partition",
+      "host": "e5d2c598af1a",
+      "ip": "172.18.0.1",
+      "org_id": "edX",
+      "page": null,
+      "path": "/courses/course-v1:edX+DemoX+Demo_Course/course/",
+      "session": "0b84391f3c4c81c5ced45dd0e445cd7e"
+    }
+  },
+  "id": "urn:uuid:d4618c23-d612-4709-8d9a-478d87808067",
+  "object": {
+    "id": "http://localhost:18000/dashboard",
+    "member": {
+      "extensions": {
+        "user_id": 6
+      },
+      "id": "http://localhost:18000/u/honor",
+      "name": "honor",
+      "type": "Person"
+    },
+    "organization": {
+      "extensions": {
+        "group_id": 15803546,
+        "group_name": "Group B",
+        "partition_id": 1912245073,
+        "partition_name": "Learners Complete"
+      },
+      "id": "http://localhost:18000/dashboard",
+      "type": "Group"
+    },
+    "type": "Membership"
+  },
+  "referrer": {
+    "id": "http://localhost:18000/dashboard",
+    "type": "WebPage"
+  },
+  "type": "Event"
+}

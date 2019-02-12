@@ -1,0 +1,54 @@
+{
+  "@context": "http://purl.imsglobal.org/ctx/caliper/v1p1",
+  "action": "Submitted",
+  "actor": {
+    "id": "http://localhost:18000/u/honor",
+    "name": "honor",
+    "type": "Person"
+  },
+  "eventTime": "2018-10-22T10:00:33.023Z",
+  "extensions": {
+    "extra_fields": {
+      "accept_language": "en-US,en;q=0.9",
+      "agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36",
+      "course_id": "course-v1:UCP+CS4230+PF_2018",
+      "course_user_tags": {},
+      "event_source": "server",
+      "event_type": "edx.special_exam.timed.attempt.submitted",
+      "host": "e5d2c598af1a",
+      "ip": "172.18.0.1",
+      "org_id": "UCP",
+      "page": null,
+      "path": "/courses/course-v1:UCP+CS4230+PF_2018/courseware/f709f9f114c14ec7b5be4b31bc6990f0/4657fcf587b0487a880a16b4f7723adf/",
+      "session": "4e6cca893d8030b2540a38a313770682",
+      "user_id": 6
+    }
+  },
+  "id": "urn:uuid:cd088ca7-c044-405c-bb41-0b2a8506f907",
+  "object": {
+    "extensions": {
+      "attempt_allowed_time_limit_mins": 10,
+      "attempt_code": "C23A176A-E89B-4FA6-9C81-3C0D083DF753",
+      "attempt_completed_at": "2018-10-22T10:00:27.289307+00:00",
+      "attempt_event_elapsed_time_secs": 605.734101,
+      "attempt_id": 1,
+      "attempt_started_at": "2018-10-22T09:50:27.289307+00:00",
+      "attempt_status": "submitted",
+      "attempt_user_id": 6,
+      "exam_content_id": "block-v1:UCP+CS4230+PF_2018+type@sequential+block@4657fcf587b0487a880a16b4f7723adf",
+      "exam_default_time_limit_mins": 10,
+      "exam_id": 1,
+      "exam_is_active": true,
+      "exam_is_practice_exam": false,
+      "exam_is_proctored": false
+    },
+    "id": "http://localhost:18000/courses/course-v1:UCP+CS4230+PF_2018/courseware/f709f9f114c14ec7b5be4b31bc6990f0/4657fcf587b0487a880a16b4f7723adf/?activate_block_id=block-v1%3AUCP%2BCS4230%2BPF_2018%2Btype%40sequential%2Bblock%404657fcf587b0487a880a16b4f7723adf",
+    "name": "Test",
+    "type": "Assessment"
+  },
+  "referrer": {
+    "id": "http://localhost:18000/courses/course-v1:UCP+CS4230+PF_2018/courseware/f709f9f114c14ec7b5be4b31bc6990f0/4657fcf587b0487a880a16b4f7723adf/?activate_block_id=block-v1%3AUCP%2BCS4230%2BPF_2018%2Btype%40sequential%2Bblock%404657fcf587b0487a880a16b4f7723adf",
+    "type": "WebPage"
+  },
+  "type": "AssessmentEvent"
+}

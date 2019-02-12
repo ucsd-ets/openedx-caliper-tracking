@@ -1,0 +1,21 @@
+{
+  "accept_language": "en-US,en;q=0.9,ur-PK;q=0.8,ur;q=0.7",
+  "agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36",
+  "context": {
+    "course_id": "",
+    "org_id": "",
+    "path": "/event",
+    "user_id": 7
+  },
+  "event": "{\"location\": \"learner_dashboard\"}",
+  "event_source": "browser",
+  "event_type": "edx.course.enrollment.upgrade.clicked",
+  "host": "http://localhost:18000/",
+  "ip": "116.58.62.58",
+  "name": "edx.course.enrollment.upgrade.clicked",
+  "page": "http://localhost:18000/dashboard",
+  "referer": "http://localhost:18000/dashboard",
+  "session": "f3029807d5ac0b71b59b53e9e789f0fc",
+  "time": "2018-10-17T13:08:35.005410+00:00",
+  "username": "honor"
+}

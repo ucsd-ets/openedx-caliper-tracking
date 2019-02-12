@@ -1,0 +1,21 @@
+{
+  "accept_language": "en-US,en;q=0.9",
+  "agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.80 Safari/537.36",
+  "context": {
+    "course_id": "course-v1:PUCIT+CS520+2018_T4",
+    "org_id": "PUCIT",
+    "path": "/event",
+    "user_id": 2
+  },
+  "event": "{\"tab_count\": 3, \"widget_placement\": \"top\", \"current_tab\": 1, \"id\": \"block-v1:PUCIT+CS520+2018_T4+type@sequential+block@02f02182a6a1465ea4c996bbe56876be\"}",
+  "event_source": "browser",
+  "event_type": "edx.ui.lms.sequence.previous_selected",
+  "host": "8c3b43aa7b1b",
+  "ip": "172.18.0.1",
+  "name": "edx.ui.lms.sequence.previous_selected",
+  "page": "http://localhost:18000/courses/course-v1:PUCIT+CS520+2018_T4/courseware/869d2ada3f0947c78095d00d691bdf96/02f02182a6a1465ea4c996bbe56876be/1?activate_block_id=block-v1%3APUCIT%2BCS520%2B2018_T4%2Btype%40vertical%2Bblock%408795d7c4a113498fb18e1b91b61d5e46",
+  "referer": "http://localhost:18000/courses/course-v1:PUCIT+CS520+2018_T4/courseware/869d2ada3f0947c78095d00d691bdf96/02f02182a6a1465ea4c996bbe56876be/1?activate_block_id=block-v1%3APUCIT%2BCS520%2B2018_T4%2Btype%40vertical%2Bblock%408795d7c4a113498fb18e1b91b61d5e46",
+  "session": "876a65b3d7fd81130a6570d4ed410070",
+  "time": "2018-12-12T14:10:05.236005+00:00",
+  "username": "edx"
+}

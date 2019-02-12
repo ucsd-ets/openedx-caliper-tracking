@@ -1,0 +1,41 @@
+{
+    "@context": "http://purl.imsglobal.org/ctx/caliper/v1p1",
+    "action": "Deleted",
+    "actor": {
+        "id": "http://localhost:18000/u/verified",
+        "name": "verified",
+        "type": "Person"
+    },
+    "eventTime": "2018-12-10T12:19:01.228Z",
+    "extensions": {
+        "extra_fields": {
+            "accept_language": "en-US,en;q=0.9",
+            "agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36",
+            "event_source": "server",
+            "event_type": "edx.bookmark.removed",
+            "host": "8433fad63981",
+            "ip": "172.18.0.1",
+            "org_id": "",
+            "page": null,
+            "path": "/api/bookmarks/v1/bookmarks/verified,block-v1:ar+CS113x+2018_T3+type@vertical+block@ba4ee5b3905747208702f465275733b6/",
+            "session": "08516514c42e3e0316cf4af9909834c8",
+            "user_id": 8
+        }
+    },
+    "id": "urn:uuid:17fe598b-04e3-4e92-9e1e-cfb82dc97d0c",
+    "object": {
+        "extensions": {
+            "bookmark_id": "verified,block-v1:ar+CS113x+2018_T3+type@vertical+block@ba4ee5b3905747208702f465275733b6",
+            "component_type": "vertical",
+            "component_usage_id": "block-v1:ar+CS113x+2018_T3+type@vertical+block@ba4ee5b3905747208702f465275733b6",
+            "course_id": "course-v1:ar+CS113x+2018_T3"
+        },
+        "id": "http://localhost:18000/courses/course-v1:ar+CS113x+2018_T3/courseware/61c5a01d2255496f88a367be5ad525db/766d16ae8c734d6a8304f1fad5d1d088/1?activate_block_id=block-v1%3Aar%2BCS113x%2B2018_T3%2Btype%40vertical%2Bblock%40ba4ee5b3905747208702f465275733b6",
+        "type": "BookmarkAnnotation"
+    },
+    "referrer": {
+        "id": "http://localhost:18000/courses/course-v1:ar+CS113x+2018_T3/courseware/61c5a01d2255496f88a367be5ad525db/766d16ae8c734d6a8304f1fad5d1d088/1?activate_block_id=block-v1%3Aar%2BCS113x%2B2018_T3%2Btype%40vertical%2Bblock%40ba4ee5b3905747208702f465275733b6",
+        "type": "WebPage"
+    },
+    "type": "Event"
+}

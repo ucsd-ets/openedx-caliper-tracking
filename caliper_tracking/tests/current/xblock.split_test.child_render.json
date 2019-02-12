@@ -1,0 +1,28 @@
+{
+  "accept_language": "en;q=1.0, en;q=1.0",
+  "agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36",
+  "context": {
+    "course_id": "course-v1:edX+DemoX+Demo_Course",
+    "course_user_tags": {
+      "xblock.partition_service.partition_1912245073": "15803546"
+    },
+    "module": {
+      "display_name": "Content Experiment",
+      "usage_key": "block-v1:edX+DemoX+Demo_Course+type@split_test+block@085a43101f9b4999a10c2246020bc3a8"
+    },
+    "org_id": "edX",
+    "path": "/courses/course-v1:edX+DemoX+Demo_Course/xblock/block-v1:edX+DemoX+Demo_Course+type@split_test+block@085a43101f9b4999a10c2246020bc3a8/handler/log_child_render",
+    "user_id": 6
+  },
+  "event": {
+    "child_id": "block-v1:edX+DemoX+Demo_Course+type@vertical+block@9934b16ced644f77891a2b782eeaa751"
+  },
+  "event_source": "server",
+  "event_type": "xblock.split_test.child_render",
+  "host": "e5d2c598af1a",
+  "ip": "172.18.0.1",
+  "page": "x_module",
+  "referer": "http://localhost:18000/courses/course-v1:edX+DemoX+Demo_Course/courseware/f343ccb14efb43f0ba5db0a653689618/bdb6a4de284a468b9f407469276f3baa/1?activate_block_id=block-v1%3AedX%2BDemoX%2BDemo_Course%2Btype%40vertical%2Bblock%40724e666b8b99433880772d0db6dc62f1",
+  "time": "2019-01-03T09:04:55.340642+00:00",
+  "username": "honor"
+}

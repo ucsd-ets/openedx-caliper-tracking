@@ -1,0 +1,47 @@
+{
+  "@context": "http://purl.imsglobal.org/ctx/caliper/v1p1",
+  "action": "Removed",
+  "actor": {
+    "id": "http://localhost:18000/u/testuser",
+    "name": "testuser",
+    "type": "Person"
+  },
+  "eventTime": "2018-10-18T15:50:12.385Z",
+  "extensions": {
+    "extra_fields": {
+      "accept_language": "en;q=1.0, en;q=1.0",
+      "agent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:62.0) Gecko/20100101 Firefox/62.0",
+      "event_source": "server",
+      "event_type": "edx.drag_and_drop_v2.feedback.closed",
+      "host": "061206df0efd",
+      "ip": "172.19.0.1",
+      "org_id": "Arbisoft",
+      "page": "x_module",
+      "path": "/courses/course-v1:Arbisoft+1+1/xblock/block-v1:Arbisoft+1+1+type@drag-and-drop-v2+block@b202af4d92cd46c98945e7890890c195/handler/publish_event",
+      "user_id": 14
+    }
+  },
+  "id": "urn:uuid:fa25a902-275e-4e5b-90b6-bd2779608dce",
+  "object": {
+    "extensions": {
+      "content": "Correct! This one belongs to The Top Zone.",
+      "manually": true,
+      "truncated": false,
+      "asides": {},
+      "course_id": "course-v1:Arbisoft+1+1",
+      "course_user_tags": {},
+      "module": {
+        "display_name": "Drag and Drop",
+        "usage_key": "block-v1:Arbisoft+1+1+type@drag-and-drop-v2+block@b202af4d92cd46c98945e7890890c195"
+      },
+      "org_id": "Arbisoft"
+    },
+    "id": "http://localhost:18000/courses/course-v1:Arbisoft+1+1/courseware/2c419f3600e64ab2a87ae95dc378132e/59694169c106479ea8ea75036cb4bb1c/3?activate_block_id=block-v1%3AArbisoft%2B1%2B1%2Btype%40vertical%2Bblock%40f9c05c5497cd4d92a4c9c90d5e39fe28",
+    "type": "Frame"
+  },
+  "referrer": {
+    "id": "http://localhost:18000/courses/course-v1:Arbisoft+1+1/courseware/2c419f3600e64ab2a87ae95dc378132e/59694169c106479ea8ea75036cb4bb1c/3?activate_block_id=block-v1%3AArbisoft%2B1%2B1%2Btype%40vertical%2Bblock%40f9c05c5497cd4d92a4c9c90d5e39fe28",
+    "type": "WebPage"
+  },
+  "type": "Event"
+}

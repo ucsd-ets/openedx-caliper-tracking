@@ -1,0 +1,21 @@
+{
+  "accept_language": "en-US,en;q=0.9",
+  "agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36",
+  "context": {
+    "course_id": "course-v1:edX+DemoX+Demo_Course",
+    "org_id": "edX",
+    "path": "/event",
+    "user_id": 6
+  },
+  "event": "{\"target_tab\": 1, \"old\": 7, \"current_tab\": 7, \"tab_count\": 7, \"new\": 1, \"widget_placement\": \"top\", \"id\": \"block-v1:edX+DemoX+Demo_Course+type@sequential+block@19a30717eff543078a5d94ae9d6c18a5\"}",
+  "event_source": "browser",
+  "event_type": "seq_goto",
+  "host": "e5d2c598af1a",
+  "ip": "172.18.0.1",
+  "name": "edx.ui.lms.sequence.tab_selected",
+  "page": "http://localhost:18000/courses/course-v1:edX+DemoX+Demo_Course/courseware/interactive_demonstrations/19a30717eff543078a5d94ae9d6c18a5/?child=first",
+  "referer": "http://localhost:18000/courses/course-v1:edX+DemoX+Demo_Course/courseware/interactive_demonstrations/19a30717eff543078a5d94ae9d6c18a5/?child=first",
+  "session": "3a045173e7f98cc06e3e8bac4f2389f6",
+  "time": "2018-12-17T12:41:36.236948+00:00",
+  "username": "honor"
+}

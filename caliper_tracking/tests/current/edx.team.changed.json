@@ -1,0 +1,27 @@
+{
+  "accept_language": "en-US,en;q=0.9",
+  "agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.80 Safari/537.36",
+  "context": {
+    "course_id": "course-v1:edx+CS0110+2014_T",
+    "org_id": "edx",
+    "path": "/api/team/v0/teams/team1-00f9ce77ea4a4f71bcf775857df8e34e",
+    "user_id": 2
+  },
+  "event": {
+    "field": "name",
+    "new": "team12",
+    "old": "team1",
+    "team_id": "team1-00f9ce77ea4a4f71bcf775857df8e34e",
+    "truncated": []
+  },
+  "event_source": "server",
+  "event_type": "edx.team.changed",
+  "host": "8c3b43aa7b1b",
+  "ip": "172.18.0.1",
+  "name": "edx.team.changed",
+  "page": null,
+  "referer": "http://localhost:18000/courses/course-v1:edx+CS0110+2014_T/teams/",
+  "session": "8b5aaa43369a0d612918005f1a65f27f",
+  "time": "2018-12-27T09:41:40.334416+00:00",
+  "username": "honor"
+}

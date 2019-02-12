@@ -1,0 +1,21 @@
+{
+  "accept_language": "en-US,en;q=0.9",
+  "agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36",
+  "context": {
+    "course_id": "course-v1:edX+DemoX+Demo_Course",
+    "org_id": "edX",
+    "path": "/event",
+    "user_id": 6
+  },
+  "event": "input_ex_practice_3_2_1=54",
+  "event_source": "browser",
+  "event_type": "problem_reset",
+  "host": "e5d2c598af1a",
+  "ip": "172.18.0.1",
+  "name": "problem_reset",
+  "page": "http://localhost:18000/courses/course-v1:edX+DemoX+Demo_Course/courseware/1414ffd5143b4b508f739b563ab468b7/workflow/",
+  "referer": "http://localhost:18000/courses/course-v1:edX+DemoX+Demo_Course/courseware/1414ffd5143b4b508f739b563ab468b7/workflow/",
+  "session": "8f4bc12afc481a0ec6084b29d67795ab",
+  "time": "2018-12-11T12:07:17.169592+00:00",
+  "username": "honor"
+}

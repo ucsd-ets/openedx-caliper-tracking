@@ -1,0 +1,21 @@
+{
+    "accept_language": "en-US,en;q=0.9",
+    "agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36",
+    "context": {
+        "course_id": "course-v1:ar+CS113x+2018_T3",
+        "org_id": "ar",
+        "path": "/event",
+        "user_id": 8
+    },
+    "event": "{\"bookmark_id\": \"verified,block-v1:ar+CS113x+2018_T3+type@vertical+block@ba4ee5b3905747208702f465275733b6\", \"component_usage_id\": \"block-v1:ar+CS113x+2018_T3+type@vertical+block@ba4ee5b3905747208702f465275733b6\", \"component_type\": \"vertical\"}",
+    "event_source": "browser",
+    "event_type": "edx.bookmark.accessed",
+    "host": "8433fad63981",
+    "ip": "172.18.0.1",
+    "name": "edx.bookmark.accessed",
+    "page": "http://localhost:18000/courses/course-v1:ar+CS113x+2018_T3/bookmarks/",
+    "referer": "http://localhost:18000/courses/course-v1:ar+CS113x+2018_T3/bookmarks/",
+    "session": "08516514c42e3e0316cf4af9909834c8",
+    "time": "2018-12-10T12:00:24.355673+00:00",
+    "username": "verified"
+}

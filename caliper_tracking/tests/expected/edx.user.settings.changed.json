@@ -1,0 +1,44 @@
+{
+    "@context": "http://purl.imsglobal.org/ctx/caliper/v1p1",
+    "action": "Modified",
+    "actor": {
+        "id": "http://localhost:18000/u/honor",
+        "name": "honor",
+        "type": "Person"
+    },
+    "eventTime": "2018-12-31T07:38:11.783Z",
+    "extensions": {
+        "extra_fields": {
+            "accept_language": "en-US,en;q=0.9",
+            "agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.80 Safari/537.36",
+            "course_id": "",
+            "event_source": "server",
+            "event_type": "edx.user.settings.changed",
+            "host": "8c3b43aa7b1b",
+            "ip": "172.18.0.1",
+            "org_id": "",
+            "page": null,
+            "path": "/api/user/v1/accounts/honor",
+            "session": "8b5aaa43369a0d612918005f1a65f27f",
+            "user_id": 2
+        }
+    },
+    "id": "urn:uuid:fa25a902-275e-4e5b-90b6-bd2779608dce",
+    "object": {
+        "extensions": {
+            "new": 2005,
+            "old": null,
+            "setting": "year_of_birth",
+            "table": "auth_userprofile",
+            "truncated": [],
+            "user_id": 2
+        },
+        "id": "http://localhost:18000/u/honor",
+        "type": "Person"
+    },
+    "referrer": {
+        "id": "http://localhost:18000/account/settings",
+        "type": "WebPage"
+    },
+    "type": "Event"
+}

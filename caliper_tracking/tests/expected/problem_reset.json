@@ -1,0 +1,37 @@
+{
+  "@context": "http://purl.imsglobal.org/ctx/caliper/v1p1",
+  "action": "Reset",
+  "actor": {
+    "id": "http://localhost:18000/u/honor",
+    "name": "honor",
+    "type": "Person"
+  },
+  "eventTime": "2018-12-11T12:07:17.169Z",
+  "extensions": {
+    "extra_fields": {
+      "accept_language": "en-US,en;q=0.9",
+      "agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36",
+      "course_id": "course-v1:edX+DemoX+Demo_Course",
+      "event": "input_ex_practice_3_2_1=54",
+      "event_source": "browser",
+      "event_type": "problem_reset",
+      "host": "e5d2c598af1a",
+      "ip": "172.18.0.1",
+      "org_id": "edX",
+      "page": "http://localhost:18000/courses/course-v1:edX+DemoX+Demo_Course/courseware/1414ffd5143b4b508f739b563ab468b7/workflow/",
+      "path": "/event",
+      "session": "8f4bc12afc481a0ec6084b29d67795ab",
+      "user_id": 6
+    }
+  },
+  "id": "urn:uuid:13bc41f6-8406-4006-b929-c9f1ac156ada",
+  "object": {
+    "id": "http://localhost:18000/courses/course-v1:edX+DemoX+Demo_Course/courseware/1414ffd5143b4b508f739b563ab468b7/workflow/",
+    "type": "Assessment"
+  },
+  "referrer": {
+    "id": "http://localhost:18000/courses/course-v1:edX+DemoX+Demo_Course/courseware/1414ffd5143b4b508f739b563ab468b7/workflow/",
+    "type": "WebPage"
+  },
+  "type": "AssessmentEvent"
+}

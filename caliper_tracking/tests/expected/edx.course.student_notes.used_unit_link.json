@@ -1,0 +1,41 @@
+{
+  "@context": "http://purl.imsglobal.org/ctx/caliper/v1p1",
+  "action": "NavigatedTo",
+  "actor": {
+    "id": "http://localhost:18000/u/honor",
+    "name": "honor",
+    "type": "Person"
+  },
+  "eventTime": "2018-12-26T12:02:49.263Z",
+  "extensions": {
+    "extra_fields": {
+      "accept_language": "en-US,en;q=0.9",
+      "agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.80 Safari/537.36",
+      "event_source": "browser",
+      "event_type": "edx.course.student_notes.used_unit_link",
+      "host": "8c3b43aa7b1b",
+      "ip": "172.18.0.1",
+      "page": "http://localhost:18000/courses/course-v1:edx+CS0110+2014_T/edxnotes/",
+      "path": "/event",
+      "session": "8b5aaa43369a0d612918005f1a65f27f",
+      "user_id": 2
+    }
+  },
+  "id": "urn:uuid:d4618c23-d612-4709-8d9a-478d87808067",
+  "object": {
+    "extensions": {
+      "component_usage_id": "block-v1:edx+CS0110+2014_T+type@html+block@9fd0bcf6454b436bb221a97b796381ef",
+      "note_id": "1",
+      "view": "Search Results",
+      "course_id": "course-v1:edx+CS0110+2014_T",
+      "org_id": "edx"
+    },
+    "id": "http://localhost:18000/courses/course-v1:edx+CS0110+2014_T/edxnotes/",
+    "type": "WebPage"
+  },
+  "referrer": {
+    "id": "http://localhost:18000/courses/course-v1:edx+CS0110+2014_T/edxnotes/",
+    "type": "WebPage"
+  },
+  "type": "NavigationEvent"
+}

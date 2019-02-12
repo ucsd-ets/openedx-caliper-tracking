@@ -1,0 +1,45 @@
+{
+    "@context": "http://purl.imsglobal.org/ctx/caliper/v1p1",
+    "action": "Used",
+    "actor": {
+        "id": "http://localhost:18000/u/honor",
+        "name": "honor",
+        "type": "Person"
+    },
+    "eventTime": "2018-12-31T10:08:19.596Z",
+    "extensions": {
+        "extra_fields": {
+            "accept_language": "en-US,en;q=0.9",
+            "agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.80 Safari/537.36",
+            "course_id": "course-v1:PUCIT+CS520+2018_T4",
+            "event_source": "browser",
+            "event_type": "textbook.pdf.search.highlight.toggled",
+            "host": "8c3b43aa7b1b",
+            "ip": "172.18.0.1",
+            "org_id": "PUCIT",
+            "page": "http://localhost:18000/courses/course-v1:PUCIT+CS520+2018_T4/pdfbook/0/?viewer=true&file=/assets/courseware/v1/4b41a3475132bd861b30a878e30aa56a/asset-v1:PUCIT+CS520+2018_T4+type@asset+block/sample.pdf#zoom=page-fit&disableRange=true",
+            "path": "/event",
+            "session": "8737c3562a6aff281d75f558e683900c",
+            "user_id": 2
+        }
+    },
+    "id": "urn:uuid:d4618c23-d612-4709-8d9a-478d87808067",
+    "object": {
+        "extensions": {
+            "caseSensitive": false,
+            "chapter": "/assets/courseware/v1/4b41a3475132bd861b30a878e30aa56a/asset-v1:PUCIT+CS520+2018_T4+type@asset+block/sample.pdf",
+            "highlightAll": true,
+            "name": "textbook.pdf.search.highlight.toggled",
+            "page": 1,
+            "query": "hello",
+            "status": "Phrase not found"
+        },
+        "id": "http://localhost:18000/courses/course-v1:PUCIT+CS520+2018_T4/pdfbook/0/?viewer=true&file=/assets/courseware/v1/4b41a3475132bd861b30a878e30aa56a/asset-v1:PUCIT+CS520+2018_T4+type@asset+block/sample.pdf",
+        "type": "SoftwareApplication"
+    },
+    "referrer": {
+        "id": "http://localhost:18000/courses/course-v1:PUCIT+CS520+2018_T4/pdfbook/0/?viewer=true&file=/assets/courseware/v1/4b41a3475132bd861b30a878e30aa56a/asset-v1:PUCIT+CS520+2018_T4+type@asset+block/sample.pdf",
+        "type": "WebPage"
+    },
+    "type": "ToolUseEvent"
+}

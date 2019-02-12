@@ -1,0 +1,54 @@
+{
+  "@context": "http://purl.imsglobal.org/ctx/caliper/v1p1",
+  "action": "Linked",
+  "actor": {
+    "id": "http://localhost:18000",
+    "type": "SoftwareApplication"
+  },
+  "eventTime": "2018-10-18T15:34:59.194Z",
+  "extensions": {
+    "extra_fields": {
+      "accept_language": "en-US,en;q=0.5",
+      "agent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:62.0) Gecko/20100101 Firefox/62.0",
+      "course_id": "course-v1:Arbisoft+1+1",
+      "course_user_tags": {},
+      "event_source": "server",
+      "event_type": "edx.librarycontentblock.content.assigned",
+      "host": "061206df0efd",
+      "ip": "172.19.0.1",
+      "org_id": "Arbisoft",
+      "page": null,
+      "path": "/courses/course-v1:Arbisoft+1+1/course/",
+      "session": "02d42e65f86ea01aa03e657ff5e0f758",
+      "user_id": 14,
+      "username": "testuser"
+    }
+  },
+  "id": "urn:uuid:e5891791-3d27-4df1-a272-091806a43dfb",
+  "object": {
+    "extensions": {
+      "learner": {
+        "name": "testuser",
+        "id": "http://localhost:18000/u/testuser",
+        "type": "Person",
+        "user_id": 14
+      },
+      "added": [
+        null
+      ],
+      "location": "block-v1:Arbisoft+1+1+type@library_content+block@cc1ac7863baf44d283ba11386733dde6",
+      "max_count": 1,
+      "previous_count": 0,
+      "result": [
+        null
+      ]
+    },
+    "id": "http://localhost:18000/login?next=%2Fcourses%2Fcourse-v1%3AArbisoft%2B1%2B1%2Fcourse%2F",
+    "type": "Assessment"
+  },
+  "referrer": {
+    "id": "http://localhost:18000/login?next=%2Fcourses%2Fcourse-v1%3AArbisoft%2B1%2B1%2Fcourse%2F",
+    "type": "WebPage"
+  },
+  "type": "Event"
+}

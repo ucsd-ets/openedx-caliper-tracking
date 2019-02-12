@@ -1,0 +1,21 @@
+{
+    "accept_language": "en-US,en;q=0.5",
+    "agent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:64.0) Gecko/20100101 Firefox/64.0",
+    "context": {
+        "course_id": "course-v1:ABC+CS103x+2018_T2",
+        "org_id": "ABC",
+        "path": "/event",
+        "user_id": 8
+    },
+    "event": "{\"code\": \"3_yD_cEKoCk\", \"new_time\": 77, \"old_time\": 60.331156042915346, \"duration\": 141, \"type\": \"onSlideSeek\", \"id\": \"bf17041a4448483eb6a435d619f56fdd\"}",
+    "event_source": "browser",
+    "event_type": "seek_video",
+    "host": "lms.devstack.edx",
+    "ip": "172.18.0.1",
+    "name": "seek_video",
+    "page": "http://localhost:18000/courses/course-v1:ABC+CS103x+2018_T2/courseware/d9266aa5e1ef456e87b75b4f825f95e9/1e28af6317de48b3bc5d1c6c1aefa478/1?activate_block_id=block-v1%3AABC%2BCS103x%2B2018_T2%2Btype%40vertical%2Bblock%40a82c46e65c2d448b97bed53efde166dc",
+    "referer": "http://localhost:18000/courses/course-v1:ABC+CS103x+2018_T2/courseware/d9266aa5e1ef456e87b75b4f825f95e9/1e28af6317de48b3bc5d1c6c1aefa478/1?activate_block_id=block-v1%3AABC%2BCS103x%2B2018_T2%2Btype%40vertical%2Bblock%40a82c46e65c2d448b97bed53efde166dc",
+    "session": "9c64d82a5382491be568dcbcac8763c6",
+    "time": "2018-12-19T09:37:17.459368+00:00",
+    "username": "verified"
+}

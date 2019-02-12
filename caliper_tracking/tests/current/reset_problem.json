@@ -1,0 +1,59 @@
+{
+    "accept_language": "en;q=1.0, en;q=1.0",
+    "agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.67 Safari/537.36",
+    "context": {
+        "asides": {},
+        "course_id": "course-v1:TestUni+ITP47+2018_T3",
+        "course_user_tags": {},
+        "module": {
+            "display_name": "Multiple Choice with Hints and Feedback",
+            "usage_key": "block-v1:TestUni+ITP47+2018_T3+type@problem+block@e0209ebc97ef4d4f89527c158a709121"
+        },
+        "org_id": "TestUni",
+        "path": "/courses/course-v1:TestUni+ITP47+2018_T3/xblock/block-v1:TestUni+ITP47+2018_T3+type@problem+block@e0209ebc97ef4d4f89527c158a709121/handler/xmodule_handler/problem_reset",
+        "user_id": 14
+    },
+    "event": {
+        "new_state": {
+            "correct_map": {},
+            "done": false,
+            "has_saved_answers": false,
+            "input_state": {
+                "e0209ebc97ef4d4f89527c158a709121_2_1": {}
+            },
+            "seed": 1,
+            "student_answers": {}
+        },
+        "old_state": {
+            "correct_map": {
+                "e0209ebc97ef4d4f89527c158a709121_2_1": {
+                    "answervariable": null,
+                    "correctness": "incorrect",
+                    "hint": "",
+                    "hintmode": null,
+                    "msg": "<div class=\"feedback-hint-incorrect\"><div class=\"explanation-title\">Answer</div><span class=\"hint-label\">Incorrect: </span><div class=\"hint-text\">You can specify optional feedback like this, which appears after this answer is submitted.</div></div>",
+                    "npoints": null,
+                    "queuestate": null
+                }
+            },
+            "done": true,
+            "has_saved_answers": false,
+            "input_state": {
+                "e0209ebc97ef4d4f89527c158a709121_2_1": {}
+            },
+            "seed": 1,
+            "student_answers": {
+                "e0209ebc97ef4d4f89527c158a709121_2_1": "choice_0"
+            }
+        },
+        "problem_id": "block-v1:TestUni+ITP47+2018_T3+type@problem+block@e0209ebc97ef4d4f89527c158a709121"
+    },
+    "event_source": "server",
+    "event_type": "reset_problem",
+    "host": "3c31c9770429",
+    "ip": "172.18.0.1",
+    "page": "x_module",
+    "referer": "http://localhost:18000/courses/course-v1:TestUni+ITP47+2018_T3/courseware/49442fdda84645d0950f613ca3052292/becccc9761f544aabd448a9167ef51a2/1?activate_block_id=block-v1%3ATestUni%2BITP47%2B2018_T3%2Btype%40vertical%2Bblock%400c93cd8fba454a9d810d5901265ef6c5",
+    "time": "2018-10-19T09:54:26.433130+00:00",
+    "username": "testlms"
+}

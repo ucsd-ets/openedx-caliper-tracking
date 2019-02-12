@@ -1,0 +1,42 @@
+{
+   "accept_language":"en-US,en;q=0.9",
+   "agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36",
+   "context":{
+      "course_id":"course-v1:ar+CS113x+2018_T3",
+      "course_user_tags":{
+
+      },
+      "org_id":"ar",
+      "path":"/courses/course-v1:ar+CS113x+2018_T3/discussion/threads/5c10dc1e977195008e000000/reply",
+      "user_id":8
+   },
+   "event":{
+      "body":"dummy message",
+      "commentable_id":"course",
+      "discussion":{
+         "id":"5c10dc1e977195008e000000"
+      },
+      "id":"5c1236e0977195008e000003",
+      "options":{
+         "followed":false
+      },
+      "truncated":false,
+      "url":"http://localhost:18000/courses/course-v1:ar+CS113x+2018_T3/discussion/forum/course/threads/5c10dc1e977195008e000000",
+      "user_course_roles":[
+
+      ],
+      "user_forums_roles":[
+         "Student"
+      ]
+   },
+   "event_source":"server",
+   "event_type":"edx.forum.response.created",
+   "host":"8433fad63981",
+   "ip":"172.18.0.1",
+   "name":"edx.forum.response.created",
+   "page":null,
+   "referer":"http://localhost:18000/courses/course-v1:ar+CS113x+2018_T3/discussion/forum/course/threads/5c10dc1e977195008e000000",
+   "session":"e2cd8950d28dbc308ecaedca3793c05c",
+   "time":"2018-12-13T10:39:28.698251+00:00",
+   "username":"verified"
+}

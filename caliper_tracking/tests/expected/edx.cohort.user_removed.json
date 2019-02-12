@@ -1,0 +1,53 @@
+{
+  "@context": "http://purl.imsglobal.org/ctx/caliper/v1p1",
+  "action": "Removed",
+  "actor": {
+    "id": "http://localhost:18000/u/osamaarshad",
+    "name": "osamaarshad",
+    "type": "Person"
+  },
+  "eventTime": "2018-12-20T07:08:08.611Z",
+  "extensions": {
+    "extra_fields": {
+      "accept_language": "en-US,en;q=0.9",
+      "agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36",
+      "course_id": "course-v1:edX+E2E-101+course",
+      "course_user_tags": {},
+      "event_source": "server",
+      "event_type": "edx.cohort.user_removed",
+      "host": "ec7deba3430f",
+      "ip": "172.18.0.1",
+      "org_id": "edX",
+      "page": null,
+      "path": "/courses/course-v1:edX+E2E-101+course/cohorts/3/add",
+      "session": "cbcc997cc8cc58a6525aa345f1a6f0cf",
+      "user_id": 13
+    }
+  },
+  "id": "urn:uuid:d4618c23-d612-4709-8d9a-478d87808067",
+  "object": {
+    "id": "http://localhost:18000/courses/course-v1:edX+E2E-101+course/instructor#view-cohort_management",
+    "member": {
+      "extensions": {
+        "user_id": 2
+      },
+      "id": "http://localhost:18000/u/honor",
+      "name": "honor",
+      "type": "Person"
+    },
+    "organization": {
+      "extensions": {
+        "cohort_id": 4
+      },
+      "id": "http://localhost:18000/courses/course-v1:edX+E2E-101+course/instructor#view-cohort_management",
+      "name": "test cohort 2",
+      "type": "Group"
+    },
+    "type": "Membership"
+  },
+  "referrer": {
+    "id": "http://localhost:18000/courses/course-v1:edX+E2E-101+course/instructor",
+    "type": "WebPage"
+  },
+  "type": "Event"
+}

@@ -1,0 +1,28 @@
+{
+   "username":"",
+   "event_source":"server",
+   "name":"edx.certificate.evidence_visited",
+   "accept_language":"en-US,en;q=0.9",
+   "time":"2019-01-09T09:47:37.994548+00:00",
+   "agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.80 Safari/537.36",
+   "page":null,
+   "host":"8c3b43aa7b1b",
+   "session":"",
+   "referer":"",
+   "context":{
+      "user_id":null,
+      "org_id":"pucit",
+      "course_id":"course-v1:pucit+cs_08+2019_F",
+      "path":"/certificates/user/8/course/course-v1:pucit+cs_08+2019_F"
+   },
+   "ip":"172.18.0.1",
+   "event":{
+      "social_network":"LinkedIn",
+      "enrollment_mode":"verified",
+      "user_id":8,
+      "course_id":"course-v1:pucit+cs_08+2019_F",
+      "certificate_id":"402fb5284c2b413eafa8f569867562a2",
+      "certificate_url":"/certificates/user/8/course/course-v1:pucit+cs_08+2019_F"
+   },
+   "event_type":"edx.certificate.evidence_visited"
+}

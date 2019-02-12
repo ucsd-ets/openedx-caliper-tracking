@@ -1,0 +1,25 @@
+{
+  "accept_language": "en-US,en;q=0.9",
+  "agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36",
+  "context": {
+    "course_id": "course-v1:PUCIT+CS520+2018_T4",
+    "org_id": "PUCIT",
+    "path": "/change_enrollment",
+    "user_id": 6
+  },
+  "event": {
+    "course_id": "course-v1:PUCIT+CS520+2018_T4",
+    "mode": "honor",
+    "user_id": 6
+  },
+  "event_source": "server",
+  "event_type": "edx.course.enrollment.mode_changed",
+  "host": "8c3b43aa7b1b",
+  "ip": "172.18.0.1",
+  "name": "edx.course.enrollment.mode_changed",
+  "page": null,
+  "referer": "http://localhost:18000/courses/course-v1:PUCIT+CS520+2018_T4/about",
+  "session": "e826193d6f48613a115e4387d12e4d5d",
+  "time": "2018-11-16T07:52:15.893562+00:00",
+  "username": "honor"
+}

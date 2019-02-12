@@ -1,0 +1,55 @@
+{
+   "@context":"http://purl.imsglobal.org/ctx/caliper/v1p1",
+   "action":"Posted",
+   "actor":{
+      "id":"http://localhost:18000/u/verified",
+      "name":"verified",
+      "type":"Person"
+   },
+   "eventTime":"2018-12-13T10:39:28.698Z",
+   "extensions":{
+      "extra_fields":{
+         "accept_language":"en-US,en;q=0.9",
+         "agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36",
+         "course_id":"course-v1:ar+CS113x+2018_T3",
+         "event_source":"server",
+         "event_type":"edx.forum.response.created",
+         "host":"8433fad63981",
+         "ip":"172.18.0.1",
+         "org_id":"ar",
+         "page":null,
+         "path":"/courses/course-v1:ar+CS113x+2018_T3/discussion/threads/5c10dc1e977195008e000000/reply",
+         "session":"e2cd8950d28dbc308ecaedca3793c05c",
+         "user_id":8
+      }
+   },
+   "id":"urn:uuid:960a6a6b-1fc3-45e4-945a-d7c9f98a7da6",
+   "object":{
+      "body":"dummy message",
+      "extensions":{
+         "commentable_id":"course",
+         "discussion":{
+            "id":"5c10dc1e977195008e000000"
+         },
+         "id":"5c1236e0977195008e000003",
+         "options":{
+            "followed":false
+         },
+         "truncated":false,
+         "url":"http://localhost:18000/courses/course-v1:ar+CS113x+2018_T3/discussion/forum/course/threads/5c10dc1e977195008e000000",
+         "user_course_roles":[
+
+         ],
+         "user_forums_roles":[
+            "Student"
+         ]
+      },
+      "id":"http://localhost:18000/courses/course-v1:ar+CS113x+2018_T3/discussion/forum/course/threads/5c10dc1e977195008e000000",
+      "type":"Message"
+   },
+   "referrer":{
+      "id":"http://localhost:18000/courses/course-v1:ar+CS113x+2018_T3/discussion/forum/course/threads/5c10dc1e977195008e000000",
+      "type":"WebPage"
+   },
+   "type":"MessageEvent"
+}

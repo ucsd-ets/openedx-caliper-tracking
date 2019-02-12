@@ -1,0 +1,27 @@
+{
+   "username":"honor",
+   "event_source":"server",
+   "name":"edx.bookmark.listed",
+   "accept_language":"en-US,en;q=0.9,ur-PK;q=0.8,ur;q=0.7",
+   "time":"2018-10-16T14:23:24.785148+00:00",
+   "agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36",
+   "page":null,
+   "host":"747befdb3d9d",
+   "session":"87d4e5619e69f6e03cfa8d8ded61d197",
+   "referer":"http://localhost:18000/courses/course-v1:edx+cs-101+2018/bookmarks/",
+   "context":{
+      "user_id":6,
+      "org_id":"",
+      "course_id":"",
+      "path":"/api/bookmarks/v1/bookmarks/"
+   },
+   "ip":"172.18.0.1",
+   "event":{
+      "course_id":"course-v1:edx+cs-101+2018",
+      "page_number":1,
+      "bookmarks_count":1,
+      "page_size":10,
+      "list_type":"per_course"
+   },
+   "event_type":"edx.bookmark.listed"
+}

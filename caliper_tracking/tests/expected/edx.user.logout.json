@@ -1,0 +1,37 @@
+{
+  "@context": "http://purl.imsglobal.org/ctx/caliper/v1p1",
+  "action": "LoggedOut",
+  "actor": {
+    "id": "http://localhost:18000/u/honor",
+    "name": "honor",
+    "type": "Person"
+  },
+  "eventTime": "2019-01-30T09:25:21.012Z",
+  "extensions": {
+    "extra_fields": {
+      "accept_language": "en-US,en;q=0.9",
+      "agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36",
+      "course_id": "",
+      "event_source": "server",
+      "event_type": "edx.user.logout",
+      "host": "427bd71e514d",
+      "ip": "172.18.0.1",
+      "org_id": "",
+      "page": null,
+      "path": "/logout",
+      "session": "84f89babd6753e4fcb6160f8dc797290",
+      "user_id": 6
+    }
+  },
+  "id": "urn:uuid:3fa5fb93-1e64-4695-a953-9842e31b7da9",
+  "object": {
+    "extensions": {},
+    "id": "http://localhost:18000",
+    "type": "SoftwareApplication"
+  },
+  "referrer": {
+    "id": "http://localhost:18000/dashboard",
+    "type": "WebPage"
+  },
+  "type": "SessionEvent"
+}

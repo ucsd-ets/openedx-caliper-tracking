@@ -1,0 +1,48 @@
+{
+    "@context": "http://purl.imsglobal.org/ctx/caliper/v1p1",
+    "action": "ChangedSpeed",
+    "actor": {
+        "id": "http://localhost:18000/u/verified",
+        "name": "verified",
+        "type": "Person"
+    },
+    "eventTime": "2018-12-12T08:26:47.073Z",
+    "extensions": {
+        "extra_fields": {
+            "accept_language": "en-US,en;q=0.9",
+            "agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36",
+            "course_id": "course-v1:ar+CS113x+2018_T3",
+            "event_source": "browser",
+            "event_type": "speed_change_video",
+            "host": "8433fad63981",
+            "ip": "172.18.0.1",
+            "org_id": "ar",
+            "page": "http://localhost:18000/courses/course-v1:ar+CS113x+2018_T3/courseware/61c5a01d2255496f88a367be5ad525db/766d16ae8c734d6a8304f1fad5d1d088/1",
+            "path": "/event",
+            "session": "58b843bf7a9821e7d6d3eda74914f898",
+            "user_id": 8
+        }
+    },
+    "id": "urn:uuid:3fa5fb93-1e64-4695-a953-9842e31b7da9",
+    "object": {
+        "duration": "PT2M21S",
+        "extensions": {
+            "code": "3_yD_cEKoCk",
+            "id": "5e9b65b2ce6b4b6eb0a1bd894e06b810",
+            "new_speed": "0.75",
+            "old_speed": "1.50"
+        },
+        "id": "http://localhost:18000/courses/course-v1:ar+CS113x+2018_T3/courseware/61c5a01d2255496f88a367be5ad525db/766d16ae8c734d6a8304f1fad5d1d088/1",
+        "type": "VideoObject"
+    },
+    "target": {
+        "id": "http://localhost:18000/courses/course-v1:ar+CS113x+2018_T3/courseware/61c5a01d2255496f88a367be5ad525db/766d16ae8c734d6a8304f1fad5d1d088/1",
+        "type": "MediaLocation",
+        "currentTime": "PT5.171946S"
+    },
+    "referrer": {
+        "id": "http://localhost:18000/courses/course-v1:ar+CS113x+2018_T3/courseware/61c5a01d2255496f88a367be5ad525db/766d16ae8c734d6a8304f1fad5d1d088/1",
+        "type": "WebPage"
+    },
+    "type": "MediaEvent"
+}

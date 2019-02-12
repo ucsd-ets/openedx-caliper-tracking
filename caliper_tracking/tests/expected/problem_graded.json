@@ -1,0 +1,42 @@
+{
+  "@context": "http://purl.imsglobal.org/ctx/caliper/v1p1",
+  "action": "Graded",
+  "actor": {
+    "id": "http://localhost:18000/u/honor",
+    "name": "honor",
+    "type": "Person"
+  },
+  "eventTime": "2018-12-13T09:38:54.212Z",
+  "extensions": {
+    "extra_fields": {
+      "accept_language": "en-US,en;q=0.9",
+      "agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36",
+      "course_id": "course-v1:edX+DemoX+Demo_Course",
+      "event_source": "browser",
+      "event_type": "problem_graded",
+      "host": "e5d2c598af1a",
+      "ip": "172.18.0.1",
+      "org_id": "edX",
+      "page": "http://localhost:18000/courses/course-v1:edX+DemoX+Demo_Course/courseware/1414ffd5143b4b508f739b563ab468b7/workflow/",
+      "path": "/event",
+      "session": "479cafdc6dafbdc38b08f6eb4cb38c23",
+      "user_id": 6
+    }
+  },
+  "id": "urn:uuid:956b4a02-8de0-4991-b8c5-b6eebb6b4cab",
+  "object": {
+    "extensions": {
+      "event": [
+        "input_ex_practice_2_2_1=24",
+        "\n\n\n\n<h3 class=\"hd hd-3 problem-header\" id=\"ex_practice_2-problem-title\" aria-describedby=\"block-v1:edX+DemoX+Demo_Course+type@problem+block@ex_practice_2-problem-progress\" tabindex=\"-1\">\n  Immediate Feedback\n</h3>\n\n<div class=\"problem-progress\" id=\"block-v1:edX+DemoX+Demo_Course+type@problem+block@ex_practice_2-problem-progress\"></div>\n\n<div class=\"problem\">\n  <div>\n  <span>\n    <p>In most questions, edX checks your answers and gives you immediate feedback. When you click &#8220;check&#8221; for a problem it is automatically submitted for grading. </p>\n    <p>Let's practice! (For many of the following questions, if you get an answer wrong, you can simply try again until you get it right.)</p>\n    <p>How many hours are in a day?</p>\n    <div class=\"wrapper-problem-response\" tabindex=\"-1\" aria-label=\"Question 1\" role=\"group\"><div id=\"inputtype_ex_practice_2_2_1\" class=\" capa_inputtype  textline\">\n\n    <div class=\"correct \">\n\n\n\n<input type=\"text\" name=\"input_ex_practice_2_2_1\" id=\"input_ex_practice_2_2_1\" aria-describedby=\"status_ex_practice_2_2_1\" value=\"24\"/>\n<span class=\"trailing_text\" id=\"trailing_text_ex_practice_2_2_1\"/>\n\n\n\n<span class=\"status correct\" id=\"status_ex_practice_2_2_1\" data-tooltip=\"This answer is correct.\">\n  <span class=\"sr\">correct</span><span class=\"status-icon\" aria-hidden=\"true\"/>\n</span>\n\n\n<p id=\"answer_ex_practice_2_2_1\" class=\"answer\"/>\n\n\n    </div>\n\n\n</div></div>\n  </span>\n</div>\n  <div class=\"action\">\n    <input type=\"hidden\" name=\"problem_id\" value=\"Immediate Feedback\" />\n\n    <div class=\"submit-attempt-container\">\n      <button type=\"button\" class=\"submit btn-brand\" data-submitting=\"Submitting\" data-value=\"Submit\" data-should-enable-submit-button=\"True\" aria-describedby=\"submission_feedback_ex_practice_2\" >\n          <span class=\"submit-label\">Submit</span>\n      </button>\n      <div class=\"submission-feedback\" id=\"submission_feedback_ex_practice_2\">\n        <span class=\"sr\">Some problems have options such as save, reset, hints, or show answer. These options follow the Submit button.</span>\n      </div>\n    </div>\n    <div class=\"problem-action-buttons-wrapper\">\n    </div>\n  </div>\n    \n\n\n<div class=\"notification warning notification-gentle-alert\n      is-hidden\"\n     tabindex=\"-1\">\n    <span class=\"icon fa fa-exclamation-circle\" aria-hidden=\"true\"></span>\n    <span class=\"notification-message\" aria-describedby=\"ex_practice_2-problem-title\">\n    </span>\n    <div class=\"notification-btn-wrapper\">\n        <button type=\"button\" class=\"btn btn-default btn-small notification-btn review-btn sr\">Review</button>\n    </div>\n</div>\n\n            \n\n\n<div class=\"notification success notification-submit\n      \"\n     tabindex=\"-1\">\n    <span class=\"icon fa fa-check\" aria-hidden=\"true\"></span>\n    <span class=\"notification-message\" aria-describedby=\"ex_practice_2-problem-title\">Correct (1/1 point)\n    </span>\n    <div class=\"notification-btn-wrapper\">\n        <button type=\"button\" class=\"btn btn-default btn-small notification-btn review-btn sr\">Review</button>\n    </div>\n</div>\n\n    \n\n\n<div class=\"notification warning notification-save\n      is-hidden\"\n     tabindex=\"-1\">\n    <span class=\"icon fa fa-save\" aria-hidden=\"true\"></span>\n    <span class=\"notification-message\" aria-describedby=\"ex_practice_2-problem-title\">None\n    </span>\n    <div class=\"notification-btn-wrapper\">\n        <button type=\"button\" class=\"btn btn-default btn-small notification-btn review-btn sr\">Review</button>\n    </div>\n</div>\n\n    \n\n\n<div class=\"notification general notification-show-answer\n      is-hidden\"\n     tabindex=\"-1\">\n    <span class=\"icon fa fa-info-circle\" aria-hidden=\"true\"></span>\n    <span class=\"notification-message\" aria-describedby=\"ex_practice_2-problem-title\">Answers are displayed within the problem\n    </span>\n    <div class=\"notification-btn-wrapper\">\n        <button type=\"button\" class=\"btn btn-default btn-small notification-btn review-btn sr\">Review</button>\n    </div>\n</div>\n\n</div>\n"
+      ]
+    },
+    "id": "http://localhost:18000/courses/course-v1:edX+DemoX+Demo_Course/courseware/1414ffd5143b4b508f739b563ab468b7/workflow/",
+    "type": "Attempt"
+  },
+  "referrer": {
+    "id": "http://localhost:18000/courses/course-v1:edX+DemoX+Demo_Course/courseware/1414ffd5143b4b508f739b563ab468b7/workflow/",
+    "type": "WebPage"
+  },
+  "type": "GradeEvent"
+}

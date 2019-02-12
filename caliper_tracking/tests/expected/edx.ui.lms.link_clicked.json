@@ -1,0 +1,36 @@
+{
+  "@context": "http://purl.imsglobal.org/ctx/caliper/v1p1",
+  "action": "NavigatedTo",
+  "actor": {
+    "id": "http://localhost:18000/u/honor",
+    "name": "honor",
+    "type": "Person"
+  },
+  "eventTime": "2018-10-16T14:23:24.785Z",
+  "extensions": {
+    "extra_fields": {
+      "accept_language": "en-US,en;q=0.9,ur-PK;q=0.8,ur;q=0.7",
+      "agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36",
+      "course_id": "course-v1:edx+cs-101+2018",
+      "event_source": "browser",
+      "event_type": "edx.ui.lms.link_clicked",
+      "host": "747befdb3d9d",
+      "ip": "172.18.0.1",
+      "org_id": "edx",
+      "page": "http://localhost:18000/courses/course-v1:edx+cs-101+2018/course/",
+      "path": "/event",
+      "session": "9460612fb30feb8c4d49fa0775812033",
+      "user_id": 6
+    }
+  },
+  "id": "urn:uuid:d4618c23-d612-4709-8d9a-478d87808067",
+  "object": {
+    "id": "http://localhost:18000/courses/course-v1:edx+cs-101+2018/jump_to/block-v1:edx+cs-101+2018+type@vertical+block@104ae453b822415282e2389721c263ab",
+    "type": "WebPage"
+  },
+  "referrer": {
+    "id": "http://localhost:18000/courses/course-v1:edx+cs-101+2018/course/",
+    "type": "WebPage"
+  },
+  "type": "NavigationEvent"
+}

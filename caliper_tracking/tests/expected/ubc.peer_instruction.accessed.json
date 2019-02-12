@@ -1,0 +1,38 @@
+{
+  "@context": "http://purl.imsglobal.org/ctx/caliper/v1p1",
+  "action": "Viewed",
+  "actor": {
+    "id": "http://localhost:18000/u/ali",
+    "name": "ali",
+    "type": "Person"
+  },
+  "eventTime": "2018-12-24T10:03:12.548Z",
+  "extensions": {
+    "extra_fields": {
+      "accept_language": "en;q=1.0, en;q=1.0",
+      "agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36",
+      "asides": {},
+      "course_id": "course-v1:PUCIT+ITC201+2018_T3",
+      "course_user_tags": {},
+      "event_source": "server",
+      "event_type": "ubc.peer_instruction.accessed",
+      "host": "9c680a5d44c8",
+      "ip": "172.18.0.1",
+      "org_id": "PUCIT",
+      "page": "x_module",
+      "path": "/courses/course-v1:PUCIT+ITC201+2018_T3/courseware/aa587438ffe54345887f00b5eaec7295/440be1d1b5bd4abea98cd755b668d590/",
+      "user_id": 17
+    }
+  },
+  "id": "urn:uuid:cd088ca7-c044-405c-bb41-0b2a8506f907",
+  "object": {
+    "extensions": {},
+    "id": "http://localhost:18000/courses/course-v1:PUCIT+ITC201+2018_T3/courseware/aa587438ffe54345887f00b5eaec7295/c43f177e6691448683a201459864920f/1?activate_block_id=block-v1%3APUCIT%2BITC201%2B2018_T3%2Btype%40vertical%2Bblock%4001d2dd1e005849dbb79124ae634ea36d",
+    "type": "AssignableDigitalResource"
+  },
+  "referrer": {
+    "id": "http://localhost:18000/courses/course-v1:PUCIT+ITC201+2018_T3/courseware/aa587438ffe54345887f00b5eaec7295/c43f177e6691448683a201459864920f/1?activate_block_id=block-v1%3APUCIT%2BITC201%2B2018_T3%2Btype%40vertical%2Bblock%4001d2dd1e005849dbb79124ae634ea36d",
+    "type": "WebPage"
+  },
+  "type": "ViewEvent"
+}

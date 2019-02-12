@@ -1,0 +1,47 @@
+{
+  "@context": "http://purl.imsglobal.org/ctx/caliper/v1p1",
+  "action": "Modified",
+  "actor": {
+    "id": "http://localhost:18000/u/edx",
+    "name": "edx",
+    "type": "Person"
+  },
+  "eventTime": "2018-12-18T10:16:28.308Z",
+  "extensions": {
+    "extra_fields": {
+      "accept_language": "en-US,en;q=0.9",
+      "agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.80 Safari/537.36",
+      "event_source": "browser",
+      "event_type": "edx.course.student_notes.edited",
+      "host": "8c3b43aa7b1b",
+      "ip": "172.18.0.1",
+      "org_id": "edx",
+      "page": "http://localhost:18000/courses/course-v1:edx+CS0110+2014_T/courseware/f1fd55ec037e468ba39c24e998ab1327/82f15a955a8d4af8aedb8ed599da324f/1#",
+      "path": "/event",
+      "session": "dee9b416a6b137a6754bfe29e3d71a97",
+      "user_id": 2
+    }
+  },
+  "id": "urn:uuid:fa25a902-275e-4e5b-90b6-bd2779608dce",
+  "object": {
+    "extensions": {
+      "component_usage_id": "block-v1:edx+CS0110+2014_T+type@html+block@9fd0bcf6454b436bb221a97b796381ef",
+      "course_id": "course-v1:edx+CS0110+2014_T",
+      "highlighted_content": "shown",
+      "note_id": "5",
+      "note_text": "hello",
+      "old_note_text": "Made it. ",
+      "old_tags": [],
+      "org_id": "edx",
+      "tags": [],
+      "truncated": []
+    },
+    "id": "http://localhost:18000/courses/course-v1:edx+CS0110+2014_T/courseware/f1fd55ec037e468ba39c24e998ab1327/82f15a955a8d4af8aedb8ed599da324f/1",
+    "type": "Document"
+  },
+  "referrer": {
+    "id": "http://localhost:18000/courses/course-v1:edx+CS0110+2014_T/courseware/f1fd55ec037e468ba39c24e998ab1327/82f15a955a8d4af8aedb8ed599da324f/1",
+    "type": "WebPage"
+  },
+  "type": "Event"
+}

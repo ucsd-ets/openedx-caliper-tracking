@@ -1,0 +1,21 @@
+{
+  "accept_language": "en-US,en;q=0.9",
+  "agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36",
+  "context": {
+    "course_id": "course-v1:edX+DemoX+Demo_Course",
+    "org_id": "edX",
+    "path": "/event",
+    "user_id": 6
+  },
+  "event": "{\"duration\": 195, \"code\": \"b7xgknqkQk8\", \"id\": \"0b9e39477cf34507a7a48f74be381fdd\", \"currentTime\": 0.026737855041503906}",
+  "event_source": "browser",
+  "event_type": "play_video",
+  "host": "e5d2c598af1a",
+  "ip": "172.18.0.1",
+  "name": "play_video",
+  "page": "http://localhost:18000/courses/course-v1:edX+DemoX+Demo_Course/courseware/d8a6192ade314473a78242dfeedfbf5b/edx_introduction/1?activate_block_id=block-v1%3AedX%2BDemoX%2BDemo_Course%2Btype%40vertical%2Bblock%40vertical_0270f6de40fc",
+  "referer": "http://localhost:18000/courses/course-v1:edX+DemoX+Demo_Course/courseware/d8a6192ade314473a78242dfeedfbf5b/edx_introduction/1?activate_block_id=block-v1%3AedX%2BDemoX%2BDemo_Course%2Btype%40vertical%2Bblock%40vertical_0270f6de40fc",
+  "session": "479cafdc6dafbdc38b08f6eb4cb38c23",
+  "time": "2018-12-14T10:08:23.725877+00:00",
+  "username": "honor"
+}

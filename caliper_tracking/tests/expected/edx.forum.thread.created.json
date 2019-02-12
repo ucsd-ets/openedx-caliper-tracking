@@ -1,0 +1,57 @@
+{
+  "@context": "http://purl.imsglobal.org/ctx/caliper/v1p1",
+  "action": "Posted",
+  "actor": {
+    "id": "http://localhost:18000/u/test",
+    "name": "test",
+    "type": "Person"
+  },
+  "eventTime": "2018-10-18T13:17:24.640Z",
+  "extensions": {
+    "extra_fields": {
+      "accept_language": "en-US,en;q=0.5",
+      "agent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:62.0) Gecko/20100101 Firefox/62.0",
+      "course_id": "course-v1:edX+DemoX+Demo_Course",
+      "course_user_tags": {},
+      "event_source": "server",
+      "event_type": "edx.forum.thread.created",
+      "host": "8433fad63981",
+      "ip": "172.18.0.1",
+      "org_id": "edX",
+      "page": null,
+      "path": "/courses/course-v1:edX+DemoX+Demo_Course/discussion/i4x-edx-eiorguegnru-course-foobarbaz/threads/create",
+      "session": "a410d5a20a89a1e7adbfb61ba142127c",
+      "user_id": 13
+    }
+  },
+  "id": "urn:uuid:fa25a902-275e-4e5b-90b6-bd2779608dce",
+  "object": {
+    "body": "Testing the comments for tracking.",
+    "extensions": {
+      "anonymous": false,
+      "anonymous_to_peers": false,
+      "commentable_id": "i4x-edx-eiorguegnru-course-foobarbaz",
+      "group_id": null,
+      "id": "5bc887e1977195008e000000",
+      "options": {
+        "followed": true
+      },
+      "thread_type": "discussion",
+      "title_truncated": false,
+      "truncated": false,
+      "url": "http://localhost:18000/courses/course-v1:edX+DemoX+Demo_Course/discussion/forum/",
+      "user_course_roles": [],
+      "user_forums_roles": [
+        "Student"
+      ]
+    },
+    "id": "http://localhost:18000/courses/course-v1:edX+DemoX+Demo_Course/discussion/forum/i4x-edx-eiorguegnru-course-foobarbaz/threads/5bc887e1977195008e000000c",
+    "name": "Testing comments",
+    "type": "Message"
+  },
+  "referrer": {
+    "id": "http://localhost:18000/courses/course-v1:edX+DemoX+Demo_Course/discussion/forum/i4x-edx-eiorguegnru-course-foobarbaz/threads/5bc887e1977195008e000000c",
+    "type": "WebPage"
+  },
+  "type": "MessageEvent"
+}

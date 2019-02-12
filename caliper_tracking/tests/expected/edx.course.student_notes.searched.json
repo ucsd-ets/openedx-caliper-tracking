@@ -1,0 +1,40 @@
+{
+  "@context": "http://purl.imsglobal.org/ctx/caliper/v1p1",
+  "action": "Searched",
+  "actor": {
+    "id": "http://localhost:18000/u/edx",
+    "name": "edx",
+    "type": "Person"
+  },
+  "eventTime": "2018-10-24T10:07:01.473Z",
+  "extensions": {
+    "extra_fields": {
+      "accept_language": "en-US,en;q=0.9",
+      "agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36",
+      "event_source": "browser",
+      "event_type": "edx.course.student_notes.searched",
+      "host": "8c3b43aa7b1b",
+      "ip": "172.18.0.1",
+      "page": "http://localhost:18000/courses/course-v1:edx+CS0110+2014_T/edxnotes/",
+      "path": "/event",
+      "session": "d4d874ce08a9fd9cc843d256a348f192"
+    }
+  },
+  "id": "urn:uuid:d4618c23-d612-4709-8d9a-478d87808067",
+  "object": {
+    "extensions": {
+      "course_id": "course-v1:edx+CS0110+2014_T",
+      "number_of_results": 1,
+      "org_id": "edx",
+      "search_string": "new note",
+      "user_id": 2
+    },
+    "id": "http://localhost:18000/courses/course-v1:edx+CS0110+2014_T/edxnotes/",
+    "type": "Document"
+  },
+  "referrer": {
+    "id": "http://localhost:18000/courses/course-v1:edx+CS0110+2014_T/edxnotes/",
+    "type": "WebPage"
+  },
+  "type": "Event"
+}

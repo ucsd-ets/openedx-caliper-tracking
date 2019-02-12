@@ -1,0 +1,21 @@
+{
+    "accept_language": "en-US,en;q=0.9",
+    "agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36",
+    "context": {
+        "course_id": "course-v1:edX+E2E-101+course",
+        "org_id": "edX",
+        "path": "/event",
+        "user_id": 13
+    },
+    "event": "{\"courseRunKey\": \"course-v1:edX+E2E-101+course\"}",
+    "event_source": "browser",
+    "event_type": "edx.bi.course.upgrade.sidebarupsell.displayed",
+    "host": "8433fad63981",
+    "ip": "172.18.0.1",
+    "name": "edx.bi.course.upgrade.sidebarupsell.displayed",
+    "page": "http://localhost:18000/courses/course-v1:edX+E2E-101+course/course/",
+    "referer": "http://localhost:18000/courses/course-v1:edX+E2E-101+course/course/",
+    "session": "11210805e852958c6eccd2e0416bccb7",
+    "time": "2018-10-19T07:05:58.705565+00:00",
+    "username": "honor"
+}

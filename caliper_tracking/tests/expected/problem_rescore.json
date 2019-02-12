@@ -1,0 +1,83 @@
+{
+    "@context": "http://purl.imsglobal.org/ctx/caliper/v1p1",
+    "action": "Graded",
+    "actor": {
+        "id": "http://localhost:18000/u/edx",
+        "name": "edx",
+        "type": "Person"
+    },
+    "eventTime": "2018-10-19T06:19:46.258Z",
+    "extensions": {
+        "extra_fields": {
+            "accept_language": "en-US,en;q=0.9",
+            "agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.67 Safari/537.36",
+            "asides": {},
+            "course_id": "",
+            "client_id": null,
+            "course_user_tags": {},
+            "event_source": "task",
+            "event_type": "problem_rescore",
+            "host": "3c31c9770429",
+            "ip": "172.18.0.1",
+            "org_id": "",
+            "page": "x_module_task",
+            "path": "/courses/course-v1:TestUni+ITP47+2018_T3/instructor/api/rescore_problem",
+            "session": "95b4edd72214ce3b878da3cd9bd636ae",
+            "user_id": 14
+        }
+    },
+    "id": "urn:uuid:d4618c23-d612-4709-8d9a-478d87808067",
+    "object": {
+        "id": "http://localhost:18000/courses/course-v1:TestUni+ITP47+2018_T3/instructor",
+        "type": "Attempt",
+        "extensions": {
+            "attempts": 4,
+            "correct_map": {
+                "381ebb822df34fbfbe70e649421245f4_2_1": {
+                    "answervariable": null,
+                    "correctness": "correct",
+                    "hint": "",
+                    "hintmode": null,
+                    "msg": "",
+                    "npoints": null,
+                    "queuestate": null
+                }
+            },
+            "new_score": 1,
+            "new_total": 1,
+            "orig_score": 1,
+            "orig_total": 1,
+            "problem_id": "block-v1:TestUni+ITP47+2018_T3+type@problem+block@381ebb822df34fbfbe70e649421245f4",
+            "state": {
+                "correct_map": {
+                    "381ebb822df34fbfbe70e649421245f4_2_1": {
+                        "answervariable": null,
+                        "correctness": "correct",
+                        "hint": "",
+                        "hintmode": null,
+                        "msg": "",
+                        "npoints": null,
+                        "queuestate": null
+                    }
+                },
+                "done": true,
+                "has_saved_answers": false,
+                "input_state": {
+                    "381ebb822df34fbfbe70e649421245f4_2_1": {}
+                },
+                "seed": 1,
+                "student_answers": {
+                    "381ebb822df34fbfbe70e649421245f4_2_1": "great"
+                }
+            },
+            "student": "testlms",
+            "success": "correct",
+            "task_id": "6d20a6b7-d632-4e43-adf9-a52d876186f4"
+        }
+    },
+    "referrer": {
+        "id": "http://localhost:18000/courses/course-v1:TestUni+ITP47+2018_T3/instructor",
+        "type": "WebPage"
+    },
+    "type": "GradeEvent"
+}

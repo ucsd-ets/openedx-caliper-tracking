@@ -1,0 +1,21 @@
+{
+  "accept_language": "en-US,en;q=0.9,ur-PK;q=0.8,ur;q=0.7",
+  "agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36",
+  "context": {
+    "course_id": "course-v1:edX+DemoX+Demo_Course",
+    "org_id": "edX",
+    "path": "/event",
+    "user_id": 10
+  },
+  "event": "{\"status\": \"\", \"chapter\": \"/assets/courseware/v1/55969d87f0409b18ed8d979465e80f1a/asset-v1:edX+DemoX+Demo_Course+type@asset+block/gazatte_11th_2018.pdf\", \"name\": \"textbook.pdf.search.navigatednext\", \"highlightAll\": false, \"caseSensitive\": false, \"findPrevious\": false, \"query\": \"cu\", \"page\": 59}",
+  "event_source": "browser",
+  "event_type": "textbook.pdf.search.navigatednext",
+  "host": "tasawernawaz.sandbox.edx.org",
+  "ip": "116.58.62.58",
+  "name": "textbook.pdf.search.navigatednext",
+  "page": "https://localhost:18000/courses/course-v1:edX+DemoX+Demo_Course/pdfbook/0/?viewer=true&file=/assets/courseware/v1/55969d87f0409b18ed8d979465e80f1a/asset-v1:edX+DemoX+Demo_Course+type@asset+block/gazatte_11th_2018.pdf#zoom=page-fit&disableRange=true",
+  "referer": "https://localhost:18000/courses/course-v1:edX+DemoX+Demo_Course/pdfbook/0/?viewer=true&file=/assets/courseware/v1/55969d87f0409b18ed8d979465e80f1a/asset-v1:edX+DemoX+Demo_Course+type@asset+block/gazatte_11th_2018.pdf",
+  "session": "e170364846d882cdfd3b4fcb5c585b5e",
+  "time": "2018-10-22T10:11:47.864197+00:00",
+  "username": "honor"
+}

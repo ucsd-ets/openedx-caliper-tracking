@@ -1,0 +1,47 @@
+{
+  "accept_language": "en;q=1.0, en;q=1.0",
+  "agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36",
+  "context": {
+      "asides": {},
+      "course_id": "course-v1:edX+DemoX+Demo_Course",
+      "course_user_tags": {},
+      "module": {
+          "display_name": "Open Response Assessment",
+          "usage_key": "block-v1:edX+DemoX+Demo_Course+type@openassessment+block@d8715bbe5cff4affa1bb48dba9a24a8f"
+      },
+      "org_id": "edX",
+      "path": "/courses/course-v1:edX+DemoX+Demo_Course/xblock/block-v1:edX+DemoX+Demo_Course+type@openassessment+block@d8715bbe5cff4affa1bb48dba9a24a8f/handler/peer_assess",
+      "user_id": 2
+  },
+  "event": {
+      "feedback": "",
+      "parts": [
+          {
+              "criterion": {
+                  "name": "Ideas",
+                  "points_possible": 5
+              },
+              "feedback": "",
+              "option": {
+                  "name": "Good",
+                  "points": 5
+              }
+          }
+      ],
+      "rubric": {
+          "content_hash": "5314f2b6853bc1fa94d5a33e1c9cab4e2591b230"
+      },
+      "score_type": "PE",
+      "scored_at": "2018-12-18T11:10:06.423642+00:00",
+      "scorer_id": "0152b60e1449d7cec51d7389c9d5c285",
+      "submission_uuid": "fc026da1-ee4b-4918-9d63-1d296fd9ce4a"
+  },
+  "event_source": "server",
+  "event_type": "openassessmentblock.peer_assess",
+  "host": "9c680a5d44c8",
+  "ip": "172.18.0.1",
+  "page": "x_module",
+  "referer": "http://localhost:18000/courses/course-v1:edX+DemoX+Demo_Course/courseware/2e563603fc064644838b249e1f7875fb/f28e0eda92bd46c7abcbd3a12bdba8ac/1?activate_block_id=block-v1%3AedX%2BDemoX%2BDemo_Course%2Btype%40vertical%2Bblock%4029665017b3f44a1bb695f9e4ec6c4230",
+  "time": "2018-12-18T11:10:06.460850+00:00",
+  "username": "edx"
+}

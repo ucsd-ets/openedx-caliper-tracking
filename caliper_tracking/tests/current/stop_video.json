@@ -1,0 +1,21 @@
+{
+  "accept_language": "en-US,en;q=0.5",
+  "agent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:62.0) Gecko/20100101 Firefox/62.0",
+  "context": {
+    "user_id": 13,
+    "org_id": "Test",
+    "course_id": "course-v1:Test+CS101x+2018_T1",
+    "path": "/event"
+  },
+  "event": "{\"duration\": 141, \"code\": \"3_yD_cEKoCk\", \"id\": \"89fe8734c41e496cbed583a5fee0f1f7\", \"currentTime\": 140.77044710490418}",
+  "event_source": "browser",
+  "event_type": "stop_video",
+  "host": "8433fad63981",
+  "ip": "172.18.0.1",
+  "name": "stop_video",
+  "page": "http://localhost:18000/courses/course-v1:Test+CS101x+2018_T1/courseware/2754d8b5c4854c88a0eb9cd892b37930/b9c0c21551fc44b29238d3ceeea55d22/1?activate_block_id=block-v1%3ATest%2BCS101x%2B2018_T1%2Btype%40vertical%2Bblock%400d4455eaca1c4dd0823d18fb8cc754b7",
+  "referer": "http://localhost:18000/courses/course-v1:Test+CS101x+2018_T1/courseware/2754d8b5c4854c88a0eb9cd892b37930/b9c0c21551fc44b29238d3ceeea55d22/1?activate_block_id=block-v1%3ATest%2BCS101x%2B2018_T1%2Btype%40vertical%2Bblock%400d4455eaca1c4dd0823d18fb8cc754b7",
+  "session": "a410d5a20a89a1e7adbfb61ba142127c",
+  "time": "2018-10-19T11:18:52.293196+00:00",
+  "username": "test"
+}

@@ -1,0 +1,52 @@
+{
+  "@context": "http://purl.imsglobal.org/ctx/caliper/v1p1",
+  "action": "Submitted",
+  "actor": {
+    "id": "http://localhost:18000/u/ali",
+    "name": "ali",
+    "type": "Person"
+  },
+  "eventTime": "2018-12-18T14:24:19.184Z",
+  "extensions": {
+    "extra_fields": {
+      "accept_language": "en;q=1.0, en;q=1.0",
+      "agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36",
+      "asides": {},
+      "course_id": "course-v1:edX+DemoX+Demo_Course",
+      "course_user_tags": {},
+      "event_source": "server",
+      "event_type": "openassessment.student_training_assess_example",
+      "host": "9c680a5d44c8",
+      "ip": "172.18.0.1",
+      "module": {
+        "display_name": "Open Response Assessment",
+        "usage_key": "block-v1:edX+DemoX+Demo_Course+type@openassessment+block@fb61b94513f44ea9a48dedfa5304e338"
+      },
+      "org_id": "edX",
+      "page": "x_module",
+      "path": "/courses/course-v1:edX+DemoX+Demo_Course/xblock/block-v1:edX+DemoX+Demo_Course+type@openassessment+block@fb61b94513f44ea9a48dedfa5304e338/handler/training_assess",
+      "user_id": 17
+    }
+  },
+  "id": "urn:uuid:8ca8127c-afed-4a75-b23b-6c92e432045d",
+  "object": {
+    "extensions": {
+      "corrections": {
+        "Content": "Good",
+        "Ideas": "Fair"
+      },
+      "options_selected": {
+        "Content": "Poor",
+        "Ideas": "Poor"
+      },
+      "submission_uuid": "2d450e42-5582-472a-95b1-9a49c491d206"
+    },
+    "id": "http://localhost:18000/courses/course-v1:edX+DemoX+Demo_Course/courseware/2e563603fc064644838b249e1f7875fb/f28e0eda92bd46c7abcbd3a12bdba8ac/?child=first",
+    "type": "Assessment"
+  },
+  "referrer": {
+    "id": "http://localhost:18000/courses/course-v1:edX+DemoX+Demo_Course/courseware/2e563603fc064644838b249e1f7875fb/f28e0eda92bd46c7abcbd3a12bdba8ac/?child=first",
+    "type": "WebPage"
+  },
+  "type": "AssessmentEvent"
+}

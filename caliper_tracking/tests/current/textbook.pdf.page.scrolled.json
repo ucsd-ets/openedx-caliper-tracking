@@ -1,0 +1,21 @@
+{  
+   "username":"honor",
+   "event_source":"browser",
+   "name":"textbook.pdf.page.scrolled",
+   "accept_language":"en-US,en;q=0.9,ur-PK;q=0.8,ur;q=0.7",
+   "time":"2018-10-22T10:05:54.057594+00:00",
+   "agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36",
+   "page":"http://localhost:18000/courses/course-v1:edX+DemoX+Demo_Course/pdfbook/0/?viewer=true&file=/assets/courseware/v1/55969d87f0409b18ed8d979465e80f1a/asset-v1:edX+DemoX+Demo_Course+type@asset+block/gazatte_11th_2018.pdf#zoom=page-fit&disableRange=true",
+   "host":"747befdb3d9d",
+   "session":"1e2bcef58672f0195f63d9e2f0736a7c",
+   "referer":"http://localhost:18000/courses/course-v1:edX+DemoX+Demo_Course/pdfbook/0/?viewer=true&file=/assets/courseware/v1/55969d87f0409b18ed8d979465e80f1a/asset-v1:edX+DemoX+Demo_Course+type@asset+block/gazatte_11th_2018.pdf",
+   "context":{  
+      "user_id":6,
+      "org_id":"edX",
+      "course_id":"course-v1:edX+DemoX+Demo_Course",
+      "path":"/event"
+   },
+   "ip":"172.18.0.1",
+   "event":"{\"chapter\": \"/assets/courseware/v1/55969d87f0409b18ed8d979465e80f1a/asset-v1:edX+DemoX+Demo_Course+type@asset+block/gazatte_11th_2018.pdf\", \"direction\": \"down\", \"page\": 3, \"name\": \"textbook.pdf.page.scrolled\"}",
+   "event_type":"textbook.pdf.page.scrolled"
+}

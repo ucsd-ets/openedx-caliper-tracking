@@ -1,0 +1,65 @@
+{
+  "@context": "http://purl.imsglobal.org/ctx/caliper/v1p1",
+  "action": "Graded",
+  "actor": {
+    "id": "http://localhost:18000/u/honor",
+    "name": "honor",
+    "type": "Person"
+  },
+  "eventTime": "2018-10-22T08:51:12.722Z",
+  "extensions": {
+    "extra_fields": {
+      "accept_language": "en;q=1.0, en;q=1.0",
+      "agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.67 Safari/537.36",
+      "asides": {},
+      "course_id": "course-v1:abcdx+CS201+2014_T1",
+      "course_user_tags": {},
+      "event_source": "server",
+      "event_type": "openassessmentblock.staff_assess",
+      "host": "ec7deba3430f",
+      "ip": "172.18.0.1",
+      "module": {
+        "display_name": "Open Response Assessment",
+        "usage_key": "block-v1:abcdx+CS201+2014_T1+type@openassessment+block@a9ff09ef751b4b0992ddc35363170f0d"
+      },
+      "org_id": "abcdx",
+      "page": "x_module",
+      "path": "/courses/course-v1:abcdx+CS201+2014_T1/xblock/block-v1:abcdx+CS201+2014_T1+type@openassessment+block@a9ff09ef751b4b0992ddc35363170f0d/handler/staff_assess",
+      "user_id": 6
+    }
+  },
+  "id": "urn:uuid:a50ca17f-5971-47bb-8fca-4e6e6879001d",
+  "object": {
+    "dateCreated": "2018-10-22T08:51:12.690Z",
+    "extensions": {
+      "feedback": "",
+      "parts": [
+        {
+          "criterion": {
+            "name": "Ideas",
+            "points_possible": 3
+          },
+          "feedback": "need to be more precise.",
+          "option": {
+            "name": "Poor",
+            "points": 0
+          }
+        }
+      ],
+      "rubric": {
+        "content_hash": "0d11e2703f47c223515d090ce9eeca6e5f4f6d55"
+      },
+      "score_type": "ST",
+      "scorer_id": "1b1f229f781bfda8aa79cdaaa7bc2891",
+      "submission_uuid": "6dae020a-5618-405c-bb45-69f2f3392862",
+      "type": "full-grade"
+    },
+    "id": "http://localhost:18000/courses/course-v1:abcdx+CS201+2014_T1/courseware/7c8fd8b2cda3463abcb36849d9ecac71/da7ff81cc6a143a59021581675f2afd7/1?activate_block_id=block-v1%3Aabcdx%2BCS201%2B2014_T1%2Btype%40vertical%2Bblock%409925c0f8b6bc4874887f56957f2930ac",
+    "type": "Attempt"
+  },
+  "referrer": {
+    "id": "http://localhost:18000/courses/course-v1:abcdx+CS201+2014_T1/courseware/7c8fd8b2cda3463abcb36849d9ecac71/da7ff81cc6a143a59021581675f2afd7/1?activate_block_id=block-v1%3Aabcdx%2BCS201%2B2014_T1%2Btype%40vertical%2Bblock%409925c0f8b6bc4874887f56957f2930ac",
+    "type": "WebPage"
+  },
+  "type": "GradeEvent"
+}

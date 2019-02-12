@@ -1,0 +1,21 @@
+{
+  "username": "verified",
+  "event_source": "browser",
+  "name": "edx.certificate.shared",
+  "accept_language": "en-US,en;q=0.9",
+  "time": "2019-01-09T09:57:44.758959+00:00",
+  "agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.80 Safari/537.36",
+  "page": "http://localhost:18000/certificates/user/8/course/course-v1:pucit+cs_08+2019_F",
+  "host": "8c3b43aa7b1b",
+  "session": "51ec4c05447ef4a00a9427f588c3e840",
+  "referer": "http://localhost:18000/certificates/user/8/course/course-v1:pucit+cs_08+2019_F",
+  "context": {
+    "user_id": 8,
+    "org_id": "",
+    "course_id": "",
+    "path": "/event"
+  },
+  "ip": "172.18.0.1",
+  "event": "{\"enrollment_mode\": \"verified\", \"user_id\": \"8\", \"certificate_id\": \"402fb5284c2b413eafa8f569867562a2\", \"certificate_url\": \"http://localhost:18000/certificates/user/8/course/course-v1:pucit+cs_08+2019_F\", \"social_network\": \"LinkedIn\", \"course_id\": \"course-v1:pucit+cs_08+2019_F\"}",
+  "event_type": "edx.certificate.shared"
+}

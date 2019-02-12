@@ -1,0 +1,31 @@
+{
+  "username": "honor",
+  "event_type": "edx.drag_and_drop_v2.item.dropped",
+  "ip": "172.18.0.1",
+  "agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36",
+  "host": "4a3fad7cf959",
+  "referer": "http://localhost:18000/courses/course-v1:edX+DemoX+Demo_Course/courseware/graded_interactions/simulations/7?activate_block_id=block-v1%3AedX%2BDemoX%2BDemo_Course%2Btype%40vertical%2Bblock%403835e93e2df44a3aaa6c94a5dc0d9da8",
+  "accept_language": "en;q=1.0, en;q=0.9",
+  "event": {
+    "item_id": 2,
+    "item": "Goes to the bottom",
+    "location_id": "top",
+    "location": "The Top Zone",
+    "is_correct": false
+  },
+  "event_source": "server",
+  "context": {
+    "course_user_tags": {},
+    "user_id": 6,
+    "org_id": "edX",
+    "asides": {},
+    "module": {
+      "usage_key": "block-v1:edX+DemoX+Demo_Course+type@drag-and-drop-v2+block@bd50d225a484469b8e77051046178ec2",
+      "display_name": "Drag and Drop"
+    },
+    "course_id": "course-v1:edX+DemoX+Demo_Course",
+    "path": "/courses/course-v1:edX+DemoX+Demo_Course/xblock/block-v1:edX+DemoX+Demo_Course+type@drag-and-drop-v2+block@bd50d225a484469b8e77051046178ec2/handler/drop_item"
+  },
+  "time": "2018-12-20T13:12:59.519940+00:00",
+  "page": "x_module"
+}

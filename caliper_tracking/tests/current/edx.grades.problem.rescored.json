@@ -1,0 +1,32 @@
+{
+    "accept_language": "en-US,en;q=0.9",
+    "agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.67 Safari/537.36",
+    "context": {
+        "course_id": "course-v1:TestUni+ITP47+2018_T3",
+        "course_user_tags": {},
+        "org_id": "TestUni",
+        "path": "/courses/course-v1:TestUni+ITP47+2018_T3/instructor/api/rescore_problem",
+        "user_id": 2
+    },
+    "event": {
+        "course_id": "course-v1:TestUni+ITP47+2018_T3",
+        "event_transaction_id": "676b3133-0b6e-45c8-9c5e-48f2be15dd49",
+        "event_transaction_type": "edx.grades.problem.rescored",
+        "instructor_id": "2",
+        "new_weighted_earned": 1,
+        "new_weighted_possible": 1,
+        "only_if_higher": false,
+        "problem_id": "block-v1:TestUni+ITP47+2018_T3+type@problem+block@381ebb822df34fbfbe70e649421245f4",
+        "user_id": "14"
+    },
+    "event_source": "server",
+    "event_type": "edx.grades.problem.rescored",
+    "host": "3c31c9770429",
+    "ip": "172.18.0.1",
+    "name": "edx.grades.problem.rescored",
+    "page": null,
+    "referer": "http://localhost:18000/courses/course-v1:TestUni+ITP47+2018_T3/instructor",
+    "session": "95b4edd72214ce3b878da3cd9bd636ae",
+    "time": "2018-10-19T06:19:46.229972+00:00",
+    "username": "edx"
+}

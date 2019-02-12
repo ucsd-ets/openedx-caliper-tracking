@@ -1,0 +1,51 @@
+{
+  "@context": "http://purl.imsglobal.org/ctx/caliper/v1p1",
+  "action": "Deleted",
+  "actor": {
+    "id": "http://localhost:18000/u/honor",
+    "name": "honor",
+    "type": "Person"
+  },
+  "eventTime": "2019-01-08T09:13:54.668Z",
+  "extensions": {
+    "extra_fields": {
+      "accept_language": "en-US,en;q=0.9",
+      "agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36",
+      "course_id": "course-v1:UCP+CS4230+PF_2018",
+      "event_source": "server",
+      "event_type": "edx.special_exam.timed.attempt.deleted",
+      "host": "e5d2c598af1a",
+      "ip": "172.18.0.1",
+      "org_id": "UCP",
+      "page": null,
+      "path": "/api/edx_proctoring/v1/proctored_exam/attempt/5",
+      "session": "9d63e7b5927025144b25fb8090e2b3d8",
+      "user_id": 6
+    }
+  },
+  "id": "urn:uuid:cd088ca7-c044-405c-bb41-0b2a8506f907",
+  "object": {
+    "extensions": {
+      "attempt_allowed_time_limit_mins": null,
+      "attempt_code": "77B93D4E-F548-480B-8150-38D533884C8A",
+      "attempt_completed_at": null,
+      "attempt_event_elapsed_time_secs": null,
+      "attempt_id": null,
+      "attempt_status": "created",
+      "attempt_user_id": 8,
+      "exam_content_id": "block-v1:UCP+CS4230+PF_2018+type@sequential+block@f4d9413d3bc14a419b7de32b90431019",
+      "exam_default_time_limit_mins": 30,
+      "exam_id": 5,
+      "exam_is_active": false,
+      "exam_is_practice_exam": true,
+      "exam_is_proctored": false
+    },
+    "id": "http://localhost:18000/courses/course-v1:UCP+CS4230+PF_2018/instructor",
+    "type": "Attempt"
+  },
+  "referrer": {
+    "id": "http://localhost:18000/courses/course-v1:UCP+CS4230+PF_2018/instructor",
+    "type": "WebPage"
+  },
+  "type": "Event"
+}

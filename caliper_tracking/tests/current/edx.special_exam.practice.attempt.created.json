@@ -1,0 +1,37 @@
+{
+  "accept_language": "en-US,en;q=0.9",
+  "agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36",
+  "context": {
+    "course_id": "course-v1:UCP+CS4230+PF_2018",
+    "org_id": "UCP",
+    "path": "/api/edx_proctoring/v1/proctored_exam/attempt",
+    "user_id": 2
+  },
+  "event": {
+    "attempt_allowed_time_limit_mins": null,
+    "attempt_code": "656070CB-D5D9-46F0-A7DD-CFC3FF701F33",
+    "attempt_completed_at": null,
+    "attempt_event_elapsed_time_secs": null,
+    "attempt_id": 4,
+    "attempt_started_at": null,
+    "attempt_status": "created",
+    "attempt_user_id": 2,
+    "exam_content_id": "block-v1:UCP+CS4230+PF_2018+type@sequential+block@f4d9413d3bc14a419b7de32b90431019",
+    "exam_default_time_limit_mins": 30,
+    "exam_id": 5,
+    "exam_is_active": true,
+    "exam_is_practice_exam": true,
+    "exam_is_proctored": true,
+    "exam_name": "Practice"
+  },
+  "event_source": "server",
+  "event_type": "edx.special_exam.practice.attempt.created",
+  "host": "e5d2c598af1a",
+  "ip": "172.18.0.1",
+  "name": "edx.special_exam.practice.attempt.created",
+  "page": null,
+  "referer": "http://localhost:18000/courses/course-v1:UCP+CS4230+PF_2018/courseware/360ca77f129246b2b495e40ade55c066/f4d9413d3bc14a419b7de32b90431019/1?activate_block_id=block-v1%3AUCP%2BCS4230%2BPF_2018%2Btype%40vertical%2Bblock%404c6968a3bc2441ba8f38e5e80319de2c",
+  "session": "83862e716c03cd4729b4dfc3dd73390c",
+  "time": "2018-10-24T10:25:19.659119+00:00",
+  "username": "honor"
+}

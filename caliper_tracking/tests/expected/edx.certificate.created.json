@@ -1,0 +1,45 @@
+{
+  "@context": "http://purl.imsglobal.org/ctx/caliper/v1p1",
+  "action": "Created",
+  "actor": {
+    "id": "http://localhost:18000",
+    "type": "SoftwareApplication"
+  },
+  "eventTime": "2018-10-17T10:28:50.552Z",
+  "extensions": {
+    "extra_fields": {
+      "accept_language": "en-US,en;q=0.9,ur-PK;q=0.8,ur;q=0.7",
+      "agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36",
+      "course_id": "course-v1:edx+cs-101+2018",
+      "course_user_tags": {},
+      "event_source": "server",
+      "event_type": "edx.certificate.created",
+      "host": "747befdb3d9d",
+      "ip": "172.18.0.1",
+      "org_id": "edx",
+      "page": null,
+      "path": "/courses/course-v1:edx+cs-101+2018/generate_user_cert",
+      "session": "4fc32b1ca8d4fc18402c4c41434a178a",
+      "user_id": 2,
+      "username": "honor"
+    }
+  },
+  "id": "urn:uuid:fa25a902-275e-4e5b-90b6-bd2779608dce",
+  "object": {
+    "extensions": {
+      "certificate_id": "d4cd91fcd49f42fe97db585ed7e8b459",
+      "certificate_url": "/certificates/user/2/course/course-v1:edx+cs-101+2018",
+      "course_id": "course-v1:edx+cs-101+2018",
+      "enrollment_mode": "verified",
+      "generation_mode": "self",
+      "user_id": 2
+    },
+    "id": "http://localhost:18000/certificates/user/2/course/course-v1:edx+cs-101+2018",
+    "type": "Document"
+  },
+  "referrer": {
+    "id": "http://localhost:18000/courses/course-v1:edx+cs-101+2018/progress",
+    "type": "WebPage"
+  },
+  "type": "Event"
+}

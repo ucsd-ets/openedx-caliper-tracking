@@ -1,0 +1,45 @@
+{
+  "@context": "http://purl.imsglobal.org/ctx/caliper/v1p1",
+  "action": "Started",
+  "actor": {
+    "id": "http://localhost:18000/u/verified",
+    "name": "verified",
+    "type": "Person"
+  },
+  "eventTime": "2018-12-24T10:35:23.349Z",
+  "extensions": {
+    "extra_fields": {
+      "accept_language": "en;q=1.0, en;q=1.0",
+      "agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36",
+      "asides": {},
+      "course_id": "course-v1:UCP+CS4230+PF_2018",
+      "course_user_tags": {},
+      "event_source": "server",
+      "event_type": "oppia.exploration.loaded",
+      "host": "e5d2c598af1a",
+      "ip": "172.18.0.1",
+      "module": {
+        "display_name": "Oppia Exploration",
+        "usage_key": "block-v1:UCP+CS4230+PF_2018+type@oppia+block@69a15552ce1841cea1a5f9dee8a0b8a0"
+      },
+      "org_id": "UCP",
+      "page": "x_module",
+      "path": "/courses/course-v1:UCP+CS4230+PF_2018/xblock/block-v1:UCP+CS4230+PF_2018+type@oppia+block@69a15552ce1841cea1a5f9dee8a0b8a0/handler/on_exploration_loaded",
+      "user_id": 8
+    }
+  },
+  "id": "urn:uuid:3fa5fb93-1e64-4695-a953-9842e31b7da9",
+  "object": {
+    "extensions": {
+      "exploration_id": "4",
+      "exploration_version": 43
+    },
+    "id": "http://localhost:18000/courses/course-v1:UCP+CS4230+PF_2018/courseware/360ca77f129246b2b495e40ade55c066/89b72ec08a3746dd932913a4ef633aea/?child=first",
+    "type": "AssessmentItem"
+  },
+  "referrer": {
+    "id": "http://localhost:18000/courses/course-v1:UCP+CS4230+PF_2018/courseware/360ca77f129246b2b495e40ade55c066/89b72ec08a3746dd932913a4ef633aea/?child=first",
+    "type": "WebPage"
+  },
+  "type": "Event"
+}

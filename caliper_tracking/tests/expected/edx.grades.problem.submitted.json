@@ -1,0 +1,50 @@
+{
+    "@context": "http://purl.imsglobal.org/ctx/caliper/v1p1",
+    "action": "Submitted",
+    "actor": {
+        "id": "http://localhost:18000/u/honor",
+        "name": "honor",
+        "type": "Person"
+    },
+    "eventTime": "2018-10-19T11:33:57.112Z",
+    "extensions": {
+        "extra_fields": {
+            "accept_language": "en-US,en;q=0.9",
+            "agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36",
+            "course_id": "course-v1:PUCIT+ITC201+2018_T3",
+            "course_user_tags": {},
+            "event_source": "server",
+            "event_type": "edx.grades.problem.submitted",
+            "host": "9c680a5d44c8",
+            "ip": "172.18.0.1",
+            "module": {
+                "display_name": "Peer Instruction Question",
+                "usage_key": "block-v1:PUCIT+ITC201+2018_T3+type@ubcpi+block@90bfb6318d4241ceacd204a41c362f65"
+            },
+            "org_id": "PUCIT",
+            "page": null,
+            "path": "/courses/course-v1:PUCIT+ITC201+2018_T3/xblock/block-v1:PUCIT+ITC201+2018_T3+type@ubcpi+block@90bfb6318d4241ceacd204a41c362f65/handler/submit_answer",
+            "session": "184a0e3123d4e3af6c8d498e44efc0b4",
+            "user_id": 6
+        }
+    },
+    "id": "urn:uuid:956b4a02-8de0-4991-b8c5-b6eebb6b4cab",
+    "object": {
+        "extensions": {
+            "course_id": "course-v1:PUCIT+ITC201+2018_T3",
+            "event_transaction_id": "a68e1659-3f5a-45c4-997e-6266d6f5ef08",
+            "event_transaction_type": "edx.grades.problem.submitted",
+            "problem_id": "block-v1:PUCIT+ITC201+2018_T3+type@ubcpi+block@90bfb6318d4241ceacd204a41c362f65",
+            "user_id": "6",
+            "weighted_earned": 1,
+            "weighted_possible": 1
+        },
+        "id": "http://localhost:18000/courses/course-v1:PUCIT+ITC201+2018_T3/courseware/aa587438ffe54345887f00b5eaec7295/c43f177e6691448683a201459864920f/1?activate_block_id=block-v1%3APUCIT%2BITC201%2B2018_T3%2Btype%40vertical%2Bblock%4001d2dd1e005849dbb79124ae634ea36d",
+        "type": "Assessment"
+    },
+    "referrer": {
+        "id": "http://localhost:18000/courses/course-v1:PUCIT+ITC201+2018_T3/courseware/aa587438ffe54345887f00b5eaec7295/c43f177e6691448683a201459864920f/1?activate_block_id=block-v1%3APUCIT%2BITC201%2B2018_T3%2Btype%40vertical%2Bblock%4001d2dd1e005849dbb79124ae634ea36d",
+        "type": "WebPage"
+    },
+    "type": "AssessmentEvent"
+}

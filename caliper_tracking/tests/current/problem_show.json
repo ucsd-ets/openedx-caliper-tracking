@@ -1,0 +1,21 @@
+{
+    "accept_language": "en-US,en;q=0.9",
+    "agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.67 Safari/537.36",
+    "context": {
+        "course_id": "course-v1:TestUni+ITP47+2018_T3",
+        "org_id": "TestUni",
+        "path": "/event",
+        "user_id": 14
+    },
+    "event": "{\"problem\": \"block-v1:TestUni+ITP47+2018_T3+type@problem+block@381ebb822df34fbfbe70e649421245f4\"}",
+    "event_source": "browser",
+    "event_type": "problem_show",
+    "host": "3c31c9770429",
+    "ip": "172.18.0.1",
+    "name": "problem_show",
+    "page": "http://localhost:18000/courses/course-v1:TestUni+ITP47+2018_T3/courseware/49442fdda84645d0950f613ca3052292/becccc9761f544aabd448a9167ef51a2/?child=first",
+    "referer": "http://localhost:18000/courses/course-v1:TestUni+ITP47+2018_T3/courseware/49442fdda84645d0950f613ca3052292/becccc9761f544aabd448a9167ef51a2/?child=first",
+    "session": "ce6d9b2922942e9209dc022a7242cfb9",
+    "time": "2018-10-19T10:39:59.824554+00:00",
+    "username": "testlms"
+}

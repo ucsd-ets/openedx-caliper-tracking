@@ -1,0 +1,25 @@
+{
+  "accept_language": "en-US,en;q=0.9,ur-PK;q=0.8,ur;q=0.7",
+  "agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36",
+  "context": {
+    "course_id": "course-v1:edx+cs-101+2018",
+    "org_id": "edx",
+    "path": "/change_enrollment",
+    "user_id": 6
+  },
+  "event": {
+    "course_id": "course-v1:edx+cs-101+2018",
+    "mode": "audit",
+    "user_id": 6
+  },
+  "event_source": "server",
+  "event_type": "edx.course.enrollment.activated",
+  "host": "747befdb3d9d",
+  "ip": "172.18.0.1",
+  "name": "edx.course.enrollment.activated",
+  "page": null,
+  "referer": "http://localhost:18000/courses/course-v1:edx+cs-101+2018/about",
+  "session": "8205ce7ea40a0619955e15f072dc33e2",
+  "time": "2018-10-17T12:12:03.143959+00:00",
+  "username": "ali"
+}

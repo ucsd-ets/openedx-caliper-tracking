@@ -1,0 +1,42 @@
+{
+  "@context": "http://purl.imsglobal.org/ctx/caliper/v1p1",
+  "action": "ChangedSize",
+  "actor": {
+    "id": "http://localhost:18000/u/honor",
+    "name": "honor",
+    "type": "Person"
+  },
+  "eventTime": "2018-12-31T10:11:14.766Z",
+  "extensions": {
+    "extra_fields": {
+      "accept_language": "en-US,en;q=0.5",
+      "agent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:64.0) Gecko/20100101 Firefox/64.0",
+      "course_id": "course-v1:ABC+CS103x+2018_T2",
+      "event_source": "browser",
+      "event_type": "textbook.pdf.zoom.buttons.changed",
+      "host": "lms.devstack.edx",
+      "ip": "172.18.0.1",
+      "org_id": "ABC",
+      "page": "http://localhost:18000/courses/course-v1:ABC+CS103x+2018_T2/pdfbook/0/?viewer=true&file=/assets/courseware/v1/29237cf673c90921fda8a65fb9ed85e3/asset-v1:ABC+CS103x+2018_T2+type@asset+block/DOC_BSEF14-522.pdf#zoom=page-fit&disableRange=true",
+      "path": "/event",
+      "session": "7a00089b51c9f29e7c86b444da03f60a",
+      "user_id": 2
+    }
+  },
+  "id": "urn:uuid:6f506246-429f-4474-a1de-865cc7c32d4e",
+  "object": {
+    "extensions": {
+      "chapter": "/assets/courseware/v1/29237cf673c90921fda8a65fb9ed85e3/asset-v1:ABC+CS103x+2018_T2+type@asset+block/DOC_BSEF14-522.pdf",
+      "direction": "in",
+      "name": "textbook.pdf.zoom.buttons.changed",
+      "page": 2
+    },
+    "id": "http://localhost:18000/courses/course-v1:ABC+CS103x+2018_T2/pdfbook/0/?viewer=true&file=/assets/courseware/v1/29237cf673c90921fda8a65fb9ed85e3/asset-v1:ABC+CS103x+2018_T2+type@asset+block/DOC_BSEF14-522.pdf",
+    "type": "Document"
+  },
+  "referrer": {
+    "id": "http://localhost:18000/courses/course-v1:ABC+CS103x+2018_T2/pdfbook/0/?viewer=true&file=/assets/courseware/v1/29237cf673c90921fda8a65fb9ed85e3/asset-v1:ABC+CS103x+2018_T2+type@asset+block/DOC_BSEF14-522.pdf",
+    "type": "WebPage"
+  },
+  "type": "Event"
+}

@@ -1,0 +1,41 @@
+{
+  "@context": "http://purl.imsglobal.org/ctx/caliper/v1p1",
+  "action": "Ended",
+  "actor": {
+    "id": "http://localhost:18000/u/test",
+    "name": "test",
+    "type": "Person"
+  },
+  "eventTime": "2018-10-19T11:18:52.293Z",
+  "extensions": {
+    "extra_fields": {
+      "accept_language": "en-US,en;q=0.5",
+      "agent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:62.0) Gecko/20100101 Firefox/62.0",
+      "course_id": "course-v1:Test+CS101x+2018_T1",
+      "event_source": "browser",
+      "event_type": "stop_video",
+      "host": "8433fad63981",
+      "ip": "172.18.0.1",
+      "org_id": "Test",
+      "page": "http://localhost:18000/courses/course-v1:Test+CS101x+2018_T1/courseware/2754d8b5c4854c88a0eb9cd892b37930/b9c0c21551fc44b29238d3ceeea55d22/1?activate_block_id=block-v1%3ATest%2BCS101x%2B2018_T1%2Btype%40vertical%2Bblock%400d4455eaca1c4dd0823d18fb8cc754b7",
+      "path": "/event",
+      "session": "a410d5a20a89a1e7adbfb61ba142127c",
+      "user_id": 13
+    }
+  },
+  "id": "urn:uuid:956b4a02-8de0-4991-b8c5-b6eebb6b4cab",
+  "object": {
+    "id": "http://localhost:18000/courses/course-v1:Test+CS101x+2018_T1/courseware/2754d8b5c4854c88a0eb9cd892b37930/b9c0c21551fc44b29238d3ceeea55d22/1?activate_block_id=block-v1%3ATest%2BCS101x%2B2018_T1%2Btype%40vertical%2Bblock%400d4455eaca1c4dd0823d18fb8cc754b7",
+    "type": "VideoObject",
+    "duration": "PT2M21S",
+    "extensions": {
+      "code": "3_yD_cEKoCk",
+      "id": "89fe8734c41e496cbed583a5fee0f1f7"
+    }
+  },
+  "referrer": {
+    "id": "http://localhost:18000/courses/course-v1:Test+CS101x+2018_T1/courseware/2754d8b5c4854c88a0eb9cd892b37930/b9c0c21551fc44b29238d3ceeea55d22/1?activate_block_id=block-v1%3ATest%2BCS101x%2B2018_T1%2Btype%40vertical%2Bblock%400d4455eaca1c4dd0823d18fb8cc754b7",
+    "type": "WebPage"
+  },
+  "type": "MediaEvent"
+}

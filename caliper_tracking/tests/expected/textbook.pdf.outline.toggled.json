@@ -1,0 +1,40 @@
+{
+  "@context": "http://purl.imsglobal.org/ctx/caliper/v1p1",
+  "action": "Used",
+  "actor": {
+    "id": "http://localhost:18000/u/staff",
+    "name": "staff",
+    "type": "Person"
+  },
+  "eventTime": "2018-10-19T07:53:48.063Z",
+  "extensions": {
+    "extra_fields": {
+      "accept_language": "en-US,en;q=0.9,ur-PK;q=0.8,ur;q=0.7",
+      "agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36",
+      "course_id": "course-v1:edX+DemoX+Demo_Course",
+      "event_source": "browser",
+      "event_type": "textbook.pdf.outline.toggled",
+      "host": "ec7deba3430f",
+      "ip": "172.18.0.1",
+      "org_id": "Arbisoft",
+      "page": "http://localhost:18000/courses/course-v1:edX+DemoX+Demo_Course/pdfbook/0/?viewer=true&file=/assets/courseware/v1/55969d87f0409b18ed8d979465e80f1a/asset-v1:edX+DemoX+Demo_Course+type@asset+block/gazatte_11th_2018.pdf#zoom=page-fit&disableRange=true",
+      "path": "/event",
+      "session": "1e2bcef58672f0195f63d9e2f0736a7c",
+      "user_id": 10
+    }
+  },
+  "id": "urn:uuid:6f506246-429f-4474-a1de-865cc7c32d4e",
+  "object": {
+    "extensions": {
+      "chapter": "/assets/courseware/v1/55969d87f0409b18ed8d979465e80f1a/asset-v1:edX+DemoX+Demo_Course+type@asset+block/gazatte_11th_2018.pdf",
+      "page": 1027
+    },
+    "id": "http://localhost:18000/courses/course-v1:edX+DemoX+Demo_Course/pdfbook/0/?viewer=true&file=/assets/courseware/v1/55969d87f0409b18ed8d979465e80f1a/asset-v1:edX+DemoX+Demo_Course+type@asset+block/gazatte_11th_2018.pdf",
+    "type": "SoftwareApplication"
+  },
+  "referrer": {
+    "id": "http://localhost:18000/courses/course-v1:edX+DemoX+Demo_Course/pdfbook/0/?viewer=true&file=/assets/courseware/v1/55969d87f0409b18ed8d979465e80f1a/asset-v1:edX+DemoX+Demo_Course+type@asset+block/gazatte_11th_2018.pdf",
+    "type": "WebPage"
+  },
+  "type": "ToolUseEvent"
+}

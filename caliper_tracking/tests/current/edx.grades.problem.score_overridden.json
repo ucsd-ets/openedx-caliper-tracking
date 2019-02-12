@@ -1,0 +1,32 @@
+{
+    "accept_language": "en-US,en;q=0.9",
+    "agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.67 Safari/537.36",
+    "context": {
+        "course_id": "course-v1:TestUni+ITP47+2018_T3",
+        "course_user_tags": {},
+        "org_id": "TestUni",
+        "path": "/courses/course-v1:TestUni+ITP47+2018_T3/instructor/api/override_problem_score",
+        "user_id": 2
+    },
+    "event": {
+        "course_id": "course-v1:TestUni+ITP47+2018_T3",
+        "event_transaction_id": "6362e721-d87b-448b-94e4-eb5c1186f004",
+        "event_transaction_type": "edx.grades.problem.score_overridden",
+        "instructor_id": "2",
+        "new_weighted_earned": 1,
+        "new_weighted_possible": 1,
+        "only_if_higher": null,
+        "problem_id": "block-v1:TestUni+ITP47+2018_T3+type@problem+block@e4dd4771a5c04fa3861d03283a035a17",
+        "user_id": "14"
+    },
+    "event_source": "server",
+    "event_type": "edx.grades.problem.score_overridden",
+    "host": "3c31c9770429",
+    "ip": "172.18.0.1",
+    "name": "edx.grades.problem.score_overridden",
+    "page": null,
+    "referer": "http://localhost:18000/courses/course-v1:TestUni+ITP47+2018_T3/courseware/49442fdda84645d0950f613ca3052292/becccc9761f544aabd448a9167ef51a2/",
+    "session": "22192280a3231f5b2c4d2a0e1a2d1ef5",
+    "time": "2018-10-22T06:40:07.342210+00:00",
+    "username": "edx"
+}

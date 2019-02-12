@@ -1,0 +1,29 @@
+{
+    "accept_language": "en-US,en;q=0.9",
+    "agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.67 Safari/537.36",
+    "context": {
+        "course_id": "course-v1:edX+DemoX+Demo_Course",
+        "course_user_tags": {},
+        "org_id": "edX",
+        "path": "/courses/course-v1:edX+DemoX+Demo_Course/instructor/api/reset_student_attempts",
+        "user_id": 2
+    },
+    "event": {
+        "course_id": "course-v1:edX+DemoX+Demo_Course",
+        "event_transaction_id": "0d9690f7-a5fa-43d3-b228-fbbc9c7c4820",
+        "event_transaction_type": "edx.grades.problem.state_deleted",
+        "instructor_id": "2",
+        "problem_id": "block-v1:TestUni+ITP47+2018_T3+type@problem+block@e4dd4771a5c04fa3861d03283a035a17",
+        "user_id": "2"
+    },
+    "event_source": "server",
+    "event_type": "edx.grades.problem.state_deleted",
+    "host": "3c31c9770429",
+    "ip": "172.18.0.1",
+    "name": "edx.grades.problem.state_deleted",
+    "page": null,
+    "referer": "http://localhost:18000/courses/course-v1:edX+DemoX+Demo_Course/courseware/49442fdda84645d0950f613ca3052292/becccc9761f544aabd448a9167ef51a2/",
+    "session": "22192280a3231f5b2c4d2a0e1a2d1ef5",
+    "time": "2018-10-22T06:50:16.138076+00:00",
+    "username": "edx"
+}

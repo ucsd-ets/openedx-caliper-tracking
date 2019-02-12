@@ -1,0 +1,44 @@
+{
+    "@context": "http://purl.imsglobal.org/ctx/caliper/v1p1",
+    "action": "Started",
+    "actor": {
+        "id": "http://localhost:18000/u/honor",
+        "name": "honor",
+        "type": "Person"
+    },
+    "eventTime": "2018-12-20T10:08:15.083Z",
+    "extensions": {
+        "extra_fields": {
+            "accept_language": "en;q=1.0, en;q=0.9",
+            "agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36",
+            "asides": {},
+            "course_id": "course-v1:edX+DemoX+Demo_Course",
+            "course_user_tags": {},
+            "event_source": "server",
+            "event_type": "edx.drag_and_drop_v2.item.picked_up",
+            "host": "4a3fad7cf959",
+            "ip": "172.18.0.1",
+            "module": {
+                "display_name": "Drag and Drop",
+                "usage_key": "block-v1:edX+DemoX+Demo_Course+type@drag-and-drop-v2+block@bd50d225a484469b8e77051046178ec2"
+            },
+            "org_id": "edX",
+            "page": "x_module",
+            "path": "/courses/course-v1:edX+DemoX+Demo_Course/xblock/block-v1:edX+DemoX+Demo_Course+type@drag-and-drop-v2+block@bd50d225a484469b8e77051046178ec2/handler/publish_event",
+            "user_id": 6
+        }
+    },
+    "id": "urn:uuid:afda01cb-7a5e-442c-8da3-ca9ce709f361",
+    "object": {
+        "extensions": {
+            "item_id": 2
+        },
+        "id": "http://localhost:18000/courses/course-v1:edX+DemoX+Demo_Course/courseware/graded_interactions/simulations/6?activate_block_id=block-v1%3AedX%2BDemoX%2BDemo_Course%2Btype%40vertical%2Bblock%40b06bbf958e1a45479b3ab2a67e2e4195",
+        "type": "AssessmentItem"
+    },
+    "referrer": {
+        "id": "http://localhost:18000/courses/course-v1:edX+DemoX+Demo_Course/courseware/graded_interactions/simulations/6?activate_block_id=block-v1%3AedX%2BDemoX%2BDemo_Course%2Btype%40vertical%2Bblock%40b06bbf958e1a45479b3ab2a67e2e4195",
+        "type": "WebPage"
+    },
+    "type": "AssessmentItemEvent"
+}

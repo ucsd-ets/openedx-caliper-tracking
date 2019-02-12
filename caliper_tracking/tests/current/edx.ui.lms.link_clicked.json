@@ -1,0 +1,21 @@
+{
+    "accept_language": "en-US,en;q=0.9,ur-PK;q=0.8,ur;q=0.7",
+    "agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36",
+    "context": {
+        "course_id": "course-v1:edx+cs-101+2018",
+        "org_id": "edx",
+        "path": "/event",
+        "user_id": 6
+    },
+    "event": "{\"target_url\": \"http://localhost:18000/courses/course-v1:edx+cs-101+2018/jump_to/block-v1:edx+cs-101+2018+type@vertical+block@104ae453b822415282e2389721c263ab\", \"current_url\": \"http://localhost:18000/courses/course-v1:edx+cs-101+2018/course/\"}",
+    "event_source": "browser",
+    "event_type": "edx.ui.lms.link_clicked",
+    "host": "747befdb3d9d",
+    "ip": "172.18.0.1",
+    "name": "edx.ui.lms.link_clicked",
+    "page": "http://localhost:18000/courses/course-v1:edx+cs-101+2018/course/",
+    "referer": "http://localhost:18000/courses/course-v1:edx+cs-101+2018/course/",
+    "session": "9460612fb30feb8c4d49fa0775812033",
+    "time": "2018-10-16T14:23:24.785371+00:00",
+    "username": "honor"
+}

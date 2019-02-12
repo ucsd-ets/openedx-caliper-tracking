@@ -1,0 +1,26 @@
+{
+  "accept_language": "en-US,en;q=0.9",
+  "agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36",
+  "context": {
+    "course_id": "course-v1:Arbisoft+1+1",
+    "course_user_tags": {},
+    "org_id": "Arbisoft",
+    "path": "/courses/course-v1:Arbisoft+1+1/cohorts/1/add",
+    "user_id": 13
+  },
+  "event": {
+    "cohort_id": 1,
+    "cohort_name": "Test Cohort",
+    "user_id": 2
+  },
+  "event_source": "server",
+  "event_type": "edx.cohort.user_added",
+  "host": "48ca736c86e8",
+  "ip": "172.19.0.1",
+  "name": "edx.cohort.user_added",
+  "page": null,
+  "referer": "http://localhost:18000/courses/course-v1:Arbisoft+1+1/instructor",
+  "session": "d6e5ba806f327a72206fbe497376c126",
+  "time": "2018-10-17T14:54:42.756040+00:00",
+  "username": "osamaarshad"
+}

@@ -1,0 +1,46 @@
+{
+    "@context": "http://purl.imsglobal.org/ctx/caliper/v1p1",
+    "action": "Started",
+    "actor": {
+        "id": "http://localhost:18000/u/honor",
+        "name": "honor",
+        "type": "Person"
+    },
+    "eventTime": "2018-12-14T10:08:23.725Z",
+    "extensions": {
+        "extra_fields": {
+            "accept_language": "en-US,en;q=0.9",
+            "agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36",
+            "course_id": "course-v1:edX+DemoX+Demo_Course",
+            "event_source": "browser",
+            "event_type": "play_video",
+            "host": "e5d2c598af1a",
+            "ip": "172.18.0.1",
+            "org_id": "edX",
+            "page": "http://localhost:18000/courses/course-v1:edX+DemoX+Demo_Course/courseware/d8a6192ade314473a78242dfeedfbf5b/edx_introduction/1?activate_block_id=block-v1%3AedX%2BDemoX%2BDemo_Course%2Btype%40vertical%2Bblock%40vertical_0270f6de40fc",
+            "path": "/event",
+            "session": "479cafdc6dafbdc38b08f6eb4cb38c23",
+            "user_id": 6
+        }
+    },
+    "id": "urn:uuid:3fa5fb93-1e64-4695-a953-9842e31b7da9",
+    "object": {
+        "duration": "PT3M15S",
+        "extensions": {
+            "id": "0b9e39477cf34507a7a48f74be381fdd",
+            "code": "b7xgknqkQk8"
+        },
+        "id": "http://localhost:18000/courses/course-v1:edX+DemoX+Demo_Course/courseware/d8a6192ade314473a78242dfeedfbf5b/edx_introduction/1?activate_block_id=block-v1%3AedX%2BDemoX%2BDemo_Course%2Btype%40vertical%2Bblock%40vertical_0270f6de40fc",
+        "type": "VideoObject"
+    },
+    "referrer": {
+        "id": "http://localhost:18000/courses/course-v1:edX+DemoX+Demo_Course/courseware/d8a6192ade314473a78242dfeedfbf5b/edx_introduction/1?activate_block_id=block-v1%3AedX%2BDemoX%2BDemo_Course%2Btype%40vertical%2Bblock%40vertical_0270f6de40fc",
+        "type": "WebPage"
+    },
+    "target": {
+        "currentTime": "PT0.026738S",
+        "id": "http://localhost:18000/courses/course-v1:edX+DemoX+Demo_Course/courseware/d8a6192ade314473a78242dfeedfbf5b/edx_introduction/1?activate_block_id=block-v1%3AedX%2BDemoX%2BDemo_Course%2Btype%40vertical%2Bblock%40vertical_0270f6de40fc",
+        "type": "MediaLocation"
+    },
+    "type": "MediaEvent"
+}

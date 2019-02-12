@@ -1,0 +1,40 @@
+{
+  "@context": "http://purl.imsglobal.org/ctx/caliper/v1p1",
+  "action": "Modified",
+  "actor": {
+    "id": "http://localhost:18000/u/honor",
+    "name": "honor",
+    "type": "Person"
+  },
+  "eventTime": "2019-01-01T09:18:02.407Z",
+  "extensions": {
+    "extra_fields": {
+      "accept_language": "en-US,en;q=0.9",
+      "agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36",
+      "course_id": "course-v1:edX+DemoX+Demo_Course",
+      "course_user_tags": {},
+      "event_source": "server",
+      "event_type": "edx.team.activity_updated",
+      "host": "e5d2c598af1a",
+      "ip": "172.18.0.1",
+      "org_id": "edX",
+      "page": null,
+      "path": "/courses/course-v1:edX+DemoX+Demo_Course/discussion/3429fc5983a84c8c8366a4477b03d91c/threads/create",
+      "session": "95ee724896a5238803c7800fe416b5a4",
+      "user_id": 6
+    }
+  },
+  "id": "urn:uuid:d4618c23-d612-4709-8d9a-478d87808067",
+  "object": {
+    "extensions": {
+      "team_id": "check-3429fc5983a84c8c8366a4477b03d91c"
+    },
+    "id": "http://localhost:18000/courses/course-v1:edX+DemoX+Demo_Course/teams/#teams/Topic1ID/check-3429fc5983a84c8c8366a4477b03d91c",
+    "type": "Forum"
+  },
+  "referrer": {
+    "id": "http://localhost:18000/courses/course-v1:edX+DemoX+Demo_Course/teams/",
+    "type": "WebPage"
+  },
+  "type": "Event"
+}

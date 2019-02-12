@@ -1,0 +1,54 @@
+{
+  "@context": "http://purl.imsglobal.org/ctx/caliper/v1p1",
+  "action": "Submitted",
+  "actor": {
+    "id": "http://localhost:18000/u/edx",
+    "name": "edx",
+    "type": "Person"
+  },
+  "eventTime": "2018-12-18T09:24:11.187Z",
+  "extensions": {
+    "extra_fields": {
+      "accept_language": "en;q=1.0, en;q=1.0",
+      "agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36",
+      "asides": {},
+      "course_id": "course-v1:edX+DemoX+Demo_Course",
+      "course_user_tags": {},
+      "event_source": "server",
+      "event_type": "openassessmentblock.create_submission",
+      "host": "9c680a5d44c8",
+      "ip": "172.18.0.1",
+      "module": {
+        "display_name": "Open Response Assessment",
+        "usage_key": "block-v1:edX+DemoX+Demo_Course+type@openassessment+block@9a2ba1ace74b4669aa880d1078b16d5b"
+      },
+      "org_id": "edX",
+      "page": "x_module",
+      "path": "/courses/course-v1:edX+DemoX+Demo_Course/xblock/block-v1:edX+DemoX+Demo_Course+type@openassessment+block@9a2ba1ace74b4669aa880d1078b16d5b/handler/submit",
+      "user_id": 2
+    }
+  },
+ "id": "urn:uuid:8ca8127c-afed-4a75-b23b-6c92e432045d",
+  "object": {
+    "extensions": {
+      "answer": {
+        "parts": [
+          {
+            "text": "well played"
+          }
+        ]
+      },
+      "attempt_number": 1,
+      "created_at": "2018-12-18T09:24:11.042Z",
+      "submission_uuid": "19d71d9f-5aef-4e52-a67a-3727d7263f3c",
+      "submitted_at": "2018-12-18T09:24:11.042Z"
+    },
+    "id": "http://localhost:18000/courses/course-v1:edX+DemoX+Demo_Course/courseware/2e563603fc064644838b249e1f7875fb/3d74fc6338a443f6b8c354b936d1bffa/1?activate_block_id=block-v1%3AedX%2BDemoX%2BDemo_Course%2Btype%40vertical%2Bblock%400f620f96ab104d0b86c087b31a597a76",
+    "type": "Assessment"
+  },
+  "referrer": {
+    "id": "http://localhost:18000/courses/course-v1:edX+DemoX+Demo_Course/courseware/2e563603fc064644838b249e1f7875fb/3d74fc6338a443f6b8c354b936d1bffa/1?activate_block_id=block-v1%3AedX%2BDemoX%2BDemo_Course%2Btype%40vertical%2Bblock%400f620f96ab104d0b86c087b31a597a76",
+    "type": "WebPage"
+  },
+  "type": "AssessmentEvent"
+}

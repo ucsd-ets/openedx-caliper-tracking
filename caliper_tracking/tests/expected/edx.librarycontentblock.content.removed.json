@@ -1,0 +1,59 @@
+{
+    "@context": "http://purl.imsglobal.org/ctx/caliper/v1p1",
+    "action": "Deleted",
+    "actor": {
+        "id": "http://localhost:18000",
+        "type": "SoftwareApplication"
+    },
+    "eventTime": "2018-10-18T15:40:17.183Z",
+    "extensions": {
+        "extra_fields": {
+            "asides": {},
+            "accept_language": "en;q=1.0, en;q=1.0",
+            "agent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:62.0) Gecko/20100101 Firefox/62.0",
+            "course_user_tags": {},
+            "course_id": "course-v1:Arbisoft+1+1",
+            "event_source": "server",
+            "event_type": "edx.librarycontentblock.content.removed",
+            "host": "061206df0efd",
+            "ip": "172.18.0.1",
+            "org_id": "Arbisoft",
+            "page": "x_module",
+            "path": "/courses/course-v1:Arbisoft+1+1/courseware/2c419f3600e64ab2a87ae95dc378132e/59694169c106479ea8ea75036cb4bb1c/2",
+            "username": "honor",
+            "user_id": 14
+        }
+    },
+    "id": "urn:uuid:13bc41f6-8406-4006-b929-c9f1ac156ada",
+    "object": {
+        "extensions": {
+            "location": "block-v1:Arbisoft+1+1+type@library_content+block@cc1ac7863baf44d283ba11386733dde6",
+            "max_count": 1,
+            "previous_count": 1,
+            "reason": "invalid",
+            "removed": [
+                {
+                    "descendants": [],
+                    "original_usage_key": null,
+                    "original_usage_version": null,
+                    "usage_key": "block-v1:Arbisoft+1+1+type@problem+block@bd1540338afe012bd6f9"
+                }
+            ],
+            "result": [
+                {
+                    "descendants": [],
+                    "original_usage_key": "lib-block-v1:Arbisoft+1+type@problem+block@dc683a73a9dd40f9a2de944f6fea1ebf",
+                    "original_usage_version": "5bc8a17c2c1d1b007af22fd7",
+                    "usage_key": "block-v1:Arbisoft+1+1+type@problem+block@aaa9c39af6e304178f6b"
+                }
+            ]
+        },
+        "id": "http://localhost:18000/courses/course-v1:Arbisoft+1+1/course/",
+        "type": "AssessmentItem"
+    },
+    "referrer": {
+        "id": "http://localhost:18000/courses/course-v1:Arbisoft+1+1/course/",
+        "type": "WebPage"
+    },
+    "type": "Event"
+}

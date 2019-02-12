@@ -1,0 +1,53 @@
+{
+  "@context": "http://purl.imsglobal.org/ctx/caliper/v1p1",
+  "action": "Created",
+  "actor": {
+    "id": "http://localhost:18000/u/honor",
+    "name": "honor",
+    "type": "Person"
+  },
+  "eventTime": "2018-10-22T09:50:27.277Z",
+  "extensions": {
+    "extra_fields": {
+      "accept_language": "en-US,en;q=0.9",
+      "agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36",
+      "course_id": "course-v1:UCP+CS4230+PF_2018",
+      "event_source": "server",
+      "event_type": "edx.special_exam.timed.attempt.created",
+      "host": "e5d2c598af1a",
+      "ip": "172.18.0.1",
+      "org_id": "UCP",
+      "page": null,
+      "path": "/api/edx_proctoring/v1/proctored_exam/attempt",
+      "session": "4e6cca893d8030b2540a38a313770682",
+      "user_id": 6
+    }
+  },
+  "id": "urn:uuid:cd088ca7-c044-405c-bb41-0b2a8506f907",
+  "object": {
+    "extensions": {
+      "attempt_allowed_time_limit_mins": null,
+      "attempt_code": "C23A176A-E89B-4FA6-9C81-3C0D083DF753",
+      "attempt_completed_at": null,
+      "attempt_event_elapsed_time_secs": null,
+      "attempt_id": 1,
+      "attempt_started_at": null,
+      "attempt_status": "created",
+      "attempt_user_id": 6,
+      "exam_content_id": "block-v1:UCP+CS4230+PF_2018+type@sequential+block@4657fcf587b0487a880a16b4f7723adf",
+      "exam_default_time_limit_mins": 10,
+      "exam_id": 1,
+      "exam_is_active": true,
+      "exam_is_practice_exam": false,
+      "exam_is_proctored": false
+    },
+    "id": "http://localhost:18000/courses/course-v1:UCP+CS4230+PF_2018/courseware/f709f9f114c14ec7b5be4b31bc6990f0/4657fcf587b0487a880a16b4f7723adf/?child=first",
+    "name": "Test",
+    "type": "Attempt"
+  },
+  "referrer": {
+    "id": "http://localhost:18000/courses/course-v1:UCP+CS4230+PF_2018/courseware/f709f9f114c14ec7b5be4b31bc6990f0/4657fcf587b0487a880a16b4f7723adf/?child=first",
+    "type": "WebPage"
+  },
+  "type": "Event"
+}

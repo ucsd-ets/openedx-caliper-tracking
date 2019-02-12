@@ -1,0 +1,41 @@
+{
+  "@context": "http://purl.imsglobal.org/ctx/caliper/v1p1",
+  "action": "Created",
+  "actor": {
+    "id": "http://localhost:18000/u/osamaarshad",
+    "name": "osamaarshad",
+    "type": "Person"
+  },
+  "eventTime": "2018-10-17T14:39:24.191Z",
+  "extensions": {
+    "extra_fields": {
+      "accept_language": "en-US,en;q=0.9",
+      "agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36",
+      "course_id": "course-v1:Arbisoft+1+1",
+      "course_user_tags": {},
+      "event_source": "server",
+      "event_type": "edx.cohort.created",
+      "host": "48ca736c86e8",
+      "ip": "172.19.0.1",
+      "org_id": "Arbisoft",
+      "page": null,
+      "path": "/courses/course-v1:Arbisoft+1+1/cohorts/",
+      "session": "d6e5ba806f327a72206fbe497376c126",
+      "user_id": 13
+    }
+  },
+  "id": "urn:uuid:d4618c23-d612-4709-8d9a-478d87808067",
+  "object": {
+    "extensions": {
+      "cohort_id": 1
+    },
+    "id": "http://localhost:18000/courses/course-v1:Arbisoft+1+1/instructor#view-cohort_management",
+    "name": "Test Cohort",
+    "type": "Group"
+  },
+  "referrer": {
+    "id": "http://localhost:18000/courses/course-v1:Arbisoft+1+1/instructor",
+    "type": "WebPage"
+  },
+  "type": "Event"
+}

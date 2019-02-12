@@ -1,0 +1,27 @@
+{
+    "accept_language": "",
+    "agent": "",
+    "context": {},
+    "event": {
+        "course_id": "course-v1:edX+DemoX+Demo_Course",
+        "event_transaction_id": "cb0fc565-2701-4405-986a-8f7de3fd9eb7",
+        "event_transaction_type": "edx.grades.problem.score_overridden",
+        "instructor_id": "None",
+        "new_weighted_earned": 0,
+        "new_weighted_possible": 1,
+        "only_if_higher": null,
+        "problem_id": "block-v1:edX+DemoX+Demo_Course+type@problem+block@a58d4fbb56fd4b1aaeed7b900407ddd7",
+        "user_id": "15"
+    },
+    "event_source": "server",
+    "event_type": "edx.grades.problem.score_overridden",
+    "host": "",
+    "id": null,
+    "ip": "",
+    "name": "edx.grades.problem.score_overridden",
+    "page": null,
+    "referer": "",
+    "session": "",
+    "time": "2019-01-18T13:41:29.527506+00:00",
+    "username": ""
+}

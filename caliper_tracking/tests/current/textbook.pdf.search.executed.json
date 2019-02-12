@@ -1,0 +1,21 @@
+{
+  "accept_language": "en-US,en;q=0.9",
+  "agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36",
+  "context": {
+    "course_id": "course-v1:edX+DemoX+Demo_Course",
+    "org_id": "edX",
+    "path": "/event",
+    "user_id": 6
+  },
+  "event": "{\"status\": \"\", \"chapter\": \"/assets/courseware/v1/f1f8a2cf00c9b9765f30ca904281290e/asset-v1:edX+DemoX+Demo_Course+type@asset+block/github-git-cheat-sheet.pdf\", \"name\": \"textbook.pdf.search.executed\", \"highlightAll\": false, \"caseSensitive\": false, \"query\": \"git\", \"page\": 1}",
+  "event_source": "browser",
+  "event_type": "textbook.pdf.search.executed",
+  "host": "4a3fad7cf959",
+  "ip": "172.18.0.1",
+  "name": "textbook.pdf.search.executed",
+  "page": "http://localhost:18000/courses/course-v1:edX+DemoX+Demo_Course/pdfbook/0/?viewer=true&file=/assets/courseware/v1/f1f8a2cf00c9b9765f30ca904281290e/asset-v1:edX+DemoX+Demo_Course+type@asset+block/github-git-cheat-sheet.pdf#zoom=page-fit&disableRange=true",
+  "referer": "http://localhost:18000/courses/course-v1:edX+DemoX+Demo_Course/pdfbook/0/?viewer=true&file=/assets/courseware/v1/f1f8a2cf00c9b9765f30ca904281290e/asset-v1:edX+DemoX+Demo_Course+type@asset+block/github-git-cheat-sheet.pdf",
+  "session": "5f864f5e71099a6f27a58faf999ad0c1",
+  "time": "2018-12-13T13:46:22.981107+00:00",
+  "username": "honor"
+}

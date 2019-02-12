@@ -1,0 +1,61 @@
+{
+    "agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36",
+    "context": {
+        "asides": {},
+        "course_id": "",
+        "org_id": "",
+        "user_id": 15
+    },
+    "event": {
+        "attempts": 3,
+        "correct_map": {
+            "a58d4fbb56fd4b1aaeed7b900407ddd7_2_1": {
+                "answervariable": null,
+                "correctness": "correct",
+                "hint": "",
+                "hintmode": null,
+                "msg": "",
+                "npoints": null,
+                "queuestate": null
+            }
+        },
+        "new_score": 1,
+        "new_total": 1,
+        "orig_score": 1,
+        "orig_total": 1,
+        "problem_id": "block-v1:edX+DemoX+Demo_Course+type@problem+block@a58d4fbb56fd4b1aaeed7b900407ddd7",
+        "state": {
+            "correct_map": {
+                "a58d4fbb56fd4b1aaeed7b900407ddd7_2_1": {
+                    "answervariable": null,
+                    "correctness": "correct",
+                    "hint": "",
+                    "hintmode": null,
+                    "msg": "",
+                    "npoints": null,
+                    "queuestate": null
+                }
+            },
+            "done": true,
+            "has_saved_answers": false,
+            "input_state": {
+                "a58d4fbb56fd4b1aaeed7b900407ddd7_2_1": {}
+            },
+            "seed": 1,
+            "student_answers": {
+                "a58d4fbb56fd4b1aaeed7b900407ddd7_2_1": "choice_1"
+            }
+        },
+        "student": "danial_malik",
+        "success": "correct",
+        "task_id": "e9b31550-56ea-4c19-b3a2-a718645a8d76"
+    },
+    "event_source": "task",
+    "event_type": "problem_rescore",
+    "host": "openedx-dev.ucsd.edu",
+    "id": null,
+    "ip": "116.58.62.58",
+    "page": "x_module_task",
+    "time": "2019-01-18T11:31:00.160752+00:00",
+    "username": "danial_malik"
+}

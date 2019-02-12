@@ -1,0 +1,43 @@
+{
+    "@context": "http://purl.imsglobal.org/ctx/caliper/v1p1",
+    "action": "Modified",
+    "actor": {
+        "id": "http://localhost:18000/u/honor",
+        "name": "honor",
+        "type": "Person"
+    },
+    "eventTime": "2018-10-19T07:02:48.950Z",
+    "extensions": {
+        "extra_fields": {
+            "accept_language": "en-US,en;q=0.9",
+            "agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36",
+            "course_id": "course-v1:UCP+CS4230+PF_2018",
+            "event_source": "server",
+            "event_type": "edx.grades.grading_policy_changed",
+            "host": "c034dda2875a",
+            "ip": "172.18.0.1",
+            "org_id": "",
+            "page": null,
+            "path": "/settings/grading/course-v1:UCP+CS4230+PF_2018",
+            "session": "b810fc5c3b1113ef86b0098a17b15e34",
+            "user_id": 13
+        }
+    },
+    "id": "urn:uuid:921bd866-93ac-4ed1-a147-cdd1fe91e87f",
+    "object": {
+        "extensions": {
+            "course_id": "course-v1:UCP+CS4230+PF_2018",
+            "event_transaction_id": "313deabc-34e9-47a1-b83c-ee469774376c",
+            "event_transaction_type": "edx.grades.grading_policy_changed",
+            "grading_policy_hash": "rYobmyZAYc4PqUyA9swU6/38tr4=",
+            "user_id": "13"
+        },
+        "id": "http://localhost:18010/settings/grading/course-v1:UCP+CS4230+PF_2018",
+        "type": "CourseOffering"
+    },
+    "referrer": {
+        "id": "http://localhost:18010/settings/grading/course-v1:UCP+CS4230+PF_2018",
+        "type": "WebPage"
+    },
+    "type": "Event"
+}

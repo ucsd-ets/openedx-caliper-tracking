@@ -1,0 +1,21 @@
+{
+  "accept_language": "en-US,en;q=0.9",
+  "agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36",
+  "context": {
+    "course_id": "course-v1:edx+CS0110+2014_T",
+    "org_id": "edx",
+    "path": "/event",
+    "user_id": 2
+  },
+  "event": "{\"search_string\": \"new note\", \"number_of_results\": 1}",
+  "event_source": "browser",
+  "event_type": "edx.course.student_notes.searched",
+  "host": "8c3b43aa7b1b",
+  "ip": "172.18.0.1",
+  "name": "edx.course.student_notes.searched",
+  "page": "http://localhost:18000/courses/course-v1:edx+CS0110+2014_T/edxnotes/",
+  "referer": "http://localhost:18000/courses/course-v1:edx+CS0110+2014_T/edxnotes/",
+  "session": "d4d874ce08a9fd9cc843d256a348f192",
+  "time": "2018-10-24T10:07:01.473209+00:00",
+  "username": "edx"
+}
