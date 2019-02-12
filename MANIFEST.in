@@ -1,0 +1,4 @@
+include LICENSE
+include README.md
+recursive-include caliper_tracking/tests/current/*
+recursive-include caliper_tracking/tests/expected/*
