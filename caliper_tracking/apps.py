@@ -2,7 +2,6 @@ from django.apps import AppConfig
 from django.conf import settings
 
 from .settings import (
-    CALIPER_TRACKING_APP_NAME,
     CALIPER_TRACKING_BACKENDS,
     CALIPER_TRACKING_PROCESSOR,
     LOGIN_EVENT_EMITTER
@@ -10,7 +9,7 @@ from .settings import (
 
 
 class CaliperTrackingConfig(AppConfig):
-    name = CALIPER_TRACKING_APP_NAME
+    name = 'caliper_tracking'
     verbose_name = "Caliper Tracking"
 
     def ready(self):
