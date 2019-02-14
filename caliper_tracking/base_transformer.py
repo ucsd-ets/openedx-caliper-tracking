@@ -3,7 +3,7 @@ Base module containing generic caliper transformer class
 """
 import uuid
 
-from openedx.features.caliper_tracking import utils
+from . import utils
 
 CALIPER_EVENT_CONTEXT = 'http://purl.imsglobal.org/ctx/caliper/v1p1'
 
