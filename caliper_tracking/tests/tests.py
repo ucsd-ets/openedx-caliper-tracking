@@ -8,10 +8,10 @@ import os
 
 from django.test import TestCase
 
-from openedx.features.caliper_tracking.base_transformer import base_transformer
-from openedx.features.caliper_tracking.caliper_config import EVENT_MAPPING
+from caliper_tracking.base_transformer import base_transformer
+from caliper_tracking.caliper_config import EVENT_MAPPING
 
-TEST_DIR_PATH = 'openedx/features/caliper_tracking/tests/'
+TEST_DIR_PATH = 'caliper_tracking/tests/'
 
 
 class CaliperTransformationTestCase(TestCase):
@@ -24,12 +24,12 @@ class CaliperTransformationTestCase(TestCase):
     maxDiff = None
 
     @mock.patch(
-        'openedx.features.caliper_tracking.utils.get_username_from_user_id',
+        'caliper_tracking.utils.get_username_from_user_id',
         return_value='honor',
         autospec=True
     )
     @mock.patch(
-        'openedx.features.caliper_tracking.utils.get_team_url_from_team_id',
+        'caliper_tracking.utils.get_team_url_from_team_id',
         return_value=(
                 "http://localhost:18000/courses/course-v1:edX+DemoX+Demo_Course/teams/"
                 "#teams/Topic1ID/check-3429fc5983a84c8c8366a4477b03d91c"
