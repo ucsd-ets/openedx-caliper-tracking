@@ -3,7 +3,9 @@ from django.conf import settings as django_settings
 from . import processor
 from .settings import CALIPER_TRACKING_BACKENDS, CALIPER_TRACKING_PROCESSOR
 
+
 default_app_config = 'caliper_tracking.apps.CaliperTrackingConfig'
+
 
 def _enable_caliper_backends():
         """
