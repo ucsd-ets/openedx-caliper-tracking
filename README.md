@@ -30,4 +30,4 @@ in `/edx/app/edxapp/lms.env.json` and `/edx/app/edxapp/cms.env.json` files of ed
 
 2. Restart your server.
 
-Event logs can be found in `/var/edx/logs/tracking/tracking.log`.
+Event logs can be found in `/edx/var/logs/tracking/tracking.log`.
