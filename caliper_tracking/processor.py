@@ -4,7 +4,7 @@ from track.backends import BaseBackend
 from .base_transformer import base_transformer
 from .caliper_config import EVENT_MAPPING
 
-logger = logging.getLogger(__name__)
+logger = logging.getLogger('tracking')
 
 
 class CaliperProcessor(BaseBackend):
