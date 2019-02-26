@@ -22,6 +22,29 @@ def base_transformer(event):
     return caliper_event
 
 
+def page_view_transformer(event):
+    """Transforms page view events into caliper format
+
+    @param event: non-caliperized event dict
+    @return : caliperized event dict
+    """
+
+    caliper_event = base_transformer(event)
+
+    caliper_event['actor']['type'] = 'Person'
+    caliper_event['referrer']['type'] = 'WebPage'
+    caliper_event['type'] = 'NavigationEvent'
+    caliper_event['action'] = 'NavigatedTo'
+    caliper_event['object'] = {
+        'id': event.get('referer'),
+        'type': 'WebPage',
+        'extensions': event.get('event')
+    }
+    caliper_event['extensions']['extra_fields'].update(event.get('context'))
+
+    return caliper_event
+
+
 def _add_generic_fields(event, caliper_event):
     """
     Adds all of the generic fields to the caliper_event object.
