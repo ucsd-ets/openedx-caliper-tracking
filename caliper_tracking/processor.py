@@ -1,8 +1,10 @@
 import logging
 
 from track.backends import BaseBackend
-from .base_transformer import base_transformer
+
+from .base_transformer import base_transformer, page_view_transformer
 from .caliper_config import EVENT_MAPPING
+
 
 logger = logging.getLogger('tracking')
 
@@ -21,3 +23,5 @@ class CaliperProcessor(BaseBackend):
     def send(self, event):
         if not event['event_type'].startswith('/'):
             logger.info(self.__call__(event))
+        else:
+            logger.info(page_view_transformer(event))
