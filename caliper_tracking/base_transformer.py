@@ -2,6 +2,7 @@
 Base module containing generic caliper transformer class
 """
 import uuid
+import json
 
 from . import utils
 
@@ -41,8 +42,8 @@ def page_view_transformer(event):
         'extensions': event.get('event')
     }
     caliper_event['extensions']['extra_fields'].update(event.get('context'))
-
-    return caliper_event
+    caliper_event_str = json.dumps(caliper_event)
+    return caliper_event_str
 
 
 def _add_generic_fields(event, caliper_event):
