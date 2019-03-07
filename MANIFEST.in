@@ -1,4 +1,4 @@
 include LICENSE
-include README.md
+include README.rst
 recursive-include caliper_tracking/tests/current/*
 recursive-include caliper_tracking/tests/expected/*
