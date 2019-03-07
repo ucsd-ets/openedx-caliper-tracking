@@ -11,7 +11,7 @@ Caliper Tracking can be used to transform the edx traditional event logs into `I
 Installation
 ############
 
-To install **caliper-tracking** in your Open edX installation, please add the following line to your requirements file. (For most Open edX installations it is located at edx-platform/requirements/edx/base.txt)::
+To install **caliper-tracking** in your Open edX installation, please add the following line to your requirements file. (For most Open edX installations it is located at edx-platform/requirements/edx/base.txt):
 
     caliper-tracking==0.9.0
 
@@ -54,9 +54,9 @@ Please see `LICENSE <./LICENSE>`_ for details.
 How To Contribute
 #################
 
-To contribute, please make PR in this repositry on Github: `Caliper Tracking <https://github.com/ucsd-ets/caliper-tracking>`_
+To contribute, please make the PR in this repositry on Github: `Caliper Tracking <https://github.com/ucsd-ets/caliper-tracking>`_
 
-If you have any issues, or questions, please feel free to open an issue on Github: `Caliper Tracking <https://github.com/ucsd-ets/caliper-tracking>`_
+If you have any issues or questions, please feel free to open an issue on Github: `Caliper Tracking <https://github.com/ucsd-ets/caliper-tracking>`_
 
 
 Contributors
