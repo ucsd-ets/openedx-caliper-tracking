@@ -5,7 +5,7 @@ Transformers for all cohort related events.
 from django.conf import settings
 from django.core.urlresolvers import reverse
 
-from caliper_tracking import utils
+from edx_caliper_tracking import utils
 
 
 def edx_cohort_user_added(current_event, caliper_event):

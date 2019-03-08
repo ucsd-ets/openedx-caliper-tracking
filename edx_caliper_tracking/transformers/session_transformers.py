@@ -3,7 +3,7 @@ Transformers for all the session related events.
 """
 from django.conf import settings
 
-from caliper_tracking.utils import get_user_link_from_username
+from edx_caliper_tracking.utils import get_user_link_from_username
 
 
 def edx_user_login(current_event, caliper_event):

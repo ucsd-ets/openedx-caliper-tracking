@@ -8,12 +8,12 @@ with open(os.path.join(os.path.dirname(__file__), 'README.rst')) as readme:
 os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
 
 setup(
-    name='caliper-tracking',
+    name='edx-caliper-tracking',
     version='0.9.0',
     packages=find_packages(),
     include_package_data=True,
     license='GPL 3.0',
-    description='Caliper Tracking app can be used to transform Open edX tracking events into Caliper standard compliant events.',
+    description='Edx Caliper Tracking app can be used to transform Open edX tracking events into Caliper standard compliant events.',
     long_description=README,
     url='https://github.com/ucsd-ets/caliper-tracking',
     author='UC San Diego',

@@ -4,7 +4,7 @@ Transformers for all openassessment events
 
 import json
 
-from caliper_tracking.utils import convert_datetime
+from edx_caliper_tracking.utils import convert_datetime
 
 
 def openassessmentblock_get_submission_for_staff_grading(

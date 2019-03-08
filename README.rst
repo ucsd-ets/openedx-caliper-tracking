@@ -1,19 +1,19 @@
-****************
-Caliper Tracking
-****************
+********************
+Edx Caliper Tracking
+********************
 
 
 Description
 ###########
 
-Caliper Tracking can be used to transform the edx traditional event logs into `IMS Caliper Standard <http://imsglobal.org/sites/default/files/caliper/v1p1/caliper-spec-v1p1/caliper-spec-v1p1.html>`_ format. Then those logs can be used with any analytics application that is compatible with Caliper Standard events.
+Edx Caliper Tracking can be used to transform the edx traditional event logs into `IMS Caliper Standard <http://imsglobal.org/sites/default/files/caliper/v1p1/caliper-spec-v1p1/caliper-spec-v1p1.html>`_ format. Then those logs can be used with any analytics application that is compatible with Caliper Standard events.
 
 Installation
 ############
 
-To install **caliper-tracking** in your Open edX installation, please add the following line to your requirements file. (For most Open edX installations it is located at edx-platform/requirements/edx/base.txt):
+To install **edx-caliper-tracking** in your Open edX installation, please add the following line to your requirements file. (For most Open edX installations it is located at edx-platform/requirements/edx/base.txt)::
 
-    caliper-tracking==0.9.0
+    edx-caliper-tracking==0.9.0
 
 
 Usage
@@ -26,7 +26,7 @@ Set the value of ``ENABLE_EVENT_CALIPERIZATION`` flag under ``FEATURES`` in the 
  * ``/edx/app/edxapp/lms.env.json``
  * ``/edx/app/edxapp/cms.env.json``
 
-these files should be located at ``/edx/app/edxapp/`` directory:
+these files should be located at ``/edx/app/edxapp/`` directory::
 
 
     "FEATURES": {
