@@ -46,7 +46,7 @@ Transformed event logs can be found in ``/edx/var/logs/tracking/tracking.log`` f
 License
 #######
 
-The code in this repository is licensed under the AGPL 3.0 unless otherwise noted.
+The code in this repository is licensed under the GPL 3.0 unless otherwise noted.
 
 Please see `LICENSE <./LICENSE>`_ for details.
 
