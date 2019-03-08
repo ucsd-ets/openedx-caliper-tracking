@@ -2,7 +2,7 @@
 Transformers for all the certificate events
 """
 
-from edx_caliper_tracking.utils import get_certificate_url
+from openedx_caliper_tracking.utils import get_certificate_url
 from django.conf import settings
 
 import json

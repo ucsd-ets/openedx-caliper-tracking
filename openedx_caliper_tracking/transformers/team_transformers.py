@@ -3,7 +3,7 @@ Transformers for all the team events
 """
 
 import json
-from edx_caliper_tracking import utils
+from openedx_caliper_tracking import utils
 
 
 def edx_team_page_viewed(current_event, caliper_event):
