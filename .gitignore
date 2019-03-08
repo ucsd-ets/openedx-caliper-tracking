@@ -1,4 +1,8 @@
 .vscode/
+.idea/
 __pycache__/
 *.pyc
 env/
+dist/
+edx_caliper_tracking.egg-info/
+build/
