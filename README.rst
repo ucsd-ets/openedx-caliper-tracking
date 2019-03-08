@@ -1,25 +1,25 @@
-********************
-Edx Caliper Tracking
-********************
+*************************
+Open edX Caliper Tracking
+*************************
 
 
 Description
 ###########
 
-Edx Caliper Tracking can be used to transform the edx traditional event logs into `IMS Caliper Standard <http://imsglobal.org/sites/default/files/caliper/v1p1/caliper-spec-v1p1/caliper-spec-v1p1.html>`_ format. Then those logs can be used with any analytics application that is compatible with Caliper Standard events.
+Open edX Caliper Tracking can be used to transform the edx traditional event logs into `IMS Caliper Standard <http://imsglobal.org/sites/default/files/caliper/v1p1/caliper-spec-v1p1/caliper-spec-v1p1.html>`_ format. Then those logs can be used with any analytics application that is compatible with Caliper Standard events.
 
 Installation
 ############
 
-To install **edx-caliper-tracking** in your Open edX installation, please add the following line to your requirements file. (For most Open edX installations it is located at edx-platform/requirements/edx/base.txt)::
+To install **openedx-caliper-tracking** in your Open edX installation, please add the following line to your requirements file. (For most Open edX installations it is located at edx-platform/requirements/edx/base.txt)::
 
-    edx-caliper-tracking==0.9.0
+    openedx-caliper-tracking==0.9.0
 
 
 Usage
 #####
 
-To enable and use `caliper-tracking`:
+To enable and use `openedx-caliper-tracking`:
 
 Set the value of ``ENABLE_EVENT_CALIPERIZATION`` flag under ``FEATURES`` in the following files:
 
@@ -54,9 +54,9 @@ Please see `LICENSE <./LICENSE>`_ for details.
 How To Contribute
 #################
 
-To contribute, please make the PR in this repositry on Github: `Caliper Tracking <https://github.com/ucsd-ets/caliper-tracking>`_
+To contribute, please make the PR in this repositry on Github: `Open edX Caliper Tracking <https://github.com/ucsd-ets/openedx-caliper-tracking>`_
 
-If you have any issues or questions, please feel free to open an issue on Github: `Caliper Tracking <https://github.com/ucsd-ets/caliper-tracking>`_
+If you have any issues or questions, please feel free to open an issue on Github: `Open edX Caliper Tracking <https://github.com/ucsd-ets/openedx-caliper-tracking>`_
 
 
 Contributors

@@ -1,5 +1,5 @@
 """
-This module contains the test cases for edx_caliper_tracking application
+This module contains the test cases for openedx_caliper_tracking application
 """
 
 import mock
@@ -8,10 +8,10 @@ import os
 
 from django.test import TestCase
 
-from edx_caliper_tracking.base_transformer import base_transformer
-from edx_caliper_tracking.caliper_config import EVENT_MAPPING
+from openedx_caliper_tracking.base_transformer import base_transformer
+from openedx_caliper_tracking.caliper_config import EVENT_MAPPING
 
-TEST_DIR_PATH = 'edx_caliper_tracking/tests/'
+TEST_DIR_PATH = 'openedx_caliper_tracking/tests/'
 
 
 class CaliperTransformationTestCase(TestCase):
@@ -24,12 +24,12 @@ class CaliperTransformationTestCase(TestCase):
     maxDiff = None
 
     @mock.patch(
-        'edx_caliper_tracking.utils.get_username_from_user_id',
+        'openedx_caliper_tracking.utils.get_username_from_user_id',
         return_value='honor',
         autospec=True
     )
     @mock.patch(
-        'edx_caliper_tracking.utils.get_team_url_from_team_id',
+        'openedx_caliper_tracking.utils.get_team_url_from_team_id',
         return_value=(
                 "http://localhost:18000/courses/course-v1:edX+DemoX+Demo_Course/teams/"
                 "#teams/Topic1ID/check-3429fc5983a84c8c8366a4477b03d91c"

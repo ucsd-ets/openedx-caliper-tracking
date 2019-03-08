@@ -4,5 +4,5 @@ __pycache__/
 *.pyc
 env/
 dist/
-edx_caliper_tracking.egg-info/
+openedx_caliper_tracking.egg-info/
 build/
