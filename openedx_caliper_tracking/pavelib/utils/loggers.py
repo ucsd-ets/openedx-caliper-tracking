@@ -1,6 +1,12 @@
 import logging
 
 
+def get_formatted_log(result, filename, event_name, status_code):
+    """Return a formatted log message"""
+    return '{} [{}][event_type:{}] Returned status: {}'.format(
+                result, filename, event_name, status_code
+            )
+
 def get_test_logger(logger_name, file_name):
     """return logger that logs the tests output to both console and file"""
 
