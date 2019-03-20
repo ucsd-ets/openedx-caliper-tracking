@@ -6,3 +6,6 @@ env/
 dist/
 openedx_caliper_tracking.egg-info/
 build/
+*.log
+*.env
+
