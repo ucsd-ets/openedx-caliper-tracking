@@ -11,7 +11,7 @@ from django.test import TestCase
 from openedx_caliper_tracking.base_transformer import base_transformer
 from openedx_caliper_tracking.caliper_config import EVENT_MAPPING
 
-TEST_DIR_PATH = 'openedx_caliper_tracking/tests/'
+TEST_DIR_PATH = os.path.dirname(os.path.abspath(__file__))
 
 
 class CaliperTransformationTestCase(TestCase):
@@ -38,14 +38,14 @@ class CaliperTransformationTestCase(TestCase):
     )
     def test_caliper_transformers(self, user_mock, team_mock):
         test_files = [file for file in os.listdir(
-            '{}current/'.format(TEST_DIR_PATH)) if file.endswith(".json")]
+            '{}/current/'.format(TEST_DIR_PATH)) if file.endswith(".json")]
 
         for file in test_files:
-            input_file = '{}current/{}'.format(
+            input_file = '{}/current/{}'.format(
                 TEST_DIR_PATH,
                 file
             )
-            output_file = '{}expected/{}'.format(
+            output_file = '{}/expected/{}'.format(
                 TEST_DIR_PATH,
                 file
             )
