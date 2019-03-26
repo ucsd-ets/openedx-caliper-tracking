@@ -5,8 +5,8 @@ Add CaliperProcessor to event tracking backends' list.
 """
 from django.conf import settings as django_settings
 
-from . import processor
-from .settings import OPENEDX_CALIPER_TRACKING_BACKENDS, OPENEDX_CALIPER_TRACKING_PROCESSOR
+from openedx_caliper_tracking import processor
+from openedx_caliper_tracking.settings import OPENEDX_CALIPER_TRACKING_BACKENDS, OPENEDX_CALIPER_TRACKING_PROCESSOR
 
 
 default_app_config = 'openedx_caliper_tracking.apps.CaliperTrackingConfig'

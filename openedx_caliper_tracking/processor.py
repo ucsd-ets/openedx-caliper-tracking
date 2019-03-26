@@ -2,8 +2,8 @@ import logging
 
 from track.backends import BaseBackend
 
-from .base_transformer import base_transformer, page_view_transformer
-from .caliper_config import EVENT_MAPPING
+from openedx_caliper_tracking.base_transformer import base_transformer, page_view_transformer
+from openedx_caliper_tracking.caliper_config import EVENT_MAPPING
 
 
 logger = logging.getLogger('tracking')
