@@ -12,3 +12,8 @@ OPENEDX_CALIPER_TRACKING_BACKENDS = {
         }
     }
 }
+
+CALIPER_AUTH = {
+    'CALIPER_TESTS_API_URL': '',
+    'CALIPER_TESTS_API_TOKEN': '',
+}
