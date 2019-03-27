@@ -3,7 +3,7 @@ import json
 import requests
 from datetime import datetime
 
-from loggers import get_caliper_logger, get_formatted_log
+from loggers import get_test_logger, get_formatted_log
 from settings import CALIPER_AUTH
 
 CALIPER_TESTS_API_URL = CALIPER_AUTH.get('CALIPER_TESTS_API_URL')
@@ -14,7 +14,7 @@ TEST_DIR_PATH = 'tests'
 TESTS_LOG_FILE = 'caliper_tests.log'
 
 
-logger = get_caliper_logger('caliper_tests', TESTS_LOG_FILE)
+logger = get_test_logger('caliper_tests', TESTS_LOG_FILE)
 
 
 test_files = [

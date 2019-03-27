@@ -2,18 +2,13 @@ import logging
 import json
 
 from track.backends import BaseBackend
-from django.conf import settings
 
 from openedx_caliper_tracking.base_transformer import base_transformer, page_view_transformer
 from openedx_caliper_tracking.caliper_config import EVENT_MAPPING
 from openedx_caliper_tracking.loggers import get_caliper_logger
 
-caliper_logging_file_path = settings.get(
-    'CALIPER_TRACKING_LOGGING_File_PATH', '/edx/var/log/caliper_tracking/caliper.log'
-)
-
 logger = logging.getLogger('tracking')
-caliper_logger = get_caliper_logger('caliper', caliper_logging_file_path)
+caliper_logger = get_caliper_logger('caliper')
 
 
 class CaliperProcessor(BaseBackend):
@@ -23,7 +18,7 @@ class CaliperProcessor(BaseBackend):
             related_function = EVENT_MAPPING[event.get('event_type')]
             caliper_logger.info(json.dumps(related_function(event, caliper_event)))
             return event
-        except KeyError as ex:
+        except KeyError:
             logger.exception("Missing transformer method implementation for {0}".format(event.get('event_type')))
         except Exception as ex:
             logger.exception(ex.args)
