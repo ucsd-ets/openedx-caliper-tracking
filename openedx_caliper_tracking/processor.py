@@ -2,13 +2,18 @@ import logging
 import json
 
 from track.backends import BaseBackend
+from django.conf import settings
 
 from openedx_caliper_tracking.base_transformer import base_transformer, page_view_transformer
 from openedx_caliper_tracking.caliper_config import EVENT_MAPPING
 from openedx_caliper_tracking.loggers import get_caliper_logger
 
+caliper_logging_file_path = settings.get(
+    'CALIPER_TRACKING_LOGGING_File_PATH', '/edx/var/log/caliper_tracking/caliper.log'
+)
+
 logger = logging.getLogger('tracking')
-caliper_logger = get_caliper_logger('caliper', '/dev/caliper.log')
+caliper_logger = get_caliper_logger('caliper', caliper_logging_file_path)
 
 
 class CaliperProcessor(BaseBackend):
