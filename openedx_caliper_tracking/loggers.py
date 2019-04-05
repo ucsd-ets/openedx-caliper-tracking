@@ -8,14 +8,13 @@ import logging
 def get_formatted_log(result, filename, event_name, status_code):
     """Return a formatted log message"""
     return '{} [{}][event_type:{}] Returned status: {}'.format(
-                result, filename, event_name, status_code
-            )
+        result, filename, event_name, status_code
+    )
 
 
-def get_caliper_logger(logger_name, file_path):
+def get_test_logger(logger_name, file_path):
     """
-    logger for caliper app
-
+    logger for caliper app tests
     :param logger_name: The name you want you create logger of
     :param file_path: The path where logs will be stored
     :return: Logger with defined configurations
@@ -31,5 +30,27 @@ def get_caliper_logger(logger_name, file_path):
 
     logger.addHandler(f_handler)
     logger.setLevel(logging.INFO)
+
+    return logger
+
+
+def get_caliper_logger(logger_name):
+    """
+    logger for caliper app
+
+    :param logger_name: The name you want you create logger of
+    :return: Logger with defined configurations
+    """
+
+    logger = logging.getLogger(logger_name)
+
+    syslog_handler = logging.handlers.SysLogHandler(address='/dev/log', facility='local2')
+    syslog_handler.setLevel(logging.INFO)
+    syslog_format = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+    syslog_handler.setFormatter(syslog_format)
+
+    logger.addHandler(syslog_handler)
+    logger.setLevel(logging.INFO)
+    logger.propagate = False
 
     return logger
