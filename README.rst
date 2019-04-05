@@ -1,32 +1,32 @@
-****************
-Caliper Tracking
-****************
+*************************
+Open edX Caliper Tracking
+*************************
 
 
 Description
 ###########
 
-Caliper Tracking can be used to transform the edx traditional event logs into `IMS Caliper Standard <http://imsglobal.org/sites/default/files/caliper/v1p1/caliper-spec-v1p1/caliper-spec-v1p1.html>`_ format. Then those logs can be used with any analytics application that is compatible with Caliper Standard events.
+Open edX Caliper Tracking can be used to transform the edX traditional event logs into `Caliper Analytics Specifications <https://www.imsglobal.org/activity/caliper>`_ provided by `IMS Global <http://imsglobal.org>`_. Generated logs can be consumed by any analytics application which is compatible with Caliper Standard.
 
 Installation
 ############
 
-To install **caliper-tracking** in your Open edX installation, please add the following line to your requirements file. (For most Open edX installations it is located at edx-platform/requirements/edx/base.txt):
+To install **openedx-caliper-tracking** in your Open edX installation, please add the following line to your requirements file. (For most Open edX installations it should be located at edx-platform/requirements/edx/base.txt)::
 
-    caliper-tracking==0.9.0
+    openedx-caliper-tracking==0.10.2
 
 
 Usage
 #####
 
-To enable and use `caliper-tracking`:
+To enable and use `openedx-caliper-tracking`:
 
-Set the value of ``ENABLE_EVENT_CALIPERIZATION`` flag under ``FEATURES`` in the following files:
+Please add ``ENABLE_EVENT_CALIPERIZATION`` flag under ``FEATURES`` in the following files:
 
  * ``/edx/app/edxapp/lms.env.json``
  * ``/edx/app/edxapp/cms.env.json``
 
-these files should be located at ``/edx/app/edxapp/`` directory:
+these files should be located at ``/edx/app/edxapp/`` directory, see the example below::
 
 
     "FEATURES": {
@@ -40,13 +40,21 @@ these files should be located at ``/edx/app/edxapp/`` directory:
 Location of Transformed Logs
 ****************************
 
-Transformed event logs can be found in ``/edx/var/logs/tracking/tracking.log`` file.
+Transformed events are logged using **'logging.handlers.SysLogHandler'** with **'facility: local2'**.
+
+We need to create output files manually and set appropriate permissions for syslog user, please follow the steps below:
+
+1. Create a log file with read/write permissions given to **syslog** user e.g: **/edx/var/log/caliper-analytics/caliper.log**
+
+2. Create a mapping for **'local2'** in the configuration files present in **/etc/rsyslog.d/** ::
+
+    local2.*                 /edx/var/log/caliper-analytics/caliper.log
 
 
 License
 #######
 
-The code in this repository is licensed under the AGPL 3.0 unless otherwise noted.
+The code in this repository is licensed under the GPL v3.0 unless otherwise noted.
 
 Please see `LICENSE <./LICENSE>`_ for details.
 
@@ -54,9 +62,9 @@ Please see `LICENSE <./LICENSE>`_ for details.
 How To Contribute
 #################
 
-To contribute, please make the PR in this repositry on Github: `Caliper Tracking <https://github.com/ucsd-ets/caliper-tracking>`_
+To contribute, please make a pull request in this repositry on Github: `Open edX Caliper Tracking <https://github.com/ucsd-ets/openedx-caliper-tracking>`_
 
-If you have any issues or questions, please feel free to open an issue on Github: `Caliper Tracking <https://github.com/ucsd-ets/caliper-tracking>`_
+If you have any question or issue, please feel free to open an issue on Github: `Open edX Caliper Tracking <https://github.com/ucsd-ets/openedx-caliper-tracking>`_
 
 
 Contributors
