@@ -3,6 +3,9 @@ Customized loggers for openedx-caliper-tracking app
 """
 
 import logging
+import sys
+
+from django.conf import settings
 
 
 def get_formatted_log(result, filename, event_name, status_code):
@@ -44,12 +47,16 @@ def get_caliper_logger(logger_name):
 
     logger = logging.getLogger(logger_name)
 
-    syslog_handler = logging.handlers.SysLogHandler(address='/dev/log', facility='local2')
-    syslog_handler.setLevel(logging.INFO)
-    syslog_format = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
-    syslog_handler.setFormatter(syslog_format)
+    if settings.DEBUG:
+        log_handler = logging.StreamHandler()
+    else:
+        log_handler = logging.handlers.SysLogHandler(address='/dev/log', facility='local2')
 
-    logger.addHandler(syslog_handler)
+    log_handler.setLevel(logging.INFO)
+    log_format = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+    log_handler.setFormatter(log_format)
+
+    logger.addHandler(log_handler)
     logger.setLevel(logging.INFO)
     logger.propagate = False
 
