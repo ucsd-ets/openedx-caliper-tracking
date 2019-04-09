@@ -42,7 +42,7 @@ Location of Transformed Logs
 
 Transformed events are logged using **'logging.handlers.SysLogHandler'** with **'facility: local2'**.
 
-We need to create output files manually and set appropriate permissions for syslog user, please follow the steps below:
+We need to create output files manually and set appropriate permissions for syslog user. To do so, please follow the steps below:
 
 1. Create a log file with read/write permissions given to **syslog** user e.g: **/edx/var/log/caliper-analytics/caliper.log**
 
