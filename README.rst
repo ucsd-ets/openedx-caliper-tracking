@@ -15,7 +15,6 @@ To install **openedx-caliper-tracking** in your Open edX installation, please ad
 
     openedx-caliper-tracking==0.10.2
 
-
 Usage
 #####
 
@@ -26,8 +25,7 @@ Please add ``ENABLE_EVENT_CALIPERIZATION`` flag under ``FEATURES`` in the follow
  * ``/edx/app/edxapp/lms.env.json``
  * ``/edx/app/edxapp/cms.env.json``
 
-these files should be located at ``/edx/app/edxapp/`` directory, see the example below::
-
+These files should be located at ``/edx/app/edxapp/`` directory, see the example below::
 
     "FEATURES": {
         ...
@@ -54,17 +52,13 @@ We need to create output files manually and set appropriate permissions for sysl
 License
 #######
 
-The code in this repository is licensed under the GPL v3.0 unless otherwise noted.
-
-Please see `LICENSE <./LICENSE>`_ for details.
+The code in this repository is licensed under the GPL v3.0 unless otherwise noted. Please see `LICENSE <./LICENSE>`_ for details.
 
 
 How To Contribute
 #################
 
-To contribute, please make a pull request in this repositry on Github: `Open edX Caliper Tracking <https://github.com/ucsd-ets/openedx-caliper-tracking>`_
-
-If you have any question or issue, please feel free to open an issue on Github: `Open edX Caliper Tracking <https://github.com/ucsd-ets/openedx-caliper-tracking>`_
+To contribute, please make a pull request in this repositry on Github: `Open edX Caliper Tracking <https://github.com/ucsd-ets/openedx-caliper-tracking>`_. If you have any question or issue, please feel free to open an issue on Github: `Open edX Caliper Tracking <https://github.com/ucsd-ets/openedx-caliper-tracking>`_.
 
 
 Contributors

@@ -1,4 +1,4 @@
 include LICENSE
 include README.rst
-recursive-include caliper_tracking/tests/current/*
-recursive-include caliper_tracking/tests/expected/*
+include openedx_caliper_tracking/tests/current/*.json
+include openedx_caliper_tracking/tests/expected/*.json

@@ -1,4 +1,11 @@
 .vscode/
+.idea/
 __pycache__/
 *.pyc
 env/
+dist/
+openedx_caliper_tracking.egg-info/
+build/
+*.log
+*.env
+
