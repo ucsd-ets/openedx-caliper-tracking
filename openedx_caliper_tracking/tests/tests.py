@@ -1,5 +1,5 @@
 """
-This module contains the test cases for caliper_tracking application
+This module contains the test cases for openedx_caliper_tracking application
 """
 
 import mock
@@ -8,10 +8,10 @@ import os
 
 from django.test import TestCase
 
-from caliper_tracking.base_transformer import base_transformer
-from caliper_tracking.caliper_config import EVENT_MAPPING
+from openedx_caliper_tracking.base_transformer import base_transformer
+from openedx_caliper_tracking.caliper_config import EVENT_MAPPING
 
-TEST_DIR_PATH = 'caliper_tracking/tests/'
+TEST_DIR_PATH = os.path.dirname(os.path.abspath(__file__))
 
 
 class CaliperTransformationTestCase(TestCase):
@@ -24,12 +24,12 @@ class CaliperTransformationTestCase(TestCase):
     maxDiff = None
 
     @mock.patch(
-        'caliper_tracking.utils.get_username_from_user_id',
+        'openedx_caliper_tracking.utils.get_username_from_user_id',
         return_value='honor',
         autospec=True
     )
     @mock.patch(
-        'caliper_tracking.utils.get_team_url_from_team_id',
+        'openedx_caliper_tracking.utils.get_team_url_from_team_id',
         return_value=(
                 "http://localhost:18000/courses/course-v1:edX+DemoX+Demo_Course/teams/"
                 "#teams/Topic1ID/check-3429fc5983a84c8c8366a4477b03d91c"
@@ -38,14 +38,14 @@ class CaliperTransformationTestCase(TestCase):
     )
     def test_caliper_transformers(self, user_mock, team_mock):
         test_files = [file for file in os.listdir(
-            '{}current/'.format(TEST_DIR_PATH)) if file.endswith(".json")]
+            '{}/current/'.format(TEST_DIR_PATH)) if file.endswith(".json")]
 
         for file in test_files:
-            input_file = '{}current/{}'.format(
+            input_file = '{}/current/{}'.format(
                 TEST_DIR_PATH,
                 file
             )
-            output_file = '{}expected/{}'.format(
+            output_file = '{}/expected/{}'.format(
                 TEST_DIR_PATH,
                 file
             )

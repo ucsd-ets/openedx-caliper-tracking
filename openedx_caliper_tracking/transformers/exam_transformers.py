@@ -1,7 +1,7 @@
 """
 Transformers for all exam related events.
 """
-from caliper_tracking.utils import convert_datetime
+from openedx_caliper_tracking.utils import convert_datetime
 
 
 def edx_special_exam_timed_attempt_created(current_event, caliper_event):

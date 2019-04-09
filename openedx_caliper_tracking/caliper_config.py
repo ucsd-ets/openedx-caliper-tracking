@@ -1,4 +1,4 @@
-from . import transformers as ctf
+from openedx_caliper_tracking import transformers as ctf
 
 """
 Mapping of events to their transformer functions
