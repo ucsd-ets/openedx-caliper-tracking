@@ -47,12 +47,13 @@ def log_failure(event_id, status_code):
     ))
 
 
-def deliver_caliper_event(event):
+def deliver_caliper_event(caliperized_event, event_type):
     """
     Delivers the caliperized event to the external API endpoint.
 
     @params
-    event: (dict) dict containing the entire event after caliperization
+    caliperized_event: (dict) dict containing the entire event after caliperization
+    event_type: (str) the type of the event being fired
     """
     try:
         response = requests.post(
@@ -65,8 +66,8 @@ def deliver_caliper_event(event):
             json={
                 "records": [
                     {
-                        "key": event.get('event_type'),
-                        "value": event
+                        "key": event_type,
+                        "value": caliperized_event
                     }
                 ]
             }
@@ -108,7 +109,7 @@ class CaliperProcessor(BaseBackend):
             caliper_logger.info(json.dumps(transformed_event))
 
             if hasattr(settings, 'CALIPER_DELIVERY_ENDPOINT') and hasattr(settings, 'CALIPER_DELIVERY_AUTH_TOKEN'):
-                deliver_caliper_event(transformed_event)
+                deliver_caliper_event(transformed_event, event.get('event_type'))
 
             return event
         except KeyError:
