@@ -62,7 +62,15 @@ def deliver_caliper_event(event):
                     settings.CALIPER_DELIVERY_AUTH_TOKEN),
                 'Content-Type': 'application/json',
             },
-            json=event)
+            json={
+                "records": [
+                    {
+                        "key": event.get('event_type'),
+                        "value": event
+                    }
+                ]
+            }
+        )
 
         if response.status_code == 200:
             log_success(event.get('id'), response.status_code)
