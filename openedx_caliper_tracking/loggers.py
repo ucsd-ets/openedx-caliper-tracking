@@ -53,8 +53,6 @@ def get_caliper_logger(logger_name):
         log_handler = logging.handlers.SysLogHandler(address='/dev/log', facility='local2')
 
     log_handler.setLevel(logging.INFO)
-    log_format = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
-    log_handler.setFormatter(log_format)
 
     logger.addHandler(log_handler)
     logger.setLevel(logging.INFO)
