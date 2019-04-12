@@ -47,7 +47,8 @@ def get_caliper_logger(logger_name):
 
     logger = logging.getLogger(logger_name)
 
-    if settings.DEBUG:
+    # checks if the environment is either devstack or test
+    if settings.DEBUG or hasattr(settings, 'TEST_ROOT'):
         log_handler = logging.StreamHandler()
     else:
         log_handler = logging.handlers.SysLogHandler(address='/dev/log', facility='local2')

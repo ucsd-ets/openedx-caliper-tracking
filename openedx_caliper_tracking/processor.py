@@ -11,8 +11,8 @@ from openedx_caliper_tracking.caliper_config import EVENT_MAPPING
 from openedx_caliper_tracking.loggers import get_caliper_logger
 
 LOGGER = logging.getLogger(__name__)
-tracking_logger = logging.getLogger('tracking')
-caliper_logger = get_caliper_logger('caliper')
+TRACKING_LOGGER = logging.getLogger('tracking')
+CALIPER_LOGGER = get_caliper_logger('caliper')
 
 
 def log_success(event_id, status_code):
@@ -46,7 +46,6 @@ def log_failure(event_id, status_code):
         settings.CALIPER_DELIVERY_ENDPOINT
     ))
 
-
 def deliver_caliper_event(caliperized_event, event_type):
     """
     Delivers the caliperized event to the external API endpoint.
@@ -61,9 +60,9 @@ def deliver_caliper_event(caliperized_event, event_type):
             headers={
                 'Authorization': 'Bearer {}'.format(
                     settings.CALIPER_DELIVERY_AUTH_TOKEN),
-                'Content-Type': 'application/json',
+                'Content-Type': 'application/vnd.kafka.json.v2+json',
             },
-            json={
+            data={
                 "records": [
                     {
                         "key": event_type,
@@ -74,11 +73,11 @@ def deliver_caliper_event(caliperized_event, event_type):
         )
 
         if response.status_code == 200:
-            log_success(event.get('id'), response.status_code)
+            log_success(caliperized_event.get('id'), response.status_code)
         else:
-            log_failure(event.get('id'), response.status_code)
-    except ConnectionError as ex:
-        log_failure(event.get('id'), 500)
+            log_failure(caliperized_event.get('id'), response.status_code)
+    except ConnectionError:
+        log_failure(caliperized_event.get('id'), 500)
 
 
 class CaliperProcessor(BaseBackend):
@@ -106,17 +105,17 @@ class CaliperProcessor(BaseBackend):
             related_function = EVENT_MAPPING[event.get('event_type')]
             transformed_event = related_function(event, caliper_event)
 
-            caliper_logger.info(json.dumps(transformed_event))
+            CALIPER_LOGGER.info(json.dumps(transformed_event))
 
             if hasattr(settings, 'CALIPER_DELIVERY_ENDPOINT') and hasattr(settings, 'CALIPER_DELIVERY_AUTH_TOKEN'):
                 deliver_caliper_event(transformed_event, event.get('event_type'))
 
             return event
         except KeyError:
-            tracking_logger.exception("Missing transformer method implementation for {}".format(
+            TRACKING_LOGGER.exception("Missing transformer method implementation for {}".format(
                 event.get('event_type')))
         except Exception as ex:
-            tracking_logger.exception(ex.args)
+            TRACKING_LOGGER.exception(ex.args)
 
     def send(self, event):
         """
@@ -126,7 +125,7 @@ class CaliperProcessor(BaseBackend):
         event: (dict) raw event from edX event tracking pipeline:
         """
         if not event['event_type'].startswith('/'):
-            tracking_logger.info(self.__call__(event))
+            TRACKING_LOGGER.info(self.__call__(event))
         else:
-            tracking_logger.info(json.dumps(event))
-            caliper_logger.info(page_view_transformer(event))
+            TRACKING_LOGGER.info(json.dumps(event))
+            CALIPER_LOGGER.info(page_view_transformer(event))
