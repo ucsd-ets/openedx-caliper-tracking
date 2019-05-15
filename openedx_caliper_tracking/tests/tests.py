@@ -54,20 +54,20 @@ class CaliperTransformationTestCase(TestCase):
                 TEST_DIR_PATH,
                 current_file
             )
+            with self.settings(LMS_ROOT_URL='http://localhost:18000'):
+                with open(input_file) as current, open(output_file) as expected:
+                    event = json.loads(current.read())
+                    expected_event = json.loads(expected.read())
 
-            with open(input_file) as current, open(output_file) as expected:
-                event = json.loads(current.read())
-                expected_event = json.loads(expected.read())
+                    expected_event.pop('id')
 
-                expected_event.pop('id')
+                    caliper_event = base_transformer(event)
+                    related_function = EVENT_MAPPING[event.get('event_type')]
+                    caliper_event = related_function(event, caliper_event)
 
-                caliper_event = base_transformer(event)
-                related_function = EVENT_MAPPING[event.get('event_type')]
-                caliper_event = related_function(event, caliper_event)
+                    caliper_event.pop('id')
 
-                caliper_event.pop('id')
-
-                self.assertDictEqual(caliper_event, expected_event)
+                    self.assertDictEqual(caliper_event, expected_event)
 
 
 class CaliperDeliveryTestCase(TestCase):
