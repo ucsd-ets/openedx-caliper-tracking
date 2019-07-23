@@ -62,7 +62,7 @@ def deliver_caliper_event(caliperized_event, event_type):
                     settings.CALIPER_DELIVERY_AUTH_TOKEN),
                 'Content-Type': 'application/vnd.kafka.json.v2+json',
             },
-            data={
+            json={
                 "records": [
                     {
                         "key": event_type,
