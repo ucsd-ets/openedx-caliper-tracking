@@ -13,14 +13,14 @@ Installation
 
 To install **openedx-caliper-tracking** in your Open edX installation, please add the following line to your requirements file. (For most Open edX installations it should be located at edx-platform/requirements/edx/base.txt)::
 
-    openedx-caliper-tracking==0.11.1
+    openedx-caliper-tracking==0.11.2
 
 Usage
 #####
 
 To enable and use `openedx-caliper-tracking`:
 
-Please add ``ENABLE_EVENT_CALIPERIZATION`` flag under ``FEATURES`` in the following files:
+1. Please add ``ENABLE_EVENT_CALIPERIZATION`` flag under ``FEATURES`` in the following files:
 
  * ``/edx/app/edxapp/lms.env.json``
  * ``/edx/app/edxapp/cms.env.json``
@@ -33,6 +33,20 @@ These files should be located at ``/edx/app/edxapp/`` directory, see the example
         "ENABLE_EVENT_CALIPERIZATION": true,
 
     }
+
+2. Add the following lines::
+
+    if FEATURES.get('ENABLE_EVENT_CALIPERIZATION'):
+        INSTALLED_APPS.insert(
+            INSTALLED_APPS.index('eventtracking.django.apps.EventTrackingConfig'),
+            'openedx_caliper_tracking'
+        )
+
+in the following files:
+
+- ``lms/envs/aws.py (production.py for ironwood release)``
+
+- ``cms/envs/aws.py (production.py for ironwood release)``
 
 
 Location of Transformed Logs
@@ -47,6 +61,28 @@ We need to create output files manually and set appropriate permissions for sysl
 2. Create a mapping for **'local2'** in the configuration files present in **/etc/rsyslog.d/** ::
 
     local2.*                 /edx/var/log/caliper-analytics/caliper.log
+
+
+Sending logs to external API
+############################
+
+Using the app, we can also send the transformed event logs to some third party broker API (e.g. kafka). To do this, we have to add the following configurations
+
+**Note**: Set these settings only if you want to send the logs to some external consumer.
+
+1. Add the key ``CALIPER_DELIVERY_ENDPOINT`` and its value in the ``lms.env.json`` and ``cms.env.json`` files.
+2. Add the key ``CALIPER_DELIVERY_AUTH_TOKEN`` and its value in the ``lms.auth.json`` and ``cms.auth.json`` files.
+3. Add the following lines::
+
+    CALIPER_DELIVERY_ENDPOINT = ENV_TOKENS.get('CALIPER_DELIVERY_ENDPOINT')
+    CALIPER_DELIVERY_AUTH_TOKEN = AUTH_TOKENS.get('CALIPER_DELIVERY_AUTH_TOKEN')
+
+
+in the following files:
+
+- ``lms/envs/aws.py (production.py for ironwood release)``
+
+- ``lms/envs/aws.py (production.py for ironwood release)``
 
 
 License
@@ -65,6 +101,7 @@ Contributors
 ############
 
 * `Muhammad Zeeshan <https://github.com/zee-pk>`_
+* `Tasawer Nawaz <https://github.com/tasawernawaz>`_
 * `Saad Ali <https://github.com/NIXKnight>`_
 * `Husnain Raza Ghaffar <https://github.com/HusnainRazaGhaffar>`_
 * `Aroosha Arif <https://github.com/arooshaarif>`_

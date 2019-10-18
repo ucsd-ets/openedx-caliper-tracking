@@ -79,7 +79,6 @@ class CaliperDeliveryTestCase(TestCase):
     @mock.patch(
         'openedx_caliper_tracking.processor.deliver_caliper_event'
     )
-    @override_settings()
     def test_event_is_not_called_without_settings(self, delivery_mock):
         """
         If the settings CALIPER_DELIVER_ENDPOINT and CALIPER_DELIVERY_AUTH_TOKEN are
