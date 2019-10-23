@@ -114,7 +114,7 @@ class CaliperProcessor(BaseBackend):
             if getattr(settings, 'CALIPER_DELIVERY_ENDPOINT') and getattr(settings, 'CALIPER_DELIVERY_AUTH_TOKEN'):
                 deliver_caliper_event(transformed_event, event.get('event_type'))
 
-            if settings.FEATURES.get('ENALBE_KAFKA_FOR_CALIPER') and hasattr(settings, 'CALIPER_KAFKA_SETTINGS'):
+            if settings.FEATURES.get('ENABLE_KAFKA_FOR_CALIPER') and hasattr(settings, 'CALIPER_KAFKA_SETTINGS'):
                 from openedx_caliper_tracking.tasks import deliver_caliper_event_to_kafka
                 deliver_caliper_event_to_kafka.delay(transformed_event, event.get('event_type'))
 
