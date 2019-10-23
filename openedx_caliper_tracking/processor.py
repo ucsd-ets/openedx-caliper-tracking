@@ -10,6 +10,7 @@ from openedx_caliper_tracking.base_transformer import base_transformer, page_vie
 from openedx_caliper_tracking.caliper_config import EVENT_MAPPING
 from openedx_caliper_tracking.loggers import get_caliper_logger
 
+
 LOGGER = logging.getLogger(__name__)
 TRACKING_LOGGER = logging.getLogger('tracking')
 CALIPER_LOGGER = get_caliper_logger('caliper')
@@ -45,6 +46,7 @@ def log_failure(event_id, status_code):
         event_id,
         settings.CALIPER_DELIVERY_ENDPOINT
     ))
+
 
 def deliver_caliper_event(caliperized_event, event_type):
     """
@@ -88,13 +90,15 @@ class CaliperProcessor(BaseBackend):
     This transformer is used in the commong.djangoapps.track django app as a replacement
     for the default tracking backend.
 
-    It is also used as an addition to the event tracking pipeline in the event_tracking app
-    by Open edX
+    It is also used as an addition to the event tracking pipeline in the
+    event_tracking app by Open edX.
     """
 
     def __call__(self, event):
         """
-        handles the transformation and delivery of an event. Delivers the event to the caliper log file as well as
+        Handles the transformation and delivery of an event.
+
+        Delivers the event to the caliper log file as well as
         delivers it to an external API if configured to do so.
 
         @params:
@@ -110,9 +114,13 @@ class CaliperProcessor(BaseBackend):
             if getattr(settings, 'CALIPER_DELIVERY_ENDPOINT') and getattr(settings, 'CALIPER_DELIVERY_AUTH_TOKEN'):
                 deliver_caliper_event(transformed_event, event.get('event_type'))
 
+            if settings.FEATURES.get('ENALBE_KAFKA_FOR_CALIPER') and hasattr(settings, 'CALIPER_KAFKA_SETTINGS'):
+                from openedx_caliper_tracking.tasks import deliver_caliper_event_to_kafka
+                deliver_caliper_event_to_kafka.delay(transformed_event, event.get('event_type'))
+
             return event
         except KeyError:
-            TRACKING_LOGGER.exception("Missing transformer method implementation for {}".format(
+            TRACKING_LOGGER.exception('Missing transformer method implementation for {}'.format(
                 event.get('event_type')))
         except Exception as ex:
             TRACKING_LOGGER.exception(ex.args)

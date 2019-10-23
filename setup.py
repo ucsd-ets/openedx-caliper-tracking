@@ -17,6 +17,9 @@ setup(
     long_description=README,
     url='https://github.com/ucsd-ets/caliper-tracking',
     author='UC San Diego',
+    install_requires=[
+        'kafka-python==1.4.7'
+    ],
     classifiers=[
         'Environment :: Web Environment',
         'Framework :: Django',
