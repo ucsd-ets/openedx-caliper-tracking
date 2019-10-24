@@ -32,6 +32,7 @@ These files should be located at ``/edx/app/edxapp/`` directory, see the example
 
         "ENABLE_EVENT_CALIPERIZATION": true,
 
+        ...
     }
 
 2. Add the following lines::
@@ -71,8 +72,24 @@ Using the app, we can also send the transformed event logs to some third party b
 **Note**: Set these settings only if you want to send the logs to some external consumer.
 
 1. Add the key ``CALIPER_DELIVERY_ENDPOINT`` and its value in the ``lms.env.json`` and ``cms.env.json`` files.
-2. Add the key ``CALIPER_DELIVERY_AUTH_TOKEN`` and its value in the ``lms.auth.json`` and ``cms.auth.json`` files.
-3. Add the following lines::
+
+2. Please add ``ENABLE_CALIPER_EVENTS_DELIVERY`` flag under ``FEATURES`` in the following files:
+
+ * ``/edx/app/edxapp/lms.env.json``
+ * ``/edx/app/edxapp/cms.env.json``
+
+These files should be located at ``/edx/app/edxapp/`` directory, see the example below::
+
+    "FEATURES": {
+        ...
+
+        "ENABLE_CALIPER_EVENTS_DELIVERY": true,
+
+        ...
+    }
+
+3. Add the key ``CALIPER_DELIVERY_AUTH_TOKEN`` and its value in the ``lms.auth.json`` and ``cms.auth.json`` files.
+4. Add the following lines::
 
     CALIPER_DELIVERY_ENDPOINT = ENV_TOKENS.get('CALIPER_DELIVERY_ENDPOINT')
     CALIPER_DELIVERY_AUTH_TOKEN = AUTH_TOKENS.get('CALIPER_DELIVERY_AUTH_TOKEN')
