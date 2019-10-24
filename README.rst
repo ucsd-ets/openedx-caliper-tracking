@@ -13,14 +13,14 @@ Installation
 
 To install **openedx-caliper-tracking** in your Open edX installation, please add the following line to your requirements file. (For most Open edX installations it should be located at edx-platform/requirements/edx/base.txt)::
 
-    openedx-caliper-tracking==0.11.2
+    openedx-caliper-tracking==0.11.3
 
 Usage
 #####
 
 To enable and use `openedx-caliper-tracking`:
 
-1. Please add ``ENABLE_EVENT_CALIPERIZATION`` flag under ``FEATURES`` in the following files:
+1. Add ``ENABLE_EVENT_CALIPERIZATION`` flag under ``FEATURES`` in the following files:
 
  * ``/edx/app/edxapp/lms.env.json``
  * ``/edx/app/edxapp/cms.env.json``
@@ -32,6 +32,7 @@ These files should be located at ``/edx/app/edxapp/`` directory, see the example
 
         "ENABLE_EVENT_CALIPERIZATION": true,
 
+        ...
     }
 
 2. Add the following lines::
@@ -70,9 +71,24 @@ Using the app, we can also send the transformed event logs to some third party b
 
 **Note**: Set these settings only if you want to send the logs to some external consumer.
 
-1. Add the key ``CALIPER_DELIVERY_ENDPOINT`` and its value in the ``lms.env.json`` and ``cms.env.json`` files.
-2. Add the key ``CALIPER_DELIVERY_AUTH_TOKEN`` and its value in the ``lms.auth.json`` and ``cms.auth.json`` files.
-3. Add the following lines::
+1. Add ``ENABLE_CALIPER_EVENTS_DELIVERY`` flag under ``FEATURES`` in the following files:
+
+ * ``/edx/app/edxapp/lms.env.json``
+ * ``/edx/app/edxapp/cms.env.json``
+
+These files should be located at ``/edx/app/edxapp/`` directory, see the example below::
+
+    "FEATURES": {
+        ...
+
+        "ENABLE_CALIPER_EVENTS_DELIVERY": true,
+
+        ...
+    }
+
+2. Add the key ``CALIPER_DELIVERY_ENDPOINT`` and its value in the ``lms.env.json`` and ``cms.env.json`` files.
+3. Add the key ``CALIPER_DELIVERY_AUTH_TOKEN`` and its value in the ``lms.auth.json`` and ``cms.auth.json`` files.
+4. Add the following lines::
 
     CALIPER_DELIVERY_ENDPOINT = ENV_TOKENS.get('CALIPER_DELIVERY_ENDPOINT')
     CALIPER_DELIVERY_AUTH_TOKEN = AUTH_TOKENS.get('CALIPER_DELIVERY_AUTH_TOKEN')
