@@ -111,7 +111,9 @@ class CaliperProcessor(BaseBackend):
 
             CALIPER_LOGGER.info(json.dumps(transformed_event))
 
-            if hasattr(settings, 'CALIPER_DELIVERY_ENDPOINT') and hasattr(settings, 'CALIPER_DELIVERY_AUTH_TOKEN'):
+            if (settings.FEATURES.get('ENABLE_CALIPER_DELIVERY_POINT')
+                and hasattr(settings, 'CALIPER_DELIVERY_ENDPOINT')
+                    and hasattr(settings, 'CALIPER_DELIVERY_AUTH_TOKEN')):
                 deliver_caliper_event(transformed_event, event.get('event_type'))
 
             if settings.FEATURES.get('ENABLE_KAFKA_FOR_CALIPER') and hasattr(settings, 'CALIPER_KAFKA_SETTINGS'):
