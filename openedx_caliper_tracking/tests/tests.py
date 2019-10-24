@@ -81,11 +81,23 @@ class CaliperDeliveryTestCase(TestCase):
     )
     def test_event_is_not_called_without_settings(self, delivery_mock):
         """
-        If the settings CALIPER_DELIVER_ENDPOINT and CALIPER_DELIVERY_AUTH_TOKEN are
-        not present then the API call shouldn't fire
+        Test that API call shouldn't fire if the following settings
+
+            ENABLE_CALIPER_EVENTS_DELIVERY,
+            CALIPER_DELIVERY_ENDPOINT,
+            CALIPER_DELIVERY_AUTH_TOKEN
+
+        are not given.
         """
-        del settings.CALIPER_DELIVERY_ENDPOINT
-        del settings.CALIPER_DELIVERY_AUTH_TOKEN
+        if settings.FEATURES.get('ENABLE_CALIPER_EVENTS_DELIVERY'):
+            settings.FEATURES.pop('ENABLE_CALIPER_EVENTS_DELIVERY')
+
+        if hasattr(settings, 'CALIPER_DELIVERY_ENDPOINT'):
+            del settings.CALIPER_DELIVERY_ENDPOINT
+
+        if hasattr(settings, 'CALIPER_DELIVERY_AUTH_TOKEN'):
+            del settings.CALIPER_DELIVERY_AUTH_TOKEN
+
         input_file = '{}/current/{}'.format(
             TEST_DIR_PATH,
             'book.json'
@@ -102,12 +114,43 @@ class CaliperDeliveryTestCase(TestCase):
     )
     @override_settings(
         CALIPER_DELIVERY_ENDPOINT='http://localhost:3000',
-        CALIPER_DELIVERY_AUTH_TOKEN='test_auth_token',
+        CALIPER_DELIVERY_AUTH_TOKEN='test_auth_token'
+    )
+    @mock.patch.dict(
+        'django.conf.settings.FEATURES',
+        {'ENABLE_CALIPER_EVENTS_DELIVERY': False},
+        clear=False
+    )
+    def test_event_is_not_called_with_unset_delivery_flag(self, delivery_mock):
+        """
+        Test that API call shouldn't fire if the feature flag ENABLE_CALIPER_EVENTS_DELIVERY is not set.
+        """
+        input_file = '{}/current/{}'.format(
+            TEST_DIR_PATH,
+            'book.json'
+        )
+        with open(input_file) as current:
+            event = json.loads(current.read())
+
+            CaliperProcessor().__call__(event)
+
+        delivery_mock.assert_not_called()
+
+    @mock.patch(
+        'openedx_caliper_tracking.processor.deliver_caliper_event'
+    )
+    @override_settings(
+        CALIPER_DELIVERY_ENDPOINT='http://localhost:3000',
+        CALIPER_DELIVERY_AUTH_TOKEN='test_auth_token'
+    )
+    @mock.patch.dict(
+        'django.conf.settings.FEATURES',
+        {'ENABLE_CALIPER_EVENTS_DELIVERY': True},
+        clear=False
     )
     def test_event_is_called_with_settings(self, delivery_mock):
         """
-        If the settings are present then the delivery method
-        should be called
+        Test that  caliper event is delivered with all required settings given.
         """
         input_file = '{}/current/{}'.format(
             TEST_DIR_PATH,
