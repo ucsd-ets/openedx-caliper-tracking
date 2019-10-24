@@ -111,7 +111,7 @@ class CaliperProcessor(BaseBackend):
 
             CALIPER_LOGGER.info(json.dumps(transformed_event))
 
-            if (settings.FEATURES.get('ENABLE_CALIPER_DELIVERY_POINT')
+            if (settings.FEATURES.get('ENABLE_CALIPER_EVENTS_DELIVERY')
                 and hasattr(settings, 'CALIPER_DELIVERY_ENDPOINT')
                     and hasattr(settings, 'CALIPER_DELIVERY_AUTH_TOKEN')):
                 deliver_caliper_event(transformed_event, event.get('event_type'))
