@@ -98,7 +98,7 @@ in the following files:
 
 - ``lms/envs/aws.py (production.py for ironwood release)``
 
-- ``lms/envs/aws.py (production.py for ironwood release)``
+- ``cms/envs/aws.py (production.py for ironwood release)``
 
 
 License
