@@ -9,6 +9,7 @@ from track.backends import BaseBackend
 from openedx_caliper_tracking.base_transformer import base_transformer, page_view_transformer
 from openedx_caliper_tracking.caliper_config import EVENT_MAPPING
 from openedx_caliper_tracking.loggers import get_caliper_logger
+from openedx_caliper_tracking.tasks import deliver_caliper_event_to_kafka
 
 
 LOGGER = logging.getLogger(__name__)
@@ -117,7 +118,6 @@ class CaliperProcessor(BaseBackend):
                 deliver_caliper_event(transformed_event, event.get('event_type'))
 
             if settings.FEATURES.get('ENABLE_KAFKA_FOR_CALIPER') and hasattr(settings, 'CALIPER_KAFKA_SETTINGS'):
-                from openedx_caliper_tracking.tasks import deliver_caliper_event_to_kafka
                 deliver_caliper_event_to_kafka.delay(transformed_event, event.get('event_type'))
 
             return event
