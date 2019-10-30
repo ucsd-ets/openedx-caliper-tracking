@@ -10,7 +10,8 @@ from django.conf import settings
 from django.core.cache import cache
 from kafka import KafkaProducer
 from kafka.errors import KafkaError
-from openedx.features.ucsd_features.utils import send_notification
+
+from openedx_caliper_tracking.utils import send_notification
 
 LOGGER = logging.getLogger(__name__)
 DEFAULT_FROM_EMAIL = settings.DEFAULT_FROM_EMAIL

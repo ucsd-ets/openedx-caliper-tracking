@@ -1,12 +1,19 @@
 """
 Utils required in transformers
 """
+import json
+import logging
+from smtplib import SMTPException
+
 from dateutil.parser import parse
 from django.contrib.auth import get_user_model
 from django.conf import settings
+from django.core.mail import EmailMultiAlternatives
 from django.core.urlresolvers import reverse
 from django.urls.exceptions import NoReverseMatch
+from django.template.loader import get_template
 
+log = logging.getLogger(__name__)
 UTC_DATETIME_FORMAT = '%Y-%m-%dT%H:%M:%S.%f'
 
 
@@ -102,3 +109,41 @@ def get_certificate_url(user_id, course_id):
         ))
     )
     return certificate_uri
+
+
+def send_notification(key, data, subject, from_email, dest_emails):
+    """
+    Send an email.
+
+    params:
+        key - Email template will be selected on the basis of key
+        data - Dict containing context/data for the template
+        subject - Email subject
+        from_email - Email address to send email
+        dest_emails - List of destination emails
+
+    return: a boolean variable indicating email response.
+    """
+    TEMPLATE_PATH = '{key}_email.html'
+    content = json.dumps(data)
+    email_template_path = TEMPLATE_PATH.format(key=key)
+    html_content = get_template(email_template_path).render(data)
+    msg = EmailMultiAlternatives(subject, content, from_email, dest_emails)
+    msg.attach_alternative(html_content, "text/html")
+    try:
+        response = msg.send()
+        log.info(
+            'Email has been sent from "%s" to "%s" for content %s.',
+            from_email,
+            dest_emails,
+            content
+        )
+        return response
+    except SMTPException:
+        log.exception(
+            'Unable to send an email from "%s" to %s for content "%s".',
+            from_email,
+            dest_emails,
+            content
+        )
+        return False
