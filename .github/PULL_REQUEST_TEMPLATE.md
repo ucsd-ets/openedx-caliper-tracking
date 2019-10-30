@@ -1,11 +1,11 @@
-# Story Link
+#### Story Link
 [Text to be displayed](Ticket link)
 
-# PR Description
+#### PR Description
 
 Please include a summary of the change/issue and include relevant information. List any dependencies that are required for this change.
 
-## Type of change
+#### Type of change
 
 Please select the options that are relevant.
 
@@ -14,14 +14,14 @@ Please select the options that are relevant.
 - [ ] Breaking change (fix or feature that would cause existing functionality to not work as expected)
 - [ ] Documentation Change
 
-# How to test?
+#### How to test?
 
 Please describe the tests that you ran to verify your changes. Provide instructions so we can reproduce. Please also list any relevant details for your test configurations.
 
 - [ ] Test A
 - [ ] Test B
 
-# Checklist before merging:
+#### Checklist before merging:
 
 - [ ] Squased
 - [ ] Reviewd
