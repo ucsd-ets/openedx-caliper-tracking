@@ -124,7 +124,7 @@ def send_notification(key, data, subject, from_email, dest_emails):
 
     return: a boolean variable indicating email response.
     """
-    TEMPLATE_PATH = '{key}_email.html'
+    TEMPLATE_PATH = 'openedx_caliper_tracking/{key}_email.html'
     content = json.dumps(data)
     email_template_path = TEMPLATE_PATH.format(key=key)
     html_content = get_template(email_template_path).render(data)

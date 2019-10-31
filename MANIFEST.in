@@ -2,3 +2,4 @@ include LICENSE
 include README.rst
 include openedx_caliper_tracking/tests/current/*.json
 include openedx_caliper_tracking/tests/expected/*.json
+include openedx_caliper_tracking/templates/openedx_caliper_tracking/*.html
