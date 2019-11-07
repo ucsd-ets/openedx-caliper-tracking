@@ -16,7 +16,7 @@
       "host": "8c3b43aa7b1b",
       "ip": "172.18.0.1",
       "org_id": "",
-      "page": "http://localhost:18000/certificates/user/8/course/course-v1:pucit+cs_08+2019_F",
+      "page": "http://localhost:18000/certificates/user/8/course/course-v1:edx+cs-101+2018",
       "path": "/event",
       "session": "51ec4c05447ef4a00a9427f588c3e840",
       "user_id": 8
@@ -26,17 +26,17 @@
   "object": {
     "extensions": {
       "certificate_id": "402fb5284c2b413eafa8f569867562a2",
-      "certificate_url": "http://localhost:18000/certificates/user/8/course/course-v1:pucit+cs_08+2019_F",
-      "course_id": "course-v1:pucit+cs_08+2019_F",
+      "certificate_url": "http://localhost:18000/certificates/user/8/course/course-v1:edx+cs-101+2018",
+      "course_id": "course-v1:edx+cs-101+2018",
       "enrollment_mode": "verified",
       "social_network": "LinkedIn",
       "user_id": "8"
     },
-    "id": "http://localhost:18000/certificates/user/8/course/course-v1:pucit+cs_08+2019_F",
+    "id": "http://localhost:18000/certificates/user/8/course/course-v1:edx+cs-101+2018",
     "type": "Document"
   },
   "referrer": {
-    "id": "http://localhost:18000/certificates/user/8/course/course-v1:pucit+cs_08+2019_F",
+    "id": "http://localhost:18000/certificates/user/8/course/course-v1:edx+cs-101+2018",
     "type": "WebPage"
   },
   "type": "Event"

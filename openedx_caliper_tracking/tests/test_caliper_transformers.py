@@ -35,6 +35,21 @@ class CaliperTransformationTestCase(TestCase):
         ),
         autospec=True
     )
+    @mock.patch(
+        'openedx_caliper_tracking.transformers.cohort_transformers.reverse',
+        return_value='/u/honor',
+        autospec=True
+    )
+    @mock.patch(
+        'openedx_caliper_tracking.transformers.certificate_transformers.get_certificate_url',
+        return_value='http://localhost:18000/certificates/user/8/course/course-v1:edx+cs-101+2018',
+        autospec=True
+    )
+    @mock.patch(
+        'openedx_caliper_tracking.transformers.enrollment_transformers.reverse',
+        return_value='/courses/course-v1:edx+cs-101+2018/about',
+        autospec=True
+    )
     def test_caliper_transformers(self, *args):
         """
         Tests whether all the caliper transformers are working as expected

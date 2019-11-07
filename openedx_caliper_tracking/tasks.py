@@ -21,7 +21,6 @@ EMAIL_DELIVERY_CACHE_KEY = 'IS_KAFKA_DELIVERY_FAILURE_EMAIL_SENT'
 HOST_ERROR_CACHE_KEY = 'HOST_NOT_FOUND_ERROR'
 
 
-
 def _get_kafka_setting(key):
     if hasattr(settings, 'CALIPER_KAFKA_SETTINGS'):
         return settings.CALIPER_KAFKA_SETTINGS.get(key)
@@ -36,22 +35,25 @@ def deliver_caliper_event_to_kafka(self, transformed_event, event_type):
     sends an error report to the specified email address.
     """
     try:
+        if cache.get(HOST_ERROR_CACHE_KEY):
+            cache.set(HOST_ERROR_CACHE_KEY, False)
+            return
+
         LOGGER.info('Attempt # {} of sending event: {} to kafka ({}) is in progress.'.format(
                     self.request_stack().get('retries'), event_type, _get_kafka_setting('END_POINT')))
 
         producer = KafkaProducer(bootstrap_servers=_get_kafka_setting('END_POINT'),
                                  value_serializer=lambda v: json.dumps(v).encode('utf-8'))
 
-        producer.send(_get_kafka_setting('TOPIC_NAME'), transformed_event).add_errback(_host_not_found,
+        producer.send(_get_kafka_setting('TOPIC_NAME'), transformed_event).add_errback(host_not_found,
                                                                                        event=transformed_event,
                                                                                        event_type=event_type)
         producer.flush()
-        if cache.get(HOST_ERROR_CACHE_KEY):
-            cache.set(HOST_ERROR_CACHE_KEY, False)
-            return
+
         if cache.get(EMAIL_DELIVERY_CACHE_KEY):
             send_system_recovery_email.delay()
         cache.set(EMAIL_DELIVERY_CACHE_KEY, False)
+
         LOGGER.info('Logs Delivered Successfully: Event ({}) has been successfully sent to kafka ({}).'.format(
             event_type, _get_kafka_setting('END_POINT')))
 
@@ -67,16 +69,17 @@ def deliver_caliper_event_to_kafka(self, transformed_event, event_type):
         self.retry(exc=error, countdown=int(random.uniform(2, 4) ** self.request.retries))
 
 
-def _host_not_found(error, event, event_type):
+def host_not_found(error, event, event_type):
     """
     Callback method.
 
     It would be called in case of "Host Not Found" error.
     """
+    HOST_NOT_FOUND_ERROR = 'Host Not Found'
     LOGGER.error('Logs Delivery Failed: Could not deliver event ({}) to kafka ({}) because of {}.'.format(
-        event_type, _get_kafka_setting('END_POINT'), error.__class__.__name__))
+        event_type, _get_kafka_setting('END_POINT'), HOST_NOT_FOUND_ERROR))
     cache.set(HOST_ERROR_CACHE_KEY, True)
-    sent_kafka_failure_email.delay(error.__class__.__name__)
+    sent_kafka_failure_email.delay(HOST_NOT_FOUND_ERROR)
 
 
 @task(bind=True)
@@ -85,7 +88,7 @@ def sent_kafka_failure_email(self, error):
     Send error report to specified email address.
     """
     if cache.get(EMAIL_DELIVERY_CACHE_KEY):
-        LOGGER.info('Email Already Sent: Events delivrey failure report has been already sent to {}.'.format(
+        LOGGER.info('Email Already Sent: Events delivery failure report has been already sent to {}.'.format(
             _get_kafka_setting('ERROR_REPORT_EMAIL')))
         return
 
@@ -96,7 +99,7 @@ def sent_kafka_failure_email(self, error):
     }
     subject = 'Failure in logs delivery to Kafka'
     if send_notification(data, subject, DEFAULT_FROM_EMAIL, [_get_kafka_setting('ERROR_REPORT_EMAIL')]):
-        success_message = 'Email Sent Succesfully: Events delivery failure report sent to {}.'.format(
+        success_message = 'Email Sent Successfully: Events delivery failure report sent to {}.'.format(
             _get_kafka_setting('ERROR_REPORT_EMAIL'))
         # after one day if the delivery of events to kafka still fails,
         # email failure  delivery report again.

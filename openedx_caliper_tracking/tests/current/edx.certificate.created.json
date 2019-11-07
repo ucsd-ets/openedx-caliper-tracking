@@ -6,15 +6,15 @@
     "course_user_tags": {},
     "org_id": "edx",
     "path": "/courses/course-v1:edx+cs-101+2018/generate_user_cert",
-    "user_id": 2
+    "user_id": 8
   },
   "event": {
     "certificate_id": "d4cd91fcd49f42fe97db585ed7e8b459",
-    "certificate_url": "/certificates/user/2/course/course-v1:edx+cs-101+2018",
+    "certificate_url": "/certificates/user/8/course/course-v1:edx+cs-101+2018",
     "course_id": "course-v1:edx+cs-101+2018",
     "enrollment_mode": "verified",
     "generation_mode": "self",
-    "user_id": 2
+    "user_id": 8
   },
   "event_source": "server",
   "event_type": "edx.certificate.created",

@@ -1,0 +1,8 @@
+celery==4.3.0
+Django==1.11.21
+isodate==0.6.0
+mock==3.0.5
+python-dateutil==2.8.0
+requests==2.22.0
+coverage
+factory-boy==2.12.0

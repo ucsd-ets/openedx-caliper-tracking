@@ -1,7 +1,6 @@
 """
 Utils required in transformers
 """
-import json
 import logging
 from smtplib import SMTPException
 
@@ -11,7 +10,6 @@ from django.conf import settings
 from django.core.mail import send_mail
 from django.core.urlresolvers import reverse
 from django.urls.exceptions import NoReverseMatch
-from django.template.loader import get_template
 
 log = logging.getLogger(__name__)
 UTC_DATETIME_FORMAT = '%Y-%m-%dT%H:%M:%S.%f'
@@ -128,18 +126,14 @@ def send_notification(data, subject, from_email, dest_emails):
         if data.get('error'):
             message = message + '\n\nError:\t{}'.format(data.get('error'))
         response = send_mail(subject, message, from_email, dest_emails)
-        log.info(
-            'Email has been sent from "{}" to "{}" for content "{}".'.format(
-            from_email,
-            dest_emails,
-            data
-        ))
+        log.info('Email has been sent from "{}" to "{}" for content "{}".'.format(
+                 from_email,
+                 dest_emails,
+                 data))
         return response
     except SMTPException:
-        log.exception(
-            'Unable to send an email from "{}" to "{}" for content "{}".'.format(
-            from_email,
-            dest_emails,
-            data
-        ))
+        log.exception('Unable to send an email from "{}" to "{}" for content "{}".'.format(
+                      from_email,
+                      dest_emails,
+                      data))
         return False

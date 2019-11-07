@@ -13,7 +13,7 @@
       "user_id":null,
       "org_id":"pucit",
       "course_id":"course-v1:pucit+cs_08+2019_F",
-      "path":"/certificates/user/8/course/course-v1:pucit+cs_08+2019_F"
+      "path":"/certificates/user/8/course/course-v1:edx+cs-101+2018"
    },
    "ip":"172.18.0.1",
    "event":{
@@ -22,7 +22,7 @@
       "user_id":8,
       "course_id":"course-v1:pucit+cs_08+2019_F",
       "certificate_id":"402fb5284c2b413eafa8f569867562a2",
-      "certificate_url":"/certificates/user/8/course/course-v1:pucit+cs_08+2019_F"
+      "certificate_url":"/certificates/user/8/course/course-v1:edx+cs-101+2018"
    },
    "event_type":"edx.certificate.evidence_visited"
 }

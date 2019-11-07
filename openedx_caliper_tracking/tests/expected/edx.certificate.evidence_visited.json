@@ -20,7 +20,7 @@
       "org_id":"pucit",
       "referer":"",
       "course_id":"course-v1:pucit+cs_08+2019_F",
-      "path":"/certificates/user/8/course/course-v1:pucit+cs_08+2019_F",
+      "path":"/certificates/user/8/course/course-v1:edx+cs-101+2018",
       "username":""
     }
   },
@@ -32,9 +32,9 @@
       "user_id":8,
       "course_id":"course-v1:pucit+cs_08+2019_F",
       "certificate_id":"402fb5284c2b413eafa8f569867562a2",
-      "certificate_url":"/certificates/user/8/course/course-v1:pucit+cs_08+2019_F"
+      "certificate_url":"/certificates/user/8/course/course-v1:edx+cs-101+2018"
     },
-    "id": "http://localhost:18000/certificates/user/8/course/course-v1:pucit+cs_08+2019_F",
+    "id": "http://localhost:18000/certificates/user/8/course/course-v1:edx+cs-101+2018",
     "type": "Document"
   },
   "type": "Event"
