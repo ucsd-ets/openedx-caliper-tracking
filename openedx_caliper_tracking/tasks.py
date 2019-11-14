@@ -15,7 +15,9 @@ from openedx_caliper_tracking.utils import send_notification
 
 LOGGER = logging.getLogger(__name__)
 DEFAULT_FROM_EMAIL = settings.DEFAULT_FROM_EMAIL
-CACHE_KEY = 'IS_KAFKA_DELIVERY_FAILURE_EMAIL_SENT'
+EMAIL_DELIVERY_CACHE_KEY = 'IS_KAFKA_DELIVERY_FAILURE_EMAIL_SENT'
+HOST_ERROR_CACHE_KEY = 'HOST_NOT_FOUND_ERROR'
+
 
 
 def _get_kafka_setting(key):
@@ -42,7 +44,12 @@ def deliver_caliper_event_to_kafka(self, transformed_event, event_type):
                                                                                        event=transformed_event,
                                                                                        event_type=event_type)
         producer.flush()
-        cache.set(CACHE_KEY, False)
+        if cache.get(HOST_ERROR_CACHE_KEY):
+            cache.set(HOST_ERROR_CACHE_KEY, False)
+            return
+        if cache.get(EMAIL_DELIVERY_CACHE_KEY):
+            send_system_recovery_email.delay()
+        cache.set(EMAIL_DELIVERY_CACHE_KEY, False)
         LOGGER.info('Logs Delivered Successfully: Event ({}) has been successfully sent to kafka ({}).'.format(
             event_type, _get_kafka_setting('END_POINT')))
 
@@ -65,6 +72,7 @@ def _host_not_found(error, event, event_type):
     """
     LOGGER.error('Logs Delivery Failed: Could not deliver event ({}) to kafka ({}) because of {}.'.format(
         event_type, _get_kafka_setting('END_POINT'), error.__class__.__name__))
+    cache.set(HOST_ERROR_CACHE_KEY, True)
     sent_kafka_failure_email.delay(error.__class__.__name__)
 
 
@@ -73,27 +81,45 @@ def sent_kafka_failure_email(self, error):
     """
     Send error report to specified email address.
     """
-    if cache.get(CACHE_KEY):
+    if cache.get(EMAIL_DELIVERY_CACHE_KEY):
         LOGGER.info('Email Already Sent: Events delivrey failure report has been already sent to {}.'.format(
             _get_kafka_setting('ERROR_REPORT_EMAIL')))
         return
 
-    additional_info = {'Error': error}
-    key = 'logs_not_sent'
     data = {
         'name': 'UCSD Support',
         'body': 'Below is the additional information regarding failure:',
-        'additional_info': additional_info
+        'error': error
     }
     subject = 'Failure in logs delivery to Kafka'
-    if send_notification(key, data, subject, DEFAULT_FROM_EMAIL, [_get_kafka_setting('ERROR_REPORT_EMAIL')]):
+    if send_notification(data, subject, DEFAULT_FROM_EMAIL, [_get_kafka_setting('ERROR_REPORT_EMAIL')]):
         success_message = 'Email Sent Succesfully: Events delivery failure report sent to {}.'.format(
             _get_kafka_setting('ERROR_REPORT_EMAIL'))
         # after one day if the delivery of events to kafka still fails,
         # email failure  delivery report again.
-        cache.set(CACHE_KEY, True, timeout=86400)
+        cache.set(EMAIL_DELIVERY_CACHE_KEY, True, timeout=86400)
         LOGGER.info(success_message)
     else:
         failure_message = 'Email Sending Failed: Could not send events delivery failure report to {}.'.format(
+            _get_kafka_setting('ERROR_REPORT_EMAIL'))
+        LOGGER.error(failure_message)
+
+
+@task(bind=True)
+def send_system_recovery_email(self):
+    """
+    Send system recovery report to specified email address.
+    """
+    data = {
+        'name': 'UCSD Support',
+        'body': 'System has been recovered. Now Caliper logs are being successfully delivered to kafka.',
+    }
+    subject = 'Success in logs delivery to Kafka'
+    if send_notification(data, subject, DEFAULT_FROM_EMAIL, [_get_kafka_setting('ERROR_REPORT_EMAIL')]):
+        success_message = 'Email Sent Successfully: Events delivery success report sent to {}.'.format(
+            _get_kafka_setting('ERROR_REPORT_EMAIL'))
+        LOGGER.info(success_message)
+    else:
+        failure_message = 'Email Sending Failed: Could not send events delivery success report to {}.'.format(
             _get_kafka_setting('ERROR_REPORT_EMAIL'))
         LOGGER.error(failure_message)
