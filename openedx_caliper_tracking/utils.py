@@ -8,7 +8,7 @@ from smtplib import SMTPException
 from dateutil.parser import parse
 from django.contrib.auth import get_user_model
 from django.conf import settings
-from django.core.mail import EmailMultiAlternatives
+from django.core.mail import send_mail
 from django.core.urlresolvers import reverse
 from django.urls.exceptions import NoReverseMatch
 from django.template.loader import get_template
@@ -111,39 +111,35 @@ def get_certificate_url(user_id, course_id):
     return certificate_uri
 
 
-def send_notification(key, data, subject, from_email, dest_emails):
+def send_notification(data, subject, from_email, dest_emails):
     """
     Send an email.
 
     params:
-        key - Email template will be selected on the basis of key
-        data - Dict containing context/data for the template
+        data - Dict containing data for email
         subject - Email subject
         from_email - Email address to send email
         dest_emails - List of destination emails
 
     return: a boolean variable indicating email response.
     """
-    TEMPLATE_PATH = 'openedx_caliper_tracking/{key}_email.html'
-    content = json.dumps(data)
-    email_template_path = TEMPLATE_PATH.format(key=key)
-    html_content = get_template(email_template_path).render(data)
-    msg = EmailMultiAlternatives(subject, content, from_email, dest_emails)
-    msg.attach_alternative(html_content, "text/html")
     try:
-        response = msg.send()
+        message = ('Name:\t{}\n{}\n'.format(data.get('name'), data.get('body')))
+        if data.get('error'):
+            message = message + '\n\nError:\t{}'.format(data.get('error'))
+        response = send_mail(subject, message, from_email, dest_emails)
         log.info(
-            'Email has been sent from "%s" to "%s" for content %s.',
+            'Email has been sent from "{}" to "{}" for content "{}".'.format(
             from_email,
             dest_emails,
-            content
-        )
+            data
+        ))
         return response
     except SMTPException:
         log.exception(
-            'Unable to send an email from "%s" to %s for content "%s".',
+            'Unable to send an email from "{}" to "{}" for content "{}".'.format(
             from_email,
             dest_emails,
-            content
-        )
+            data
+        ))
         return False
