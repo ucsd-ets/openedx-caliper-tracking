@@ -17,3 +17,4 @@ if hasattr(django_settings, 'EVENT_TRACKING_BACKENDS'):
 
 if hasattr(django_settings, 'TRACKING_BACKENDS'):
     django_settings.TRACKING_BACKENDS = OPENEDX_CALIPER_TRACKING_BACKENDS
+

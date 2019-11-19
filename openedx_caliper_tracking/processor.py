@@ -4,12 +4,18 @@ import requests
 
 from django.conf import settings
 from requests.exceptions import ConnectionError
-from track.backends import BaseBackend
 
 from openedx_caliper_tracking.base_transformer import base_transformer, page_view_transformer
 from openedx_caliper_tracking.caliper_config import EVENT_MAPPING
 from openedx_caliper_tracking.loggers import get_caliper_logger
 from openedx_caliper_tracking.tasks import deliver_caliper_event_to_kafka
+
+try:
+    # if app is running in edx-platfrom get BaseBackend from edx codebase
+    from track.backends import BaseBackend
+except (NameError, ImportError):
+    # if app is running locally for testing use Testing Backend
+    from openedx_caliper_tracking.tests.testing_backend import BaseBackend
 
 
 LOGGER = logging.getLogger(__name__)

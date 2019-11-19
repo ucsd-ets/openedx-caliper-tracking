@@ -20,7 +20,7 @@
       "page": null,
       "path": "/courses/course-v1:edx+cs-101+2018/generate_user_cert",
       "session": "4fc32b1ca8d4fc18402c4c41434a178a",
-      "user_id": 2,
+      "user_id": 8,
       "username": "honor"
     }
   },
@@ -28,13 +28,13 @@
   "object": {
     "extensions": {
       "certificate_id": "d4cd91fcd49f42fe97db585ed7e8b459",
-      "certificate_url": "/certificates/user/2/course/course-v1:edx+cs-101+2018",
+      "certificate_url": "/certificates/user/8/course/course-v1:edx+cs-101+2018",
       "course_id": "course-v1:edx+cs-101+2018",
       "enrollment_mode": "verified",
       "generation_mode": "self",
-      "user_id": 2
+      "user_id": 8
     },
-    "id": "http://localhost:18000/certificates/user/2/course/course-v1:edx+cs-101+2018",
+    "id": "http://localhost:18000/certificates/user/8/course/course-v1:edx+cs-101+2018",
     "type": "Document"
   },
   "referrer": {
