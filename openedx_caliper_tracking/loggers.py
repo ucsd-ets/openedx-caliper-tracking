@@ -37,7 +37,7 @@ def get_test_logger(logger_name, file_path):
     return logger
 
 
-def get_caliper_logger(logger_name):
+def get_caliper_logger(logger_name, facility):
     """
     logger for caliper app
 
@@ -51,7 +51,7 @@ def get_caliper_logger(logger_name):
     if settings.DEBUG or hasattr(settings, 'TEST_ROOT'):
         log_handler = logging.StreamHandler()
     else:
-        log_handler = logging.handlers.SysLogHandler(address='/dev/log', facility='local2')
+        log_handler = logging.handlers.SysLogHandler(address='/dev/log', facility=facility)
 
     log_handler.setLevel(logging.INFO)
 

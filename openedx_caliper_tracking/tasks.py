@@ -12,8 +12,10 @@ from kafka import KafkaProducer
 from kafka.errors import KafkaError
 
 from openedx_caliper_tracking.utils import send_notification
+from openedx_caliper_tracking.loggers import get_caliper_logger
 
 LOGGER = logging.getLogger(__name__)
+CALIPER_DELIVERY_FAILURE_LOGGER = get_caliper_logger('caliper_delivery_failure', 'local3')
 DEFAULT_FROM_EMAIL = settings.DEFAULT_FROM_EMAIL
 EMAIL_DELIVERY_CACHE_KEY = 'IS_KAFKA_DELIVERY_FAILURE_EMAIL_SENT'
 HOST_ERROR_CACHE_KEY = 'HOST_NOT_FOUND_ERROR'
@@ -58,6 +60,7 @@ def deliver_caliper_event_to_kafka(self, transformed_event, event_type):
                      ' of {}.').format(event_type, _get_kafka_setting('END_POINT'), error.__class__.__name__))
 
         if self.request_stack().get('retries') == _get_kafka_setting('MAXIMUM_RETRIES'):
+            CALIPER_DELIVERY_FAILURE_LOGGER.info(json.dumps(transformed_event))
             sent_kafka_failure_email.delay(error.__class__.__name__)
             return
 

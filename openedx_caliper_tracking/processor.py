@@ -14,7 +14,7 @@ from openedx_caliper_tracking.tasks import deliver_caliper_event_to_kafka
 
 LOGGER = logging.getLogger(__name__)
 TRACKING_LOGGER = logging.getLogger('tracking')
-CALIPER_LOGGER = get_caliper_logger('caliper')
+CALIPER_LOGGER = get_caliper_logger('caliper', 'local2')
 
 
 def log_success(event_id, status_code):
