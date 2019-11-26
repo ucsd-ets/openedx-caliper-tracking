@@ -36,10 +36,14 @@ if [ "$(ls | grep -w openedx-caliper-tracking)" != "" ]; then
     printf "Running Caliper Tests"
     printf "\n=====================\n"
     coverage run --source='openedx_caliper_tracking' manage.py test openedx_caliper_tracking
+    is_test_failed=$?
     coverage report --omit='*tests*, *pavement.py*, *__init__.py*'
     deactivate
     cd ../..
     rm -rf $FOLDER_NAME
+    if [ $is_test_failed -eq 1 ]; then
+        exit 1
+    fi
 else
     echo "Your current directory doesn't contain the package named openedx-caliper-tracking."
 fi
