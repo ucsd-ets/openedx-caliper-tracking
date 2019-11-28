@@ -148,7 +148,7 @@ class CaliperKafkaTestCase(TestCase):
                                                                                                       producer_mock,
                                                                                                       cache_mock):
         deliver_caliper_event_to_kafka({}, 'book')
-        self.assertFalse(producer_mock.called)
+        self.assertTrue(producer_mock.called)
         cache_mock.assert_called_with(HOST_ERROR_CACHE_KEY)
 
     @mock.patch(
@@ -226,7 +226,7 @@ class CaliperKafkaTestCase(TestCase):
         'openedx_caliper_tracking.tasks.sent_kafka_failure_email.delay',
         autospec=True,
     )
-    def test_ifhost_not_found_error(self, sent_email_mock):
+    def test_host_not_found_error(self, sent_email_mock):
         host_not_found(mock.MagicMock(), self.event, 'book')
         self.assertTrue(sent_email_mock.called)
 

@@ -35,20 +35,19 @@ def deliver_caliper_event_to_kafka(self, transformed_event, event_type):
     sends an error report to the specified email address.
     """
     try:
-        if cache.get(HOST_ERROR_CACHE_KEY):
-            cache.set(HOST_ERROR_CACHE_KEY, False)
-            return
-
         LOGGER.info('Attempt # {} of sending event: {} to kafka ({}) is in progress.'.format(
                     self.request_stack().get('retries'), event_type, _get_kafka_setting('END_POINT')))
 
         producer = KafkaProducer(bootstrap_servers=_get_kafka_setting('END_POINT'),
                                  value_serializer=lambda v: json.dumps(v).encode('utf-8'))
-
         producer.send(_get_kafka_setting('TOPIC_NAME'), transformed_event).add_errback(host_not_found,
                                                                                        event=transformed_event,
                                                                                        event_type=event_type)
         producer.flush()
+
+        if cache.get(HOST_ERROR_CACHE_KEY):
+            cache.set(HOST_ERROR_CACHE_KEY, False)
+            return
 
         if cache.get(EMAIL_DELIVERY_CACHE_KEY):
             send_system_recovery_email.delay()
