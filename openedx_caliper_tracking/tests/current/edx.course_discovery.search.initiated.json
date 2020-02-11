@@ -1,0 +1,25 @@
+{
+    "accept_language": "en-US,en;q=0.9",
+    "agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.120 Safari/537.36",
+    "context": {
+        "course_id": "",
+        "org_id": "",
+        "path": "/search/course_discovery/",
+        "user_id": 2
+    },
+    "event": {
+        "page_number": 0,
+        "page_size": 20,
+        "search_term": ""
+    },
+    "event_source": "server",
+    "event_type": "edx.course_discovery.search.initiated",
+    "host": "localhost:18000",
+    "ip": "172.18.0.1",
+    "name": "edx.course_discovery.search.initiated",
+    "page": null,
+    "referer": "http://localhost:18000/courses",
+    "session": "211c9c0321954f8507c89f9c7e9664e4",
+    "time": "2020-02-11T10:10:17.140412+00:00",
+    "username": "edx"
+}

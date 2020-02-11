@@ -184,4 +184,5 @@ EVENT_MAPPING = {
     'edx.cohort.user_add_requested': ctf.edx_cohort_user_add_requested,
     'edx.user.login': ctf.edx_user_login,
     'edx.user.logout': ctf.edx_user_logout,
+    'edx.course_discovery.search.initiated': ctf.edx_course_discovery_search_initiated,
 }
