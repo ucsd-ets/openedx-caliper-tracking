@@ -201,3 +201,6 @@ from openedx_caliper_tracking.transformers.session_transformers import (
     edx_user_login,
     edx_user_logout
 )
+from openedx_caliper_tracking.transformers.course_discovery_transformers import (
+    edx_course_discovery_search_initiated
+)
