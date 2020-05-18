@@ -38,8 +38,20 @@ def deliver_caliper_event_to_kafka(self, transformed_event, event_type):
         LOGGER.info('Attempt # {} of sending event: {} to kafka ({}) is in progress.'.format(
                     self.request_stack().get('retries'), event_type, _get_kafka_setting('END_POINT')))
 
-        producer = KafkaProducer(bootstrap_servers=_get_kafka_setting('END_POINT'),
-                                 value_serializer=lambda v: json.dumps(v).encode('utf-8'))
+        if _get_kafka_setting('USERNAME') and _get_kafka_setting('PASSWORD'):
+            producer = KafkaProducer(
+                bootstrap_servers=_get_kafka_setting('END_POINT'),
+                value_serializer=lambda v: json.dumps(v).encode('utf-8'),
+                sasl_plain_username=_get_kafka_setting('USERNAME'),
+                sasl_plain_password=_get_kafka_setting('PASSWORD'),
+                security_protocol=_get_kafka_setting('PROTOCOL'),
+                sasl_mechanism=_get_kafka_setting('MECHANISM'),
+            )
+        else:
+            producer = KafkaProducer(
+                bootstrap_servers=_get_kafka_setting('END_POINT'),
+                value_serializer=lambda v: json.dumps(v).encode('utf-8'),
+            )
         producer.send(_get_kafka_setting('TOPIC_NAME'), transformed_event).add_errback(host_not_found,
                                                                                        event=transformed_event,
                                                                                        event_type=event_type)
