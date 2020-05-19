@@ -38,7 +38,7 @@ def deliver_caliper_event_to_kafka(self, transformed_event, event_type):
         LOGGER.info('Attempt # {} of sending event: {} to kafka ({}) is in progress.'.format(
                     self.request_stack().get('retries'), event_type, _get_kafka_setting('END_POINT')))
 
-        if _get_kafka_setting('USERNAME') and _get_kafka_setting('PASSWORD'):
+        if _get_kafka_setting('ENABLE_SASL'):
             producer = KafkaProducer(
                 bootstrap_servers=_get_kafka_setting('END_POINT'),
                 value_serializer=lambda v: json.dumps(v).encode('utf-8'),
