@@ -1,5 +1,5 @@
 celery==4.3.0
-Django==1.11.28
+Django==1.11.29
 isodate==0.6.0
 mock==3.0.5
 python-dateutil==2.8.0
