@@ -15,6 +15,20 @@ from openedx_caliper_tracking.tasks import (host_not_found, deliver_caliper_even
 from openedx_caliper_tracking.tests import TEST_DIR_PATH
 
 
+CALIPER_KAFKA_SETTINGS_FIXTURE = {
+    'PRODUCER_CONFIG': {
+        'bootstrap_servers': [
+            'testing.com',
+        ]
+    },
+    'TOPIC_NAME': 'dummy topic',
+    'ERROR_REPORT_EMAIL': 'dummy@example.com',
+    'MAXIMUM_RETRIES': 3
+}
+
+CALIPER_KAFKA_AUTH_SETTINGS_FIXTURE = {}
+
+
 class CaliperKafkaTestCase(TestCase):
 
     def setUp(self):
@@ -31,12 +45,8 @@ class CaliperKafkaTestCase(TestCase):
     )
     @override_settings(
         LMS_ROOT_URL='https://localhost:18000',
-        CALIPER_KAFKA_SETTINGS={
-            'END_POINT': 'http://localhost:9092',
-            'TOPIC_NAME': 'dummy topic',
-            'ERROR_REPORT_EMAIL': 'dummy@example.com',
-            'MAXIMUM_RETRIES': 3
-        },
+        CALIPER_KAFKA_SETTINGS=CALIPER_KAFKA_SETTINGS_FIXTURE,
+        CALIPER_KAFKA_AUTH_SETTINGS=CALIPER_KAFKA_AUTH_SETTINGS_FIXTURE,
         FEATURES={'ENABLE_KAFKA_FOR_CALIPER': True}
     )
     def test_caliper_event_is_delivered_to_kafka_without_error_using_celery(self, delivery_mock):
@@ -60,12 +70,8 @@ class CaliperKafkaTestCase(TestCase):
         autospec=True
     )
     @override_settings(
-        CALIPER_KAFKA_SETTINGS={
-            'END_POINT': 'http://localhost:9092',
-            'TOPIC_NAME': 'dummy topic',
-            'ERROR_REPORT_EMAIL': 'dummy@example.com',
-            'MAXIMUM_RETRIES': 3
-        },
+        CALIPER_KAFKA_SETTINGS=CALIPER_KAFKA_SETTINGS_FIXTURE,
+        CALIPER_KAFKA_AUTH_SETTINGS=CALIPER_KAFKA_AUTH_SETTINGS_FIXTURE
     )
     def test_deliver_caliper_event_to_kafka_without_using_celery_without_error(self, producer_mock,
                                                                                sent_email_mock, logger_mock):
@@ -78,12 +84,13 @@ class CaliperKafkaTestCase(TestCase):
         self.assertFalse(sent_email_mock.called)
         self.assertFalse(logger_mock.error.called)
         logger_mock.info.assert_called_with('Logs Delivered Successfully: Event (book) has been successfully'
-                                            ' sent to kafka (http://localhost:9092).')
+                                            ' sent to kafka ([\'testing.com\']).')
 
     @mock.patch(
         'openedx_caliper_tracking.tasks.cache.get',
         autospec=True,
-        side_effect=lambda CACHE_KEY: {HOST_ERROR_CACHE_KEY: False, EMAIL_DELIVERY_CACHE_KEY: True}[CACHE_KEY]
+        side_effect=lambda CACHE_KEY: {
+            HOST_ERROR_CACHE_KEY: False, EMAIL_DELIVERY_CACHE_KEY: True}[CACHE_KEY]
     )
     @mock.patch(
         'openedx_caliper_tracking.tasks.send_system_recovery_email.delay',
@@ -102,12 +109,8 @@ class CaliperKafkaTestCase(TestCase):
         autospec=True
     )
     @override_settings(
-        CALIPER_KAFKA_SETTINGS={
-            'END_POINT': 'http://localhost:9092',
-            'TOPIC_NAME': 'dummy topic',
-            'ERROR_REPORT_EMAIL': 'dummy@example.com',
-            'MAXIMUM_RETRIES': 3
-        },
+        CALIPER_KAFKA_SETTINGS=CALIPER_KAFKA_SETTINGS_FIXTURE,
+        CALIPER_KAFKA_AUTH_SETTINGS=CALIPER_KAFKA_AUTH_SETTINGS_FIXTURE
     )
     def test_deliver_caliper_event_to_kafka_without_celery_without_error_with_system_recovered(self, producer_mock,
                                                                                                sent_email_mock,
@@ -125,7 +128,7 @@ class CaliperKafkaTestCase(TestCase):
         self.assertTrue(recovery_mail_mock.called)
         self.assertTrue(cache_mock.called)
         logger_mock.info.assert_called_with('Logs Delivered Successfully: Event (book) has been successfully'
-                                            ' sent to kafka (http://localhost:9092).')
+                                            ' sent to kafka ([\'testing.com\']).')
 
     @mock.patch(
         'openedx_caliper_tracking.tasks.cache.get',
@@ -137,12 +140,8 @@ class CaliperKafkaTestCase(TestCase):
         autospec=True
     )
     @override_settings(
-        CALIPER_KAFKA_SETTINGS={
-            'END_POINT': 'http://localhost:9092',
-            'TOPIC_NAME': 'dummy topic',
-            'ERROR_REPORT_EMAIL': 'dummy@example.com',
-            'MAXIMUM_RETRIES': 3
-        },
+        CALIPER_KAFKA_SETTINGS=CALIPER_KAFKA_SETTINGS_FIXTURE,
+        CALIPER_KAFKA_AUTH_SETTINGS=CALIPER_KAFKA_AUTH_SETTINGS_FIXTURE
     )
     def test_deliver_caliper_event_to_kafka_without_celery_with_host_not_found_error_already_occurred(self,
                                                                                                       producer_mock,
@@ -169,25 +168,23 @@ class CaliperKafkaTestCase(TestCase):
         side_effect=KafkaError
     )
     @override_settings(
-        CALIPER_KAFKA_SETTINGS={
-            'END_POINT': 'http://localhost:9092',
-            'TOPIC_NAME': 'dummy topic',
-            'ERROR_REPORT_EMAIL': 'dummy@example.com',
-            'MAXIMUM_RETRIES': 3
-        }
+        CALIPER_KAFKA_SETTINGS=CALIPER_KAFKA_SETTINGS_FIXTURE,
+        CALIPER_KAFKA_AUTH_SETTINGS=CALIPER_KAFKA_AUTH_SETTINGS_FIXTURE
     )
     def test_deliver_caliper_event_to_kafka_without_celery_with_error_with_retry(self, producer_mock, sent_email_mock,
                                                                                  logger_mock, retry_mock):
         """
         Test that caliper event is not delivered to kafka
-        when error is occurred and retry code is executed.
+        when error is occurred and retry code is not executed if
+        there is some issue with the configurations.
         """
         deliver_caliper_event_to_kafka({}, 'book')
         self.assertTrue(producer_mock.called)
-        self.assertFalse(sent_email_mock.called)
+        self.assertTrue(sent_email_mock.called)
         logger_mock.error.assert_called_with('Logs Delivery Failed: Could not deliver event (book) to kafka'
-                                             ' (http://localhost:9092) because of KafkaError.')
-        self.assertTrue(retry_mock.called)
+                                             ' ([\'testing.com\']) due to the error:'
+                                             ' Invalid Configurations are provided')
+        self.assertFalse(retry_mock.called)
 
     @mock.patch(
         'openedx_caliper_tracking.tasks.LOGGER',
@@ -203,12 +200,8 @@ class CaliperKafkaTestCase(TestCase):
         side_effect=KafkaError
     )
     @override_settings(
-        CALIPER_KAFKA_SETTINGS={
-            'END_POINT': 'http://localhost:9092',
-            'TOPIC_NAME': 'dummy topic',
-            'ERROR_REPORT_EMAIL': 'dummy@example.com',
-            'MAXIMUM_RETRIES': 0
-        }
+        CALIPER_KAFKA_SETTINGS=CALIPER_KAFKA_SETTINGS_FIXTURE,
+        CALIPER_KAFKA_AUTH_SETTINGS=CALIPER_KAFKA_AUTH_SETTINGS_FIXTURE
     )
     def test_deliver_caliper_event_to_kafka_without_celery_with_error_without_retry(self, producer_mock,
                                                                                     sent_email_mock, logger_mock):
@@ -220,11 +213,16 @@ class CaliperKafkaTestCase(TestCase):
         self.assertTrue(producer_mock.called)
         self.assertTrue(sent_email_mock.called)
         logger_mock.error.assert_called_with('Logs Delivery Failed: Could not deliver event (book) to kafka'
-                                             ' (http://localhost:9092) because of KafkaError.')
+                                             ' ([\'testing.com\']) due to the error:'
+                                             ' Invalid Configurations are provided')
 
     @mock.patch(
         'openedx_caliper_tracking.tasks.sent_kafka_failure_email.delay',
         autospec=True,
+    )
+    @override_settings(
+        CALIPER_KAFKA_SETTINGS=CALIPER_KAFKA_SETTINGS_FIXTURE,
+        CALIPER_KAFKA_AUTH_SETTINGS=CALIPER_KAFKA_AUTH_SETTINGS_FIXTURE
     )
     def test_host_not_found_error(self, sent_email_mock):
         host_not_found(mock.MagicMock(), self.event, 'book')
@@ -240,9 +238,8 @@ class CaliperKafkaTestCase(TestCase):
         return_value=True
     )
     @override_settings(
-        CALIPER_KAFKA_SETTINGS={
-            'ERROR_REPORT_EMAIL': 'dummy@example.com',
-        }
+        CALIPER_KAFKA_SETTINGS=CALIPER_KAFKA_SETTINGS_FIXTURE,
+        CALIPER_KAFKA_AUTH_SETTINGS=CALIPER_KAFKA_AUTH_SETTINGS_FIXTURE
     )
     def test_sent_kafka_failure_email_with_success(self, send_notification_mock, logger_mock):
         """
@@ -263,9 +260,8 @@ class CaliperKafkaTestCase(TestCase):
         return_value=True
     )
     @override_settings(
-        CALIPER_KAFKA_SETTINGS={
-            'ERROR_REPORT_EMAIL': 'dummy@example.com',
-        }
+        CALIPER_KAFKA_SETTINGS=CALIPER_KAFKA_SETTINGS_FIXTURE,
+        CALIPER_KAFKA_AUTH_SETTINGS=CALIPER_KAFKA_AUTH_SETTINGS_FIXTURE
     )
     def test_sent_kafka_failure_email_with_email_already_sent(self, cache_mock, logger_mock):
         """
@@ -286,9 +282,8 @@ class CaliperKafkaTestCase(TestCase):
         return_value=False
     )
     @override_settings(
-        CALIPER_KAFKA_SETTINGS={
-            'ERROR_REPORT_EMAIL': 'dummy@example.com',
-        }
+        CALIPER_KAFKA_SETTINGS=CALIPER_KAFKA_SETTINGS_FIXTURE,
+        CALIPER_KAFKA_AUTH_SETTINGS=CALIPER_KAFKA_AUTH_SETTINGS_FIXTURE
     )
     def test_sent_kafka_failure_email_with_failure(self, send_notification_mock, logger_mock):
         """
@@ -309,9 +304,8 @@ class CaliperKafkaTestCase(TestCase):
         return_value=True
     )
     @override_settings(
-        CALIPER_KAFKA_SETTINGS={
-            'ERROR_REPORT_EMAIL': 'dummy@example.com',
-        }
+        CALIPER_KAFKA_SETTINGS=CALIPER_KAFKA_SETTINGS_FIXTURE,
+        CALIPER_KAFKA_AUTH_SETTINGS=CALIPER_KAFKA_AUTH_SETTINGS_FIXTURE
     )
     def test_send_system_recovery_email_with_success(self, send_notification_mock, logger_mock):
         send_system_recovery_email()
@@ -329,9 +323,8 @@ class CaliperKafkaTestCase(TestCase):
         return_value=False
     )
     @override_settings(
-        CALIPER_KAFKA_SETTINGS={
-            'ERROR_REPORT_EMAIL': 'dummy@example.com',
-        }
+        CALIPER_KAFKA_SETTINGS=CALIPER_KAFKA_SETTINGS_FIXTURE,
+        CALIPER_KAFKA_AUTH_SETTINGS=CALIPER_KAFKA_AUTH_SETTINGS_FIXTURE
     )
     def test_send_system_recovery_email_with_failure(self, send_notification_mock, logger_mock):
         """
