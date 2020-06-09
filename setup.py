@@ -9,7 +9,7 @@ os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
 
 setup(
     name='openedx-caliper-tracking',
-    version='0.11.8',
+    version='0.12.0',
     packages=find_packages(),
     include_package_data=True,
     license='GPL 3.0',
@@ -18,7 +18,7 @@ setup(
     url='https://github.com/ucsd-ets/caliper-tracking',
     author='UC San Diego',
     install_requires=[
-        'kafka-python==1.4.7'
+        'kafka-python==2.0.1'
     ],
     classifiers=[
         'Environment :: Web Environment',

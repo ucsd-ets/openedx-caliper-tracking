@@ -50,9 +50,9 @@ These files should be located at ``/edx/app/edxapp/`` directory, see the example
 
 in the following files:
 
-- ``lms/envs/aws.py (production.py for ironwood release)``
+- ``lms/envs/production.py (aws.py for hawthorn release)``
 
-- ``cms/envs/aws.py (production.py for ironwood release)``
+- ``cms/envs/production.py (aws.py for hawthorn release)``
 
 **Note:**
 
@@ -100,9 +100,9 @@ These files should be located at ``/edx/app/edxapp/`` directory, see the example
 
 in the following files:
 
-- ``lms/envs/aws.py (production.py for ironwood release)``
+- ``lms/envs/production.py (aws.py for hawthorn release)``
 
-- ``cms/envs/aws.py (production.py for ironwood release)``
+- ``cms/envs/production.py (aws.py for hawthorn release)``
 
 Using Kafka Broker API
 **********************
@@ -127,38 +127,95 @@ These files should be located at ``/edx/app/edxapp/`` directory, see the example
     }
 
 2. Add the following keys and their values in the ``lms.env.json`` and ``cms.env.json`` files.
+Please note that all parameters in the `PRODUCER_CONFIG` are unique to the broker instances. You
+can set whatever parameters are required for your instance.
+
 ::
 
     "CALIPER_KAFKA_SETTINGS": {
-        "MAXIMUM_RETRIES": <integer>,
-        "END_POINT": "kafka endpoint",
-        "TOPIC_NAME": "topic name",
-        "ERROR_REPORT_EMAIL": "support@example.com"
-    }
+        "PRODUCER_CONFIG": {
+            "bootstrap_servers": [
+                "<List of Kafka Brokers URLs>"
+            ],
+            ...
+        },
+
+        "TOPIC_NAME": "<Kafka Topic Name>",
+
+        "ERROR_REPORT_EMAIL": "<Reporting Email Address>",
+        "MAXIMUM_RETRIES": <An Integer>
+    },
 
 +------------------+------------------------------------------------------------------------------+
 |Keys              |                                  Description                                 |
 +==================+==============================================================================+
 |MAXIMUM_RETRIES   |Number of times the app will try to send the logs to Kafka in case of failure |
 +------------------+------------------------------------------------------------------------------+
-|END_POINT         |URL for Kafka Broker                                                          |
+|PRODUCER_CONFIG   |Configurations for initializing the Kafka Producer                            |
+|                  |                                                                              |
+|                  |Can further contain:                                                          |
+|                  |    - "bootstrap_servers":                                                    |
+|                  |        - List of Kafka Brokers URLs                                          |
+|                  |    - Any other supported paramter in the `Kafka-python docs`_                |
+|                  |        - Please note that it's better to store the sensitive information in  |
+|                  |          the `*.auth.json` files                                             |
 +------------------+------------------------------------------------------------------------------+
 |TOPIC_NAME        |Topic name for the Kafka broker                                               |
 +------------------+------------------------------------------------------------------------------+
 |ERROR_REPORT_EMAIL|Email Address to notify when number of failures exceeds the MAXIMUM_RETRIES   |
 +------------------+------------------------------------------------------------------------------+
 
-3. Add the following lines of code:
+3. Add the following keys and their values in the ``lms.auth.json`` and ``cms.auth.json`` files.
+Please note that all parameters in the `PRODUCER_CONFIG` are unique to the broker instances. You
+can set whatever parameters are required for you.
+
+::
+
+    "CALIPER_KAFKA_AUTH_SETTINGS": {
+        "PRODUCER_CONFIG": {
+            ...
+            "sasl_plain_username": "<Username>",
+            "sasl_plain_password": "<Password>",
+            "security_protocol": "<Secuirty Protocol>",
+            "ssl_cafile": "<Path/to/the/ca/file>",
+            ...
+        }
+    }
+
++------------------+------------------------------------------------------------------------------+
+|Keys              |                                  Description                                 |
++==================+==============================================================================+
+|PRODUCER_CONFIG   |Configurations for initializing the Kafka Producer. Use this confiration to   |
+|                  |store all sensitive configuration like authentication parameters.             |
+|                  |                                                                              |
+|                  |For example:                                                                  |
+|                  |    - Use this to configure paramters like:                                   |
+|                  |         - sasl_plain_username                                                |
+|                  |         - sasl_plain_password                                                |
+|                  |         - security_protocol                                                  |
+|                  |         - sasl_mechanism                                                     |
+|                  |                                                                              |
+|                  |It can further contain:                                                       |
+|                  |    - Any other supported paramter in the `Kafka-python docs`_                |
+|                  |        - Please note that it's better to store the insensitive information   |
+|                  |          in the `*.env.json` files                                           |
++------------------+------------------------------------------------------------------------------+
+
+.. _Kafka-python docs: https://kafka-python.readthedocs.io/en/2.0.1/apidoc/KafkaProducer.html#kafka.KafkaProducer
+
+4. Add the following lines of code:
+
 ::
 
     if FEATURES.get('ENABLE_KAFKA_FOR_CALIPER'):
         CALIPER_KAFKA_SETTINGS = ENV_TOKENS.get('CALIPER_KAFKA_SETTINGS')
+        CALIPER_KAFKA_AUTH_SETTINGS = AUTH_TOKENS.get('CALIPER_KAFKA_AUTH_SETTINGS')
 
 in the following files:
 
-- ``lms/envs/aws.py (production.py for ironwood release)``
+- ``lms/envs/production.py (aws.py for hawthorn release)``
 
-- ``cms/envs/aws.py (production.py for ironwood release)``
+- ``cms/envs/production.py (aws.py for hawthorn release)``
 
 Location of Transformed Logs
 ############################
