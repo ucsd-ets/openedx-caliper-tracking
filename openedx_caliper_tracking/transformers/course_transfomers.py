@@ -81,3 +81,63 @@ def edx_grades_grading_policy_changed(current_event, caliper_event):
     })
 
     return caliper_event
+
+def edx_course_goal_transformer(transformer):
+    """
+    This decorator transforms the  fields in course goal events that are going
+    to be same for all such events.
+    """
+
+    def inner(current_event, caliper_event):
+        caliper_event = caliper_event.copy()
+        caliper_object = {
+            'id': current_event['referer'],
+            'type': 'LearningObjective',
+            'extensions': current_event['event']
+        }
+
+        caliper_event.update({
+            'type': 'Event',
+            'object': caliper_object
+        })
+
+        caliper_event['extensions']['extra_fields'].update(
+            current_event['context']
+        )
+
+        caliper_event['extensions']['extra_fields']['ip'] = current_event.get('ip', '')
+
+        caliper_event['referrer']['type'] = 'WebPage'
+
+        caliper_event['actor'].update({
+            'name': current_event['username'],
+            'type': 'Person'
+        })
+        caliper_event = transformer(current_event, caliper_event)
+        return caliper_event
+    return inner
+
+
+@edx_course_goal_transformer
+def edx_course_goal_added(current_event, caliper_event):
+    """
+    This event occurs when user adds a goal in a course.
+
+    :param current_event: default event log generated.
+    :param caliper_event: caliper_event log having some basic attributes.
+    :return: updated caliper_event.
+    """
+    caliper_event['action'] = 'Added'
+    return caliper_event
+
+@edx_course_goal_transformer
+def edx_course_goal_updated(current_event, caliper_event):
+    """
+    This event occurs when user updates an existing goal in any course.
+
+    :param current_event: default event log generated.
+    :param caliper_event: caliper_event log having some basic attributes.
+    :return: updated caliper_event.
+    """
+    caliper_event['action'] = 'Modified'
+    return caliper_event

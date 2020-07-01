@@ -184,7 +184,9 @@ from openedx_caliper_tracking.transformers.content_library_transformers import (
 )
 from openedx_caliper_tracking.transformers.course_transfomers import (
     edx_course_home_resume_course_clicked,
-    edx_grades_grading_policy_changed
+    edx_grades_grading_policy_changed,
+    edx_course_goal_added,
+    edx_course_goal_updated
 )
 from openedx_caliper_tracking.transformers.content_library_transformers import (
     edx_librarycontentblock_content_assigned,

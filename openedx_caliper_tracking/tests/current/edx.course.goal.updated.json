@@ -1,0 +1,23 @@
+{
+    "username": "honor",
+    "event_source": "server",
+    "name": "edx.course.goal.updated",
+    "accept_language": "en-US,en;q=0.9",
+    "time": "2020-07-01T06:40:20.201270+00:00",
+    "agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36",
+    "page": null,
+    "host": "edx.devstack.lms:18000",
+    "session": "88ec9b8465b74eac758bdc3731fc5595",
+    "referer": "http://edx.devstack.lms:18000/courses/course-v1:edX+DemoX+Demo_Course/course/",
+    "context": {
+        "user_id": 6,
+        "org_id": "",
+        "course_id": "",
+        "path": "/api/course_goals/v0/course_goals/"
+    },
+    "ip": "172.23.0.1",
+    "event": {
+        "goal_key": "complete"
+    },
+    "event_type": "edx.course.goal.updated"
+}

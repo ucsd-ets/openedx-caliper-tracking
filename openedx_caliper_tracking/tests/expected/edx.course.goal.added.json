@@ -1,0 +1,39 @@
+{
+    "@context": "http://purl.imsglobal.org/ctx/caliper/v1p1",
+    "action": "Added",
+    "actor": {
+        "id": "http://localhost:18000/u/honor",
+        "name": "honor",
+        "type": "Person"
+    },
+    "eventTime": "2020-07-01T06:38:32.016Z",
+    "extensions": {
+        "extra_fields": {
+            "accept_language": "en-US,en;q=0.9",
+            "agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36",
+            "course_id": "",
+            "event_source": "server",
+            "event_type": "edx.course.goal.added",
+            "host": "edx.devstack.lms:18000",
+            "ip": "172.23.0.1",
+            "org_id": "",
+            "page": null,
+            "path": "/api/course_goals/v0/course_goals/",
+            "session": "88ec9b8465b74eac758bdc3731fc5595",
+            "user_id": 6
+        }
+    },
+    "id": "urn:uuid:3fa5fb93-1e64-4695-a953-9842e31b7da9",
+    "object": {
+        "extensions": {
+            "goal_key": "explore"
+        },
+        "id": "http://edx.devstack.lms:18000/courses/course-v1:edX+DemoX+Demo_Course/course/",
+        "type": "LearningObjective"
+    },
+    "referrer": {
+        "id": "http://edx.devstack.lms:18000/courses/course-v1:edX+DemoX+Demo_Course/course/",
+        "type": "WebPage"
+    },
+    "type": "Event"
+}

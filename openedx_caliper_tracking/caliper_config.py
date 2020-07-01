@@ -18,6 +18,8 @@ EVENT_MAPPING = {
         ctf.edx_course_enrollment_upgrade_clicked,
     'speed_change_video': ctf.edx_video_speed_changed,
     'edx.course.tool.accessed': ctf.edx_course_tool_accessed,
+    'edx.course.goal.added': ctf.edx_course_goal_added,
+    'edx.course.goal.updated': ctf.edx_course_goal_updated,
     'edx.forum.response.created': ctf.edx_forum_response_created,
     'problem_show': ctf.problem_show,
     'edx.ui.lms.sequence.next_selected': ctf.edx_ui_lms_sequence_next_selected,
