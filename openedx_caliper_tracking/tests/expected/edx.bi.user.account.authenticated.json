@@ -1,0 +1,43 @@
+{
+    "@context": "http://purl.imsglobal.org/ctx/caliper/v1p1",
+    "action": "LoggedIn",
+    "actor": {
+        "id": "http://localhost:18000/u/edx",
+        "type": "Person",
+        "name": "edx"
+    },
+    "eventTime": "2020-07-06T06:52:55.025Z",
+    "extensions": {
+        "extra_fields": {
+            "accept_language": "en-US,en;q=0.9",
+            "agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36",
+            "event_source": "server",
+            "event_type": "edx.bi.user.account.authenticated",
+            "host": "localhost:18000",
+            "course_id": "",
+            "ip": "172.23.0.1",
+            "org_id": "",
+            "page": null,
+            "path": "/user_api/v1/account/login_session/",
+            "session": "",
+            "user_id": null
+        }
+    },
+    "id": "urn:uuid:d4618c23-d612-4709-8d9a-478d87808067",
+    "object": {
+        "id": "http://localhost:18000",
+        "type": "Session",
+        "extensions": {
+            "category": "conversion",
+            "username": "edx",
+            "provider": null,
+            "email": "edx@example.com",
+            "label": null
+        }
+    },
+    "referrer": {
+        "id": "http://localhost:18000/login?next=%2F",
+        "type": "WebPage"
+    },
+    "type": "SessionEvent"
+}

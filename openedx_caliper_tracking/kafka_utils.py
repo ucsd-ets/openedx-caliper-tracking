@@ -15,5 +15,5 @@ def get_kafka_producer_configurations():
         configurations.update(settings.CALIPER_KAFKA_AUTH_SETTINGS.get('PRODUCER_CONFIG', {}))
         return configurations
 
-    except KeyError as ex:
+    except AttributeError as ex:
         LOGGER.exception('Invalid or no configurations are provided for KafkaProducer: %s', str(ex))

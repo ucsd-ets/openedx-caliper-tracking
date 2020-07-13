@@ -1,0 +1,26 @@
+{
+    "username": "honor",
+    "event_source": "server",
+    "name": "edx.bi.schedule.suppressed",
+    "accept_language": "en-US,en;q=0.9",
+    "time": "2020-07-06T12:03:33.798254+00:00",
+    "agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36",
+    "page": null,
+    "host": "localhost:18000",
+    "session": "5523bc0779186ad329ec7a592ac4da18",
+    "referer": "http://localhost:18000/courses/course-v1:EDX+EDX001+2020_T2/about",
+    "context": {
+        "user_id": 17,
+        "org_id": "",
+        "course_id": "",
+        "path": "/change_enrollment"
+    },
+    "ip": "172.23.0.1",
+    "event": {
+        "course_id": "course-v1:EDX+EDX001+2020_T2",
+        "upgrade_deadline": null,
+        "experience_type": 0,
+        "content_availability_date": "2020-07-07T06:00:00+00:00"
+    },
+    "event_type": "edx.bi.schedule.suppressed"
+}

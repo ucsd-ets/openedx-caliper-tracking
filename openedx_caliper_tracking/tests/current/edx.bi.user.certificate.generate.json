@@ -1,0 +1,25 @@
+{
+    "username": "edx",
+    "event_source": "server",
+    "name": "edx.bi.user.certificate.generate",
+    "accept_language": "en-US,en;q=0.9",
+    "time": "2020-07-06T09:01:18.960307+00:00",
+    "agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36",
+    "page": null,
+    "host": "localhost:18000",
+    "session": "b79a2475546523a05c654f2c12e7a139",
+    "referer": "http://localhost:18000/courses/course-v1:edx+cs-101+2018/progress",
+    "context": {
+        "course_user_tags": {},
+        "user_id": 18,
+        "org_id": "edX",
+        "course_id": "course-v1:edx+cs-101+2018",
+        "path": "/courses/course-v1:edx+cs-101+2018/generate_user_cert"
+    },
+    "ip": "172.23.0.1",
+    "event": {
+        "category": "certificates",
+        "label": "course-v1:edx+cs-101+2018"
+    },
+    "event_type": "edx.bi.user.certificate.generate"
+}

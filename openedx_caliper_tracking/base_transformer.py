@@ -105,5 +105,6 @@ def _add_referrer(event, caliper_event):
     @param caliper_event: caliper event dict
     """
     caliper_event['referrer'] = {
-        'id': event.get('referer')
+        'id': event.get('referer'),
+        'type': 'WebPage',
     }

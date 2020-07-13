@@ -18,8 +18,8 @@ EVENT_MAPPING = {
         ctf.edx_course_enrollment_upgrade_clicked,
     'speed_change_video': ctf.edx_video_speed_changed,
     'edx.course.tool.accessed': ctf.edx_course_tool_accessed,
-    'edx.course.goal.added': ctf.edx_course_goal_added,
-    'edx.course.goal.updated': ctf.edx_course_goal_updated,
+    'edx.course.goal.added': ctf.edx_course_goal_transformer,
+    'edx.course.goal.updated': ctf.edx_course_goal_transformer,
     'edx.forum.response.created': ctf.edx_forum_response_created,
     'problem_show': ctf.problem_show,
     'edx.ui.lms.sequence.next_selected': ctf.edx_ui_lms_sequence_next_selected,
@@ -188,4 +188,16 @@ EVENT_MAPPING = {
     'edx.user.logout': ctf.edx_user_logout,
     'edx.course_discovery.search.initiated': ctf.edx_course_discovery_search_initiated,
     'edx.course_discovery.search.results_displayed': ctf.edx_course_discovery_search_results_displayed,
+
+
+    ### Segment events
+    'edx.bi.email.sent': ctf.edx_bi_email_sent,
+    'edx.bi.schedule.suppressed': ctf.edx_bi_schedule_suppressed,
+    'edx.bi.user.account.authenticated': ctf.edx_bi_user_account_events,
+    'edx.bi.user.account.linked': ctf.edx_bi_user_account_events,
+    'edx.bi.user.account.registered': ctf.edx_bi_user_account_registered,
+    'edx.bi.user.certificate.generate': ctf.edx_bi_user_certificate_generate,
+    'edx.bi.user.org_email.opted_out': ctf.edx_bi_user_org_email_events,
+    'edx.bi.user.org_email.opted_in': ctf.edx_bi_user_org_email_events,
+    'edx.bi.verify.submitted': ctf.edx_bi_verify_submitted,
 }

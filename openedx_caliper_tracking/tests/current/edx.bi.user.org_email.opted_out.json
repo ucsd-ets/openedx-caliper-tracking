@@ -1,0 +1,24 @@
+{
+    "username": "edx",
+    "event_source": "server",
+    "name": "edx.bi.user.org_email.opted_out",
+    "accept_language": "en-US,en;q=0.9",
+    "time": "2020-07-06T13:20:31.533686+00:00",
+    "agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36",
+    "page": null,
+    "host": "localhost:18000",
+    "session": "5523bc0779186ad329ec7a592ac4da18",
+    "referer": "http://localhost:18000/courses/course-v1:edx+cs-101+2018/about",
+    "context": {
+        "user_id": 17,
+        "org_id": "",
+        "course_id": "",
+        "path": "/change_enrollment"
+    },
+    "ip": "172.23.0.1",
+    "event": {
+        "category": "communication",
+        "label": "edX_programs"
+    },
+    "event_type": "edx.bi.user.org_email.opted_out"
+}
