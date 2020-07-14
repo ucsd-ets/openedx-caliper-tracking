@@ -351,7 +351,7 @@ def edx_problem_hint_feedback_displayed(current_event, caliper_event):
 
 def edx_grades_problem_submitted(current_event, caliper_event):
     """
-    Occurs when learner submitted submitted a question of peer assignment.
+    Occurs when learner submits response to a problem.
 
     :param current_event: default event log generated.
     :param caliper_event: caliper_event log having some basic attributes.

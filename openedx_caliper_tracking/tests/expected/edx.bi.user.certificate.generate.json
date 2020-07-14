@@ -1,0 +1,40 @@
+{
+    "@context": "http://purl.imsglobal.org/ctx/caliper/v1p1",
+    "action": "Created",
+    "actor": {
+        "id": "http://localhost:18000",
+        "type": "SoftwareApplication"
+    },
+    "eventTime": "2020-07-06T09:01:18.960Z",
+    "extensions": {
+        "extra_fields": {
+            "accept_language": "en-US,en;q=0.9",
+            "agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36",
+            "event_source": "server",
+            "event_type": "edx.bi.user.certificate.generate",
+            "host": "localhost:18000",
+            "course_id": "course-v1:edx+cs-101+2018",
+            "course_user_tags": {},
+            "ip": "172.23.0.1",
+            "org_id": "edX",
+            "page": null,
+            "path": "/courses/course-v1:edx+cs-101+2018/generate_user_cert",
+            "session": "b79a2475546523a05c654f2c12e7a139",
+            "user_id": 18
+        }
+    },
+    "id": "urn:uuid:d4618c23-d612-4709-8d9a-478d87808067",
+    "object": {
+        "id": "http://localhost:18000/courses/course-v1:edx+cs-101+2018/generate_user_cert",
+        "type": "Document",
+        "extensions": {
+            "category": "certificates",
+            "label": "course-v1:edx+cs-101+2018"
+        }
+    },
+    "referrer": {
+        "id": "http://localhost:18000/courses/course-v1:edx+cs-101+2018/progress",
+        "type": "WebPage"
+    },
+    "type": "Event"
+}

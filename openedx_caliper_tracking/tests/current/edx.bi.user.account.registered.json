@@ -1,0 +1,25 @@
+{
+    "username": "edx",
+    "event_source": "server",
+    "name": "edx.bi.user.account.registered",
+    "accept_language": "en-US,en;q=0.9",
+    "time": "2020-07-06T13:32:33.765961+00:00",
+    "agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36",
+    "page": null,
+    "host": "localhost:18000",
+    "session": "",
+    "referer": "http://localhost:18000/register",
+    "context": {
+        "user_id": null,
+        "org_id": "",
+        "course_id": "",
+        "path": "/user_api/v1/account/registration/"
+    },
+    "ip": "172.23.0.1",
+    "event": {
+        "category": "conversion",
+        "provider": null,
+        "label": null
+    },
+    "event_type": "edx.bi.user.account.registered"
+}

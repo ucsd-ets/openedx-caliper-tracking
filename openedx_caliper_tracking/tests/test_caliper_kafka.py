@@ -22,7 +22,7 @@ CALIPER_KAFKA_SETTINGS_FIXTURE = {
         ]
     },
     'TOPIC_NAME': 'dummy topic',
-    'ERROR_REPORT_EMAIL': 'dummy@example.com',
+    'ERROR_REPORT_EMAILS': ['dummy@example.com',],
     'MAXIMUM_RETRIES': 3
 }
 
@@ -248,7 +248,7 @@ class CaliperKafkaTestCase(TestCase):
         sent_kafka_failure_email('Dummy Error')
         self.assertTrue(send_notification_mock.called)
         logger_mock.info.assert_called_with('Email Sent Successfully: Events delivery failure report'
-                                            ' sent to dummy@example.com.')
+                                            ' sent to [\'dummy@example.com\'].')
 
     @mock.patch(
         'openedx_caliper_tracking.tasks.LOGGER',
@@ -270,7 +270,7 @@ class CaliperKafkaTestCase(TestCase):
         sent_kafka_failure_email('Dummy Error')
         self.assertTrue(cache_mock.called)
         logger_mock.info.assert_called_with('Email Already Sent: Events delivery failure report'
-                                            ' has been already sent to dummy@example.com.')
+                                            ' has been already sent to [\'dummy@example.com\'].')
 
     @mock.patch(
         'openedx_caliper_tracking.tasks.LOGGER',
@@ -292,7 +292,7 @@ class CaliperKafkaTestCase(TestCase):
         sent_kafka_failure_email('Dummy Error')
         self.assertTrue(send_notification_mock.called)
         logger_mock.error.assert_called_with('Email Sending Failed: Could not send events delivery'
-                                             ' failure report to dummy@example.com.')
+                                             ' failure report to [\'dummy@example.com\'].')
 
     @mock.patch(
         'openedx_caliper_tracking.tasks.LOGGER',
@@ -311,7 +311,7 @@ class CaliperKafkaTestCase(TestCase):
         send_system_recovery_email()
         self.assertTrue(send_notification_mock.called)
         logger_mock.info.assert_called_with('Email Sent Successfully: Events delivery success report sent to '
-                                            'dummy@example.com.')
+                                            '[\'dummy@example.com\'].')
 
     @mock.patch(
         'openedx_caliper_tracking.tasks.LOGGER',
@@ -333,4 +333,4 @@ class CaliperKafkaTestCase(TestCase):
         send_system_recovery_email()
         self.assertTrue(send_notification_mock.called)
         logger_mock.error.assert_called_with('Email Sending Failed: Could not send events delivery success report to '
-                                             'dummy@example.com.')
+                                             '[\'dummy@example.com\'].')

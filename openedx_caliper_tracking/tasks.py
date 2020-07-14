@@ -136,13 +136,13 @@ def sent_kafka_failure_email(self, error):
     """
     Send error report to specified email address.
     """
-    reporting_email = settings.CALIPER_KAFKA_SETTINGS.get('ERROR_REPORT_EMAIL')
-    if not reporting_email:
+    reporting_emails = settings.CALIPER_KAFKA_SETTINGS.get('ERROR_REPORT_EMAILS')
+    if not reporting_emails:
         return
 
     if cache.get(EMAIL_DELIVERY_CACHE_KEY):
         LOGGER.info('Email Already Sent: Events delivery failure report has been already sent to {}.'.format(
-            reporting_email))
+            reporting_emails))
         return
 
     data = {
@@ -151,9 +151,9 @@ def sent_kafka_failure_email(self, error):
         'error': error
     }
     subject = 'Failure in logs delivery to Kafka'
-    if send_notification(data, subject, DEFAULT_FROM_EMAIL, [reporting_email]):
+    if send_notification(data, subject, DEFAULT_FROM_EMAIL, reporting_emails):
         success_message = 'Email Sent Successfully: Events delivery failure report sent to {}.'.format(
-            reporting_email)
+            reporting_emails)
         # after one day if the delivery of events to kafka still fails,
         # email failure  delivery report again.
         cache.set(EMAIL_DELIVERY_CACHE_KEY, True,
@@ -161,7 +161,7 @@ def sent_kafka_failure_email(self, error):
         LOGGER.info(success_message)
     else:
         failure_message = 'Email Sending Failed: Could not send events delivery failure report to {}.'.format(
-            reporting_email)
+            reporting_emails)
         LOGGER.error(failure_message)
 
 
@@ -170,8 +170,8 @@ def send_system_recovery_email(self):
     """
     Send system recovery report to specified email address.
     """
-    reporting_email = settings.CALIPER_KAFKA_SETTINGS.get('ERROR_REPORT_EMAIL')
-    if not reporting_email:
+    reporting_emails = settings.CALIPER_KAFKA_SETTINGS.get('ERROR_REPORT_EMAILS')
+    if not reporting_emails:
         return
 
     data = {
@@ -179,11 +179,11 @@ def send_system_recovery_email(self):
         'body': 'System has been recovered. Now Caliper logs are being successfully delivered to kafka.',
     }
     subject = 'Success in logs delivery to Kafka'
-    if send_notification(data, subject, DEFAULT_FROM_EMAIL, [reporting_email]):
+    if send_notification(data, subject, DEFAULT_FROM_EMAIL, reporting_emails):
         success_message = 'Email Sent Successfully: Events delivery success report sent to {}.'.format(
-            reporting_email)
+            reporting_emails)
         LOGGER.info(success_message)
     else:
         failure_message = 'Email Sending Failed: Could not send events delivery success report to {}.'.format(
-            reporting_email)
+            reporting_emails)
         LOGGER.error(failure_message)

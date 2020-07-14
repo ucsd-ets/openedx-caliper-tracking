@@ -1,0 +1,39 @@
+{
+    "@context": "http://purl.imsglobal.org/ctx/caliper/v1p1",
+    "action": "Submitted",
+    "actor": {
+        "id": "http://localhost:18000/u/edx",
+        "type": "Person",
+        "name": "edx"
+    },
+    "eventTime": "2020-07-06T08:43:34.408Z",
+    "extensions": {
+        "extra_fields": {
+            "accept_language": "en-US,en;q=0.9",
+            "agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36",
+            "event_source": "server",
+            "event_type": "edx.bi.verify.submitted",
+            "host": "localhost:18000",
+            "course_id": "",
+            "ip": "172.23.0.1",
+            "org_id": "",
+            "page": null,
+            "path": "/verify_student/submit-photos/",
+            "session": "b79a2475546523a05c654f2c12e7a139",
+            "user_id": 18
+        }
+    },
+    "id": "urn:uuid:d4618c23-d612-4709-8d9a-478d87808067",
+    "object": {
+        "id": "http://localhost:18000/verify_student/verify-now/course-v1:DMC_Programs+DMC_P_001+2020_T1/",
+        "type": "ImageObject",
+        "extensions": {
+            "category": "verification"
+        }
+    },
+    "referrer": {
+        "id": "http://localhost:18000/verify_student/verify-now/course-v1:DMC_Programs+DMC_P_001+2020_T1/",
+        "type": "WebPage"
+    },
+    "type": "Event"
+}

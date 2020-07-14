@@ -1,0 +1,46 @@
+{
+    "@context": "http://purl.imsglobal.org/ctx/caliper/v1p1",
+    "action": "Posted",
+    "actor": {
+        "id": "http://localhost:18000",
+        "type": "SoftwareApplication"
+    },
+    "eventTime": "2020-07-06T09:59:20.424Z",
+    "extensions": {
+        "extra_fields": {
+            "accept_language": "en-US,en;q=0.9",
+            "agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36",
+            "event_source": "server",
+            "course_user_tags": {},
+            "event_type": "edx.bi.email.sent",
+            "host": "localhost:18000",
+            "ip": "172.23.0.1",
+            "org_id": "edx",
+            "page": null,
+            "path": "/",
+            "session": "34ec4c1626d7c374aecac481ac99b9b4",
+            "user_id": "17"
+        }
+    },
+    "id": "urn:uuid:d4618c23-d612-4709-8d9a-478d87808067",
+    "object": {
+        "id": "http://localhost:18000/courses/course-v1:edx+cs-101+2018/discussion/forum/course/threads/5f02f5d5ceb0b1008d00001a",
+        "type": "Message",
+        "extensions": {
+            "thread_id": "5f02f5d5ceb0b1008d00001a",
+            "name": "responsenotification",
+            "language": "en",
+            "app_label": "discussion",
+            "course_id": "course-v1:edx+cs-101+2018",
+            "send_uuid": "9fd6c246-1773-4a97-bee1-b514fc3a43f8",
+            "thread_created_at": "2020-07-06T09:58:45+00:00",
+            "nonInteraction": 1,
+            "uuid": "6fe413fb-b7c3-4118-a180-01990dbb49e7"
+        }
+    },
+    "referrer": {
+        "id": "http://localhost:18000/courses/course-v1:edx+cs-101+2018/discussion/forum/course/threads/5f02f5d5ceb0b1008d00001a",
+        "type": "WebPage"
+    },
+    "type": "Event"
+}

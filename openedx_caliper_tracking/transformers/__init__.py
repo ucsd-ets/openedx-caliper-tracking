@@ -185,8 +185,7 @@ from openedx_caliper_tracking.transformers.content_library_transformers import (
 from openedx_caliper_tracking.transformers.course_transfomers import (
     edx_course_home_resume_course_clicked,
     edx_grades_grading_policy_changed,
-    edx_course_goal_added,
-    edx_course_goal_updated
+    edx_course_goal_transformer,
 )
 from openedx_caliper_tracking.transformers.content_library_transformers import (
     edx_librarycontentblock_content_assigned,
@@ -206,4 +205,13 @@ from openedx_caliper_tracking.transformers.session_transformers import (
 from openedx_caliper_tracking.transformers.course_discovery_transformers import (
     edx_course_discovery_search_initiated,
     edx_course_discovery_search_results_displayed
+)
+from openedx_caliper_tracking.transformers.segment_transformers import (
+    edx_bi_email_sent,
+    edx_bi_schedule_suppressed,
+    edx_bi_user_account_events,
+    edx_bi_user_account_registered,
+    edx_bi_user_certificate_generate,
+    edx_bi_user_org_email_events,
+    edx_bi_verify_submitted,
 )

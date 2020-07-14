@@ -1,0 +1,40 @@
+{
+    "@context": "http://purl.imsglobal.org/ctx/caliper/v1p1",
+    "action": "Skipped",
+    "actor": {
+        "id": "http://localhost:18000",
+        "type": "SoftwareApplication"
+    },
+    "eventTime": "2020-07-06T12:03:33.798Z",
+    "extensions": {
+        "extra_fields": {
+            "accept_language": "en-US,en;q=0.9",
+            "agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36",
+            "event_source": "server",
+            "event_type": "edx.bi.schedule.suppressed",
+            "host": "localhost:18000",
+            "ip": "172.23.0.1",
+            "org_id": "",
+            "page": null,
+            "path": "/change_enrollment",
+            "session": "5523bc0779186ad329ec7a592ac4da18",
+            "user_id": 17
+        }
+    },
+    "id": "urn:uuid:d4618c23-d612-4709-8d9a-478d87808067",
+    "object": {
+        "id": "http://localhost:18000/courses/course-v1:EDX+EDX001+2020_T2/about",
+        "type": "Message",
+        "extensions": {
+            "course_id": "course-v1:EDX+EDX001+2020_T2",
+            "upgrade_deadline": null,
+            "experience_type": 0,
+            "content_availability_date": "2020-07-07T06:00:00+00:00"
+        }
+    },
+    "referrer": {
+        "id": "http://localhost:18000/courses/course-v1:EDX+EDX001+2020_T2/about",
+        "type": "WebPage"
+    },
+    "type": "Event"
+}

@@ -1,0 +1,26 @@
+{
+    "username": "edx",
+    "event_source": "server",
+    "name": "edx.bi.user.account.linked",
+    "accept_language": "en-US,en;q=0.9",
+    "time": "2020-07-06T07:25:21.605657+00:00",
+    "agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36",
+    "page": null,
+    "host": "localhost:18000",
+    "session": "c96cac021d83d046e6ee9e84d597f3a2",
+    "referer": "http://localhost:18000/account/settings",
+    "context": {
+        "user_id": 18,
+        "org_id": "",
+        "course_id": "",
+        "path": "/auth/complete/google-oauth2/"
+    },
+    "ip": "172.23.0.1",
+    "event": {
+        "category": "conversion",
+        "username": "edx",
+        "provider": "google-oauth2",
+        "label": null
+    },
+    "event_type": "edx.bi.user.account.linked"
+}
