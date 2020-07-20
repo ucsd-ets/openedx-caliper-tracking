@@ -11,7 +11,7 @@ Installation
 To install **openedx-caliper-tracking** in your Open edX instance, please add the following line to your ``requirements file``. (For most Open edX installations it should be located at ``edx-platform/requirements/edx/base.txt``).
 ::
 
-    openedx-caliper-tracking==0.12.1
+    openedx-caliper-tracking==0.13.0
 
 For manual installation:
 ::
@@ -142,28 +142,32 @@ can set whatever parameters are required for your instance.
 
         "TOPIC_NAME": "<Kafka Topic Name>",
 
-        "ERROR_REPORT_EMAIL": "<Reporting Email Address>",
+        "ERROR_REPORT_EMAILS": [
+            "<Reporting Email Address 1>",
+            "<Reporting Email Address 2>",
+            ...
+        ]
         "MAXIMUM_RETRIES": <An Integer>
     },
 
-+------------------+------------------------------------------------------------------------------+
-|Keys              |                                  Description                                 |
-+==================+==============================================================================+
-|MAXIMUM_RETRIES   |Number of times the app will try to send the logs to Kafka in case of failure |
-+------------------+------------------------------------------------------------------------------+
-|PRODUCER_CONFIG   |Configurations for initializing the Kafka Producer                            |
-|                  |                                                                              |
-|                  |Can further contain:                                                          |
-|                  |    - "bootstrap_servers":                                                    |
-|                  |        - List of Kafka Brokers URLs                                          |
-|                  |    - Any other supported paramter in the `Kafka-python docs`_                |
-|                  |        - Please note that it's better to store the sensitive information in  |
-|                  |          the `*.auth.json` files                                             |
-+------------------+------------------------------------------------------------------------------+
-|TOPIC_NAME        |Topic name for the Kafka broker                                               |
-+------------------+------------------------------------------------------------------------------+
-|ERROR_REPORT_EMAIL|Email Address to notify when number of failures exceeds the MAXIMUM_RETRIES   |
-+------------------+------------------------------------------------------------------------------+
++-------------------+------------------------------------------------------------------------------+
+|Keys               |                                  Description                                 |
++===================+==============================================================================+
+|MAXIMUM_RETRIES    |Number of times the app will try to send the logs to Kafka in case of failure |
++-------------------+------------------------------------------------------------------------------+
+|PRODUCER_CONFIG    |Configurations for initializing the Kafka Producer                            |
+|                   |                                                                              |
+|                   |Can further contain:                                                          |
+|                   |    - "bootstrap_servers":                                                    |
+|                   |        - List of Kafka Brokers URLs                                          |
+|                   |    - Any other supported paramter in the `Kafka-python docs`_                |
+|                   |        - Please note that it's better to store the sensitive information in  |
+|                   |          the `*.auth.json` files                                             |
++-------------------+------------------------------------------------------------------------------+
+|TOPIC_NAME         |Topic name for the Kafka broker                                               |
++-------------------+------------------------------------------------------------------------------+
+|ERROR_REPORT_EMAILS|Email Addresses to notify when number of failures exceeds the MAXIMUM_RETRIES |
++-------------------+------------------------------------------------------------------------------+
 
 3. Add the following keys and their values in the ``lms.auth.json`` and ``cms.auth.json`` files.
 Please note that all parameters in the `PRODUCER_CONFIG` are unique to the broker instances. You
