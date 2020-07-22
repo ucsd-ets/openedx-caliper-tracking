@@ -4,9 +4,7 @@ Contains tasks related to Openedx Caliper Tracking.
 import json
 import logging
 import random
-import os
 
-from path import Path as path
 from celery.task import task
 from django.conf import settings
 from django.core.cache import cache
@@ -30,28 +28,6 @@ DEFAULT_FROM_EMAIL = settings.DEFAULT_FROM_EMAIL
 REPORT_EMAIL_VALIDITY_PERIOD = 86400  # in ms. Equals to one day.
 
 MAXIMUM_RETRIES = getattr(settings, 'CALIPER_KAFKA_SETTINGS', {}).get('MAXIMUM_RETRIES', 3)
-
-# SERVICE_VARIANT specifies name of the variant used, which decides what JSON
-# configuration files are read during startup.
-SERVICE_VARIANT = os.environ.get('SERVICE_VARIANT', None)
-
-# CONFIG_ROOT specifies the directory where the JSON configuration
-# files are expected to be found. If not specified, use the project
-# directory.
-CONFIG_ROOT = path(os.environ.get('CONFIG_ROOT'))
-
-# CONFIG_PREFIX specifies the prefix of the JSON configuration files,
-# based on the service variant. If no variant is use, don't use a
-# prefix.
-CONFIG_PREFIX = SERVICE_VARIANT + "." if SERVICE_VARIANT else ""
-
-########################## NON-SECURE ENV CONFIG ##############################
-# Things like server locations, ports, etc.
-
-with open(CONFIG_ROOT / CONFIG_PREFIX + "env.json") as env_file:
-    ENV_TOKENS = json.load(env_file)
-
-LMS_ROOT_URL = ENV_TOKENS.get('LMS_ROOT_URL')
 
 @task(bind=True, max_retries=MAXIMUM_RETRIES)
 def deliver_caliper_event_to_kafka(self, transformed_event, event_type):
@@ -170,7 +146,8 @@ def sent_kafka_failure_email(self, error):
 
     data = {
         'name': 'UCSD Support',
-        'body': 'Below is the additional information regarding failure:\n LMS_ROOT_URL = {}'.format(LMS_ROOT_URL),
+        'body': 'Below is the additional information regarding failure:\n LMS_ROOT_URL = {}'.format(
+            settings.LMS_ROOT_URL),
         'error': error
     }
     subject = 'Failure in logs delivery to Kafka'
