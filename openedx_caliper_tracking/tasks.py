@@ -29,6 +29,7 @@ REPORT_EMAIL_VALIDITY_PERIOD = 86400  # in ms. Equals to one day.
 
 MAXIMUM_RETRIES = getattr(settings, 'CALIPER_KAFKA_SETTINGS', {}).get('MAXIMUM_RETRIES', 3)
 
+
 @task(bind=True, max_retries=MAXIMUM_RETRIES)
 def deliver_caliper_event_to_kafka(self, transformed_event, event_type):
     """
@@ -176,7 +177,8 @@ def send_system_recovery_email(self):
 
     data = {
         'name': 'UCSD Support',
-        'body': 'System has been recovered. Now Caliper logs are being successfully delivered to kafka.',
+        'body': 'System has been recovered. Now Caliper logs are being successfully delivered to kafka.'
+                '\n LMS_ROOT_URL = '.format(settings.LMS_ROOT_URL),
     }
     subject = 'Success in logs delivery to Kafka'
     if send_notification(data, subject, DEFAULT_FROM_EMAIL, reporting_emails):
