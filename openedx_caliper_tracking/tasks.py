@@ -147,7 +147,8 @@ def sent_kafka_failure_email(self, error):
 
     data = {
         'name': 'UCSD Support',
-        'body': 'Below is the additional information regarding failure:',
+        'body': 'Below is the additional information regarding failure:\n System URL = {}'.format(
+            settings.LMS_ROOT_URL),
         'error': error
     }
     subject = 'Failure in logs delivery to Kafka'
@@ -176,7 +177,8 @@ def send_system_recovery_email(self):
 
     data = {
         'name': 'UCSD Support',
-        'body': 'System has been recovered. Now Caliper logs are being successfully delivered to kafka.',
+        'body': 'System has been recovered. Now Caliper logs are being successfully delivered to kafka.'
+                '\n System URL = '.format(settings.LMS_ROOT_URL),
     }
     subject = 'Success in logs delivery to Kafka'
     if send_notification(data, subject, DEFAULT_FROM_EMAIL, reporting_emails):
