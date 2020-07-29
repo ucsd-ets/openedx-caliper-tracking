@@ -178,7 +178,7 @@ def send_system_recovery_email(self):
     data = {
         'name': 'UCSD Support',
         'body': 'System has been recovered. Now Caliper logs are being successfully delivered to kafka.'
-                '\n System URL = '.format(settings.LMS_ROOT_URL),
+                '\n System URL = {}'.format(settings.LMS_ROOT_URL),
     }
     subject = 'Success in logs delivery to Kafka'
     if send_notification(data, subject, DEFAULT_FROM_EMAIL, reporting_emails):
