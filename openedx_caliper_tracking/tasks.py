@@ -47,30 +47,24 @@ def deliver_caliper_event_to_kafka(self, transformed_event, event_type):
         LOGGER.info('Attempt # {} of sending event: {} to kafka ({}) is in progress.'.format(
                     self.request_stack().get('retries'), event_type, bootstrap_servers))
 
-        producer_configrations = get_kafka_producer_configurations()
-
         try:
+            producer_configrations = get_kafka_producer_configurations()
             producer = KafkaProducer(
                 value_serializer=lambda v: json.dumps(v).encode('utf-8'),
                 **producer_configrations
             )
 
         # Invalid/unsupported arguments are provided
-        except TypeError as ex:
+        except (TypeError, AttributeError) as ex:
             LOGGER.exception(
-                'Invalid configurations are provided for KafkaProducer: %s', str(ex))
+                'Invalid configurations are provided for KafkaProducer: %s', str(ex)
+            )
             raise InvalidConfigurationsError('Invalid Configurations are provided')
 
         # Most probably a certificate file was not found.
         except IOError as ex:
             LOGGER.exception(
                 'Configured Certificate is not found: %s', str(ex)
-            )
-            raise InvalidConfigurationsError('Invalid Configurations are provided')
-
-        except Exception as ex:
-            LOGGER.exception(
-                'Error occurred while trying to configure Kafka: %s', str(ex)
             )
             raise InvalidConfigurationsError('Invalid Configurations are provided')
 
@@ -147,8 +141,8 @@ def sent_kafka_failure_email(self, error):
 
     data = {
         'name': 'UCSD Support',
-        'body': 'Below is the additional information regarding failure:\n System URL = {}'.format(
-            settings.LMS_ROOT_URL),
+        'body': 'Below is the additional information regarding failure:'
+                '\nSystem URL = {}'.format(settings.LMS_ROOT_URL),
         'error': error
     }
     subject = 'Failure in logs delivery to Kafka'
@@ -178,7 +172,7 @@ def send_system_recovery_email(self):
     data = {
         'name': 'UCSD Support',
         'body': 'System has been recovered. Now Caliper logs are being successfully delivered to kafka.'
-                '\n System URL = {}'.format(settings.LMS_ROOT_URL),
+                '\nSystem URL = {}'.format(settings.LMS_ROOT_URL),
     }
     subject = 'Success in logs delivery to Kafka'
     if send_notification(data, subject, DEFAULT_FROM_EMAIL, reporting_emails):

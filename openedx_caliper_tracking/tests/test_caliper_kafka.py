@@ -22,7 +22,7 @@ CALIPER_KAFKA_SETTINGS_FIXTURE = {
         ]
     },
     'TOPIC_NAME': 'dummy topic',
-    'ERROR_REPORT_EMAILS': ['dummy@example.com',],
+    'ERROR_REPORT_EMAILS': ['dummy@example.com', ],
     'MAXIMUM_RETRIES': 3
 }
 
@@ -180,41 +180,10 @@ class CaliperKafkaTestCase(TestCase):
         """
         deliver_caliper_event_to_kafka({}, 'book')
         self.assertTrue(producer_mock.called)
-        self.assertTrue(sent_email_mock.called)
-        logger_mock.error.assert_called_with('Logs Delivery Failed: Could not deliver event (book) to kafka'
-                                             ' ([\'testing.com\']) due to the error:'
-                                             ' Invalid Configurations are provided')
-        self.assertFalse(retry_mock.called)
-
-    @mock.patch(
-        'openedx_caliper_tracking.tasks.LOGGER',
-        autospec=True,
-    )
-    @mock.patch(
-        'openedx_caliper_tracking.tasks.sent_kafka_failure_email.delay',
-        autospec=True
-    )
-    @mock.patch(
-        'openedx_caliper_tracking.tasks.KafkaProducer',
-        autospec=True,
-        side_effect=KafkaError
-    )
-    @override_settings(
-        CALIPER_KAFKA_SETTINGS=CALIPER_KAFKA_SETTINGS_FIXTURE,
-        CALIPER_KAFKA_AUTH_SETTINGS=CALIPER_KAFKA_AUTH_SETTINGS_FIXTURE
-    )
-    def test_deliver_caliper_event_to_kafka_without_celery_with_error_without_retry(self, producer_mock,
-                                                                                    sent_email_mock, logger_mock):
-        """
-        Test that caliper event is not delivered to kafka when error is occurred
-        and at last retry failure email task is called.
-        """
-        deliver_caliper_event_to_kafka({}, 'book')
-        self.assertTrue(producer_mock.called)
-        self.assertTrue(sent_email_mock.called)
-        logger_mock.error.assert_called_with('Logs Delivery Failed: Could not deliver event (book) to kafka'
-                                             ' ([\'testing.com\']) due to the error:'
-                                             ' Invalid Configurations are provided')
+        self.assertTrue(retry_mock.called)
+        self.assertFalse(sent_email_mock.called)
+        logger_mock.error.assert_called_with(('Logs Delivery Failed: Could not deliver event (book) to kafka'
+                                              ' ([\'testing.com\']) because of KafkaError.'))
 
     @mock.patch(
         'openedx_caliper_tracking.tasks.sent_kafka_failure_email.delay',
