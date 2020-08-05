@@ -13,7 +13,8 @@ OPENEDX_CALIPER_TRACKING_BACKENDS = {
     }
 }
 
-CALIPER_AUTH = {
-    'CALIPER_TESTS_API_URL': '',
-    'CALIPER_TESTS_API_TOKEN': '',
+# Used for certification
+CERTIFICATION_AUTH = {
+    'API_URL': '',
+    'API_TOKEN': '',
 }

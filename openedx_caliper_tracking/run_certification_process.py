@@ -4,10 +4,10 @@ import requests
 from datetime import datetime
 
 from loggers import get_test_logger, get_formatted_log
-from settings import CALIPER_AUTH
+from settings import CERTIFICATION_AUTH
 
-CALIPER_TESTS_API_URL = CALIPER_AUTH.get('CALIPER_TESTS_API_URL')
-CALIPER_TESTS_API_TOKEN = CALIPER_AUTH.get('CALIPER_TESTS_API_TOKEN')
+CERTIFICATION_API_URL = CERTIFICATION_AUTH.get('API_URL')
+CERTIFICATION_API_TOKEN = CERTIFICATION_AUTH.get('API_TOKEN')
 
 
 TEST_DIR_PATH = 'tests'
@@ -33,13 +33,13 @@ for file in test_files:
         "dataVersion": "http://purl.imsglobal.org/ctx/caliper/v1p1",
         "data": [test_json]
     }
-    BEARER_TOKEN = 'Bearer {}'.format(CALIPER_TESTS_API_TOKEN)
+    BEARER_TOKEN = 'Bearer {}'.format(CERTIFICATION_API_TOKEN)
     headers = {
         'Authorization': BEARER_TOKEN,
         'Content-Type': "application/json",
     }
     response = requests.request('POST',
-                                CALIPER_TESTS_API_URL,
+                                CERTIFICATION_API_URL,
                                 data=json.dumps(TEST_ENVELOP),
                                 headers=headers
                                 )
@@ -53,5 +53,3 @@ for file in test_files:
             get_formatted_log(
                 'ERROR', file, test_json['extensions']['extra_fields']['event_type'], response.status_code)
         )
-
-
