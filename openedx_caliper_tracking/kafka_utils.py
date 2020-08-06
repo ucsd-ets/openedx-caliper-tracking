@@ -17,3 +17,4 @@ def get_kafka_producer_configurations():
 
     except AttributeError as ex:
         LOGGER.exception('Invalid or no configurations are provided for KafkaProducer: %s', str(ex))
+        raise
