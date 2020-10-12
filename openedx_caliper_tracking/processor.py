@@ -128,7 +128,7 @@ class CaliperProcessor(BaseBackend):
 
             return event
         except KeyError:
-            LOGGER.exception('Missing transformer method implementation for {}'.format(
+            LOGGER.warning('Missing transformer method implementation for {}'.format(
                 event.get('event_type')))
         except Exception as ex:
             LOGGER.exception(ex.args)
