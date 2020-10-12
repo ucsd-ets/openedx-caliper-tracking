@@ -9,7 +9,7 @@ os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
 
 setup(
     name='openedx-caliper-tracking',
-    version='0.14.2',
+    version='0.14.3',
     packages=find_packages(),
     include_package_data=True,
     license='GPL 3.0',
