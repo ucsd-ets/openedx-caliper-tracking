@@ -11,7 +11,7 @@ Installation
 To install **openedx-caliper-tracking** in your Open edX instance, please add the following line to your ``requirements file``. (For most Open edX installations it should be located at ``edx-platform/requirements/edx/base.txt``).
 ::
 
-    openedx-caliper-tracking==0.14.2
+    openedx-caliper-tracking==0.14.3
 
 For manual installation:
 ::
