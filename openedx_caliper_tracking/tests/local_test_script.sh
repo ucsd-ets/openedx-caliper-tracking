@@ -11,14 +11,15 @@ if [ "$(ls | grep -w openedx-caliper-tracking)" != "" ]; then
     printf "\n\n\n=========================================\n"
     printf "Making and Activating Virtual Environment"
     printf "\n=========================================\n"
-    virtualenv venv --python=python2.7
+    pip3 install virtualenv
+    virtualenv venv -p python3.8
     source venv/bin/activate
 
     printf "\n\n\n=======================\n"
     printf "Installing Dependencies"
     printf "\n=======================\n"
     pip install  ../openedx-caliper-tracking
-    pip install -r venv/lib/python2.7/site-packages/openedx_caliper_tracking/tests/test_requirements.txt
+    pip install -r venv/lib/python3.8/site-packages/openedx_caliper_tracking/tests/test_requirements.txt
 
     printf "\n\n\n=======================\n"
     printf "Creating Django Project"

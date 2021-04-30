@@ -8,7 +8,7 @@ from dateutil.parser import parse
 from django.contrib.auth import get_user_model
 from django.conf import settings
 from django.core.mail import send_mail
-from django.core.urlresolvers import reverse
+from django.urls import reverse
 from django.urls.exceptions import NoReverseMatch
 
 log = logging.getLogger(__name__)
@@ -23,7 +23,7 @@ def convert_datetime(current_datetime):
     """
 
     # convert current_datetime to a datetime object if it is string
-    if type(current_datetime) in (str, unicode):
+    if type(current_datetime) == str:
         current_datetime = parse(current_datetime)
 
     utc_offset = current_datetime.utcoffset()

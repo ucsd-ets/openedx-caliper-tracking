@@ -89,10 +89,11 @@ class CaliperUtilsTestCase(TestCase):
 
         utils.send_notification(data, subject, 'dummy_sender@example.com', ['dummy_receiver@example.com'])
         self.assertTrue(mail_send_mock.called)
-        logger_mock.info.assert_called_with('Email has been sent from "dummy_sender@example.com" to '
-                                            '"[\'dummy_receiver@example.com\']" for content "{\'body'
-                                            '\': \'Below is the additional information regarding '
-                                            'failure:\', \'name\': \'Dummy Support\', \'error\': \'dummy error\'}".')
+        logger_mock.info.assert_called_with(
+            'Email has been sent from "dummy_sender@example.com" to "[\'dummy_receiver@example.com\']" '
+            'for content "{\'name\': \'Dummy Support\', \'body\': \'Below is the additional information '
+            'regarding failure:\', \'error\': \'dummy error\'}".'
+        )
 
     @mock.patch(
         'openedx_caliper_tracking.utils.log',
@@ -112,7 +113,8 @@ class CaliperUtilsTestCase(TestCase):
         subject = 'Dummy Subject'
         utils.send_notification(data, subject, 'dummy_sender@example.com', ['dummy_receiver@example.com'])
         self.assertTrue(mail_send_mock.called)
-        logger_mock.exception.assert_called_with('Unable to send an email from "dummy_sender@example.com" to '
-                                                 '"[\'dummy_receiver@example.com\']" for content "{\'body\': '
-                                                 '\'Below is the additional information regarding failure:\','
-                                                 ' \'name\': \'Dummy Support\', \'error\': \'dummy error\'}".')
+        logger_mock.exception.assert_called_with(
+            'Unable to send an email from "dummy_sender@example.com" to "[\'dummy_receiver@example.com\']" '
+            'for content "{\'name\': \'Dummy Support\', \'body\': \'Below is the additional information '
+            'regarding failure:\', \'error\': \'dummy error\'}".'
+        )
