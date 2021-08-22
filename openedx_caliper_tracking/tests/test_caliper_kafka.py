@@ -197,6 +197,9 @@ class CaliperKafkaTestCase(TestCase):
         host_not_found(mock.MagicMock(), self.event, 'book')
         self.assertTrue(sent_email_mock.called)
 
+    @override_settings(
+        LMS_ROOT_URL='https://localhost:18000'
+    )
     @mock.patch(
         'openedx_caliper_tracking.tasks.LOGGER',
         autospec=True,
@@ -241,6 +244,9 @@ class CaliperKafkaTestCase(TestCase):
         logger_mock.info.assert_called_with('Email Already Sent: Events delivery failure report'
                                             ' has been already sent to [\'dummy@example.com\'].')
 
+    @override_settings(
+        LMS_ROOT_URL='https://localhost:18000'
+    )
     @mock.patch(
         'openedx_caliper_tracking.tasks.LOGGER',
         autospec=True,
@@ -263,6 +269,9 @@ class CaliperKafkaTestCase(TestCase):
         logger_mock.error.assert_called_with('Email Sending Failed: Could not send events delivery'
                                              ' failure report to [\'dummy@example.com\'].')
 
+    @override_settings(
+        LMS_ROOT_URL='https://localhost:18000'
+    )
     @mock.patch(
         'openedx_caliper_tracking.tasks.LOGGER',
         autospec=True,
@@ -282,6 +291,9 @@ class CaliperKafkaTestCase(TestCase):
         logger_mock.info.assert_called_with('Email Sent Successfully: Events delivery success report sent to '
                                             '[\'dummy@example.com\'].')
 
+    @override_settings(
+        LMS_ROOT_URL='https://localhost:18000'
+    )
     @mock.patch(
         'openedx_caliper_tracking.tasks.LOGGER',
         autospec=True,
