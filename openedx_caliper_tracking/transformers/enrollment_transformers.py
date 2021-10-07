@@ -3,7 +3,7 @@ Transformers for all course related events.
 """
 
 from django.conf import settings
-from django.core.urlresolvers import reverse
+from django.urls import reverse
 
 
 def edx_course_enrollment_activated(current_event, caliper_event):
